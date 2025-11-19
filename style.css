@@ -8,6 +8,13 @@
     --color-white: #ffffff;
     --color-light-gray: #f8f8f8;
     --color-border: #eeeeee;
+
+    /* New colors from the latest image */
+    --color-focus-yellow: #ffeb3b;
+    --color-focus-pink: #ff69b4;
+    --color-focus-green: #4caf50;
+    --color-focus-blue: #2196f3;
+
     --font-family: 'Arial', sans-serif; /* Using Arial as a common, clean sans-serif font */
 }
 
@@ -133,7 +140,7 @@ nav a:hover {
     background-color: var(--color-light-gray);
 }
 
-.cta-white-border { /* Se Livsboken / Se paket & priser */
+.cta-white-border { /* Se Livsboken / Se paket & priser (Hero) */
     background-color: transparent;
     color: var(--color-white);
     border: 2px solid var(--color-white);
@@ -141,6 +148,28 @@ nav a:hover {
 
 .cta-white-border:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cta-white-border-dark { /* Se paket & priser (Livsbok) */
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.cta-white-border-dark:hover {
+    background-color: var(--color-text);
+    color: var(--color-white);
+}
+
+.cta-white-small {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -205,6 +234,51 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+/* Focus Features Section */
+.focus-features-section {
+    background-color: var(--color-white);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.focus-card {
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--color-text);
+    text-align: left;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.focus-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.focus-card .cta-button {
+    margin-left: 0;
+}
+
+.focus-card.color-yellow { background-color: var(--color-focus-yellow); }
+.focus-card.color-pink { background-color: var(--color-focus-pink); color: var(--color-white); }
+.focus-card.color-green { background-color: var(--color-focus-green); color: var(--color-white); }
+.focus-card.color-blue { background-color: var(--color-focus-blue); color: var(--color-white); }
+
 /* Vad är Elivra? Section */
 #vad-ar-elivra {
     background-color: var(--color-white);
@@ -262,40 +336,6 @@ nav a:hover {
 .livsbok-ctas .cta-button {
     margin-left: 0;
     margin-right: 15px;
-}
-
-.livsbok-right {
-    flex: 1;
-}
-
-.livsbok-timeline-card {
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.timeline-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.timeline-item:last-child {
-    border-bottom: none;
-}
-
-.timeline-title {
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.timeline-example {
-    font-size: 14px;
-    color: var(--color-light-text);
-    margin-bottom: 0;
 }
 
 /* Pricing Section */
