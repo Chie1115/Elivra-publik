@@ -1,11 +1,14 @@
 /* General Styles */
 :root {
-    --color-primary: #e67e22; /* コーラルオレンジ (Coral Orange) - Warmth */
-    --color-secondary: #2ecc71; /* ティールグリーン (Teal Green) - Trust/CTA */
-    --color-background: #fdf5e6; /* Light Beige/Off-White */
+    /* Colors extracted from the mockups */
+    --color-primary: #4a40e0; /* Deep Purple/Blue for main background and CTA */
+    --color-secondary: #f7b500; /* Yellow/Orange for secondary CTA (Recommended) */
     --color-text: #333333;
     --color-light-text: #666666;
-    --font-family: 'Noto Sans JP', sans-serif; /* Placeholder for a rounded, readable font */
+    --color-white: #ffffff;
+    --color-light-gray: #f8f8f8;
+    --color-border: #eeeeee;
+    --font-family: 'Arial', sans-serif; /* Using Arial as a common, clean sans-serif font */
 }
 
 * {
@@ -18,7 +21,12 @@ body {
     font-family: var(--font-family);
     color: var(--color-text);
     line-height: 1.6;
-    background-color: white;
+    background-color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
 }
 
 main {
@@ -30,16 +38,26 @@ section {
     text-align: center;
 }
 
+.section-padded {
+    padding: 80px 5%;
+}
+
 h1 { font-size: 48px; margin-bottom: 10px; }
 h2 { font-size: 32px; margin-bottom: 40px; color: var(--color-text); }
 h3 { font-size: 24px; margin-bottom: 15px; }
 p { font-size: 18px; margin-bottom: 20px; }
 
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 20px;
+}
+
 /* Header */
 header {
-    background-color: white;
+    background-color: var(--color-white);
     padding: 15px 5%;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,64 +85,132 @@ nav a:hover {
     color: var(--color-primary);
 }
 
+.header-ctas {
+    display: flex;
+    align-items: center;
+}
+
 /* CTA Buttons */
 .cta-button {
     padding: 12px 25px;
-    border-radius: 30px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     margin-left: 10px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     display: inline-block;
     font-size: 16px;
+    text-align: center;
 }
 
-.cta-main {
+.cta-main { /* Prova gratis / Välj Bas/Premium */
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-white);
     border: 2px solid var(--color-primary);
 }
 
 .cta-main:hover {
-    background-color: #d66f1b;
+    background-color: #3830b0;
 }
 
-.cta-sub {
-    border: 2px solid var(--color-secondary);
-    color: var(--color-secondary);
-    background-color: transparent;
-}
-
-.cta-sub:hover {
+.cta-orange { /* Presentkort / Välj Familj */
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-text);
+    border: 2px solid var(--color-secondary);
+}
+
+.cta-orange:hover {
+    background-color: #e0a500;
+}
+
+.cta-white { /* Köp presentkort (Hero) / Välj presentkort (Final CTA) */
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-white);
+}
+
+.cta-white:hover {
+    background-color: var(--color-light-gray);
+}
+
+.cta-white-border { /* Se Livsboken / Se paket & priser */
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.cta-white-border:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--color-background);
-    padding: 120px 5% 100px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 100px 5% 100px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 60%;
 }
 
 .hero h1 {
-    color: var(--color-text);
-    max-width: 800px;
-    margin: 0 auto 20px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 20px;
-    color: var(--color-light-text);
-    max-width: 600px;
-    margin: 0 auto 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 500px;
 }
 
-/* Features Grid (Tre skäl) */
-.reasons-section {
-    background-color: white;
+.hero-ctas {
+    margin-bottom: 15px;
 }
 
-.features-grid {
+.hero-small-text {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.hero-info-box {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    right: 5%;
+}
+
+.hero-info-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 5px;
+}
+
+.hero-info-box p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Vad är Elivra? Section */
+#vad-ar-elivra {
+    background-color: var(--color-white);
+}
+
+.features-grid-3 {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -132,75 +218,140 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.feature-item {
+.feature-card {
     flex: 1;
     padding: 30px;
-    border: 1px solid #f0f0f0;
-    border-radius: 10px;
-    text-align: left;
-    transition: box-shadow 0.3s;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--color-white);
 }
 
-.feature-item:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+.icon-placeholder {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-.feature-item h3 {
-    color: var(--color-primary);
-}
-
-/* Lifebook Section */
-.lifebook-section {
-    background-color: #f9f9f9;
-}
-
-.lifebook-timeline {
-    background-color: white;
-    padding: 50px;
-    border-radius: 10px;
-    margin: 40px auto;
-    max-width: 900px;
-    border: 1px solid #eee;
-}
-
-/* Family Section */
-.family-section {
-    background-color: white;
-    text-align: left;
-}
-
-.family-content-wrapper {
+/* Min Livsbok Section */
+.livsbok-section {
+    background-color: var(--color-light-gray);
     display: flex;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 80px;
-    align-items: center;
+    gap: 50px;
+    align-items: flex-start;
 }
 
-.family-image {
+.livsbok-left {
     flex: 1;
-    min-height: 400px;
-    background-color: #ccc; /* Placeholder for image */
-    border-radius: 8px;
+    padding-right: 50px;
 }
 
-.family-content {
-    flex: 1;
-}
-
-.family-content ul {
+.livsbok-left ul {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 30px;
 }
 
-.family-content li {
+.livsbok-left li {
     font-size: 18px;
-    margin-bottom: 15px;
-    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.livsbok-ctas .cta-button {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.livsbok-right {
+    flex: 1;
+}
+
+.livsbok-timeline-card {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.timeline-example {
+    font-size: 14px;
+    color: var(--color-light-text);
+    margin-bottom: 0;
+}
+
+/* Pricing Section */
+.pricing-section {
+    background-color: var(--color-white);
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.price-card {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--color-white);
+}
+
+.price-card.recommended {
+    border-color: var(--color-secondary);
+    border-width: 3px;
+    box-shadow: 0 5px 15px rgba(247, 181, 0, 0.2);
+}
+
+.price-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price-card .price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.price-card li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-left: 20px;
     position: relative;
 }
 
-.family-content li::before {
+.price-card li::before {
     content: '✓';
     color: var(--color-secondary);
     font-weight: bold;
@@ -208,43 +359,62 @@ nav a:hover {
     left: 0;
 }
 
+.giftcard-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.giftcard-options p {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.giftcard-link {
+    font-size: 16px;
+    color: var(--color-text);
+    padding: 5px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+
+/* Security Section */
+.security-section {
+    background-color: var(--color-light-gray);
+}
+
+.security-item {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.security-item h3 {
+    font-size: 18px;
+}
+
 /* Final CTA */
 .final-cta {
     background-color: var(--color-primary);
-    color: white;
-    padding: 80px 5%;
+    color: var(--color-white);
+    padding: 60px 5%;
 }
 
 .final-cta h2 {
-    color: white;
-    margin-bottom: 40px;
+    color: var(--color-white);
+    margin-bottom: 30px;
 }
 
-.cta-main-inverted {
-    background-color: white;
-    color: var(--color-primary);
-    border: 2px solid white;
-}
-
-.cta-main-inverted:hover {
-    background-color: #f0f0f0;
-}
-
-.cta-sub-inverted {
-    border: 2px solid white;
-    color: white;
-    background-color: transparent;
-}
-
-.cta-sub-inverted:hover {
-    background-color: white;
-    color: var(--color-primary);
+.final-cta-buttons .cta-button {
+    margin: 0 10px;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-text);
+    color: var(--color-white);
     padding: 40px 5%;
     text-align: center;
     font-size: 14px;
@@ -257,5 +427,5 @@ footer {
 }
 
 .footer-links a:hover {
-    color: white;
+    color: var(--color-white);
 }
