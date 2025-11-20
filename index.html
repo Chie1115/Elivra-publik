@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elivra – Ge trygghet och sällskap i present</title>
     <link rel="stylesheet" href="style.css">
+    <script src="dist/main.js" defer></script>
 </head>
 <body>
 
@@ -24,7 +25,7 @@
 
     <main>
         <!-- 1. Hero Area (Hjälteområde) -->
-        <section class="hero">
+        <section class="hero animate-on-scroll">
             <div class="hero-content">
                 <h1>Ge trygghet och sällskap i present</h1>
                 <p>En AI-assistent som pratar, lyssnar och tränar minnet – nu med Min Livsbok för att spara livets berättelser.</p>
@@ -43,7 +44,7 @@
         </section>
 
         <!-- NEW SECTION: Key Features in Focus -->
-        <section id="fokus-funktioner" class="section-padded focus-features-section">
+        <section id="fokus-funktioner" class="section-padded focus-features-section animate-on-scroll">
             <h2>Elivras viktigaste funktioner i fokus</h2>
             <div class="focus-grid">
                 <div class="focus-card large-card" style="background-image: url('assets/samla_slakten.png');">
@@ -90,7 +91,7 @@
         <!-- END NEW SECTION -->
 
         <!-- 2. Vad är Elivra? (What is Elivra?) -->
-        <section id="vad-ar-elivra" class="section-padded">
+        <section id="vad-ar-elivra" class="section-padded animate-on-scroll">
             <h2>Vad är Elivra?</h2>
             <p class="section-subtitle">Elivra är en kombination av social AI-assistent, Livsbok för minnen och trygghetsfunktioner – designad för äldre och deras anhöriga.</p>
             <div class="features-grid-3">
@@ -113,7 +114,7 @@
         </section>
 
         <!-- 3. Min Livsbok (My Lifebook) -->
-        <section id="min-livsbok" class="section-padded livsbok-section">
+        <section id="min-livsbok" class="section-padded livsbok-section animate-on-scroll">
             <div class="livsbok-left">
                 <h2>Min Livsbok</h2>
                 <p>Samla minnen och anekdoter – automatiskt strukturerade efter tid och tema. Spela in röst, skriv text, lägg till bilder och dela tryggt med familjen.</p>
@@ -151,7 +152,7 @@
         </section>
 
         <!-- 4. Paket & Priser (Packages & Prices) -->
-        <section id="priser" class="section-padded pricing-section">
+        <section id="priser" class="section-padded pricing-section animate-on-scroll">
             <h2>Paket & Priser</h2>
             <div class="pricing-grid">
                 <div class="price-card">
@@ -194,7 +195,7 @@
         </section>
 
         <!-- 5. Trygghet & Integritet (Security & Integrity) -->
-        <section id="trygghet" class="section-padded security-section">
+        <section id="trygghet" class="section-padded security-section animate-on-scroll">
             <h2>Trygghet & Integritet</h2>
             <div class="features-grid-3">
                 <div class="security-item">
@@ -212,8 +213,39 @@
             </div>
         </section>
 
-        <!-- 6. Final CTA (Sista CTA) -->
-        <section class="final-cta">
+        <!-- 6. Testimonials (Kunder säger) -->
+        <section id="testimonials" class="section-padded testimonials-section animate-on-scroll">
+            <h2>Vad våra kunder säger</h2>
+            <p class="section-subtitle">Läs vittnesmål från familjer som har upplevt Elivra-skillnaden. Upptäck hur vår omsorgsfulla vård och dedikerade support har haft en positiv inverkan på deras nära och käras liv.</p>
+            
+            <div class="testimonial-photo-grid">
+                <!-- プレースホルダー画像。実際の画像はassetsに配置する必要があります -->
+                <img src="assets/testimonial_placeholder_1.png" alt="Nöjd kund 1" class="testimonial-photo">
+                <img src="assets/testimonial_placeholder_2.png" alt="Nöjd kund 2" class="testimonial-photo">
+                <img src="assets/testimonial_placeholder_3.png" alt="Nöjd kund 3" class="testimonial-photo">
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Elivra har varit en livräddare för vår familj. Vårdgivaren är snäll, tålmodig och bryr sig verkligen om min mammas välbefinnande. Jag rekommenderar varmt deras tjänster."</p>
+                    <p class="author">- Anna S.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Teamet på Elivra är professionellt, pålitligt och medkännande. De går utöver det vanliga för att säkerställa att min pappa får bästa möjliga vård. Vi är så tacksamma för deras stöd."</p>
+                    <p class="author">- Erik L.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p>"Jag tvekade att söka hjälp först, men Elivra gjorde processen enkel och bekväm. Vårdgivaren är vänlig, respektfull och sätter alltid mina behov först. Jag känner mig mycket mer självständig och trygg med deras stöd."</p>
+                    <p class="author">- Margareta K.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Final CTA (Sista CTA) -->
+        <section class="final-cta animate-on-scroll">
             <h2>Ge bort trygghet – och ett sätt att minnas</h2>
             <div class="final-cta-buttons">
                 <a href="#" class="cta-button cta-white">Välj presentkort</a>

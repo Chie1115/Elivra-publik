@@ -266,3 +266,84 @@ footer {
 .footer-links a:hover {
     color: var(--color-white);
 }
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--color-secondary); /* Light gray background */
+}
+
+.testimonial-photo-grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 0 5%;
+}
+
+.testimonial-photo {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.testimonial-card {
+    flex: 1;
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: left;
+    background-color: var(--color-white);
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: var(--color-primary);
+    line-height: 1;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: Georgia, serif;
+    opacity: 0.8;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    margin-top: 20px; /* Make space for the quote icon */
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: var(--color-light-text);
+}
+
+/* Animation Classes for TypeScript */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
