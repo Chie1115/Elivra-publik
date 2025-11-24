@@ -47,29 +47,43 @@ a {
 /* ===== HEADER ===== */
 .header {
     background-color: var(--white);
-    padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 0 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.header-content {
+.header .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
 .logo {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 600;
     color: var(--primary-blue);
     letter-spacing: -0.5px;
+    text-align: center;
 }
 
 .nav-desktop {
     display: flex;
-    gap: 32px;
+    gap: 40px;
+    justify-content: center;
+    padding: 15px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
 }
 
 .nav-desktop a {
@@ -86,7 +100,7 @@ a {
 .nav-desktop a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -15px;
     left: 0;
     width: 0;
     height: 2px;
@@ -106,6 +120,10 @@ a {
     border: none;
     cursor: pointer;
     padding: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .mobile-menu-toggle span {
@@ -230,6 +248,30 @@ a {
     background-color: var(--primary-blue);
     color: var(--white);
     transform: translateY(-2px);
+}
+
+.btn-outline-blue {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-coral {
+    background-color: var(--coral);
+    color: var(--white);
+    border: none;
+}
+
+.btn-coral:hover {
+    background-color: #ff6b61;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 138, 128, 0.3);
 }
 
 /* ===== CONTENT SECTIONS ===== */
@@ -357,11 +399,12 @@ a {
 
 .pricing-card {
     background-color: var(--white);
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--primary-blue);
     border-radius: 12px;
     padding: 40px 30px;
     text-align: center;
     transition: all 0.3s;
+    position: relative;
 }
 
 .pricing-card:hover {
@@ -370,12 +413,25 @@ a {
 }
 
 .pricing-card.featured {
-    border-color: var(--coral);
-    box-shadow: 0 4px 20px rgba(255, 138, 128, 0.2);
+    border-color: var(--primary-blue);
+    box-shadow: 0 4px 20px rgba(52, 144, 174, 0.15);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--coral);
+    color: var(--white);
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .pricing-title {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--primary-blue);
     margin-bottom: 20px;
     font-weight: 600;
@@ -386,7 +442,7 @@ a {
 }
 
 .price-amount {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--gray);
 }
