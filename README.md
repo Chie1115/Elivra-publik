@@ -1,133 +1,263 @@
-# Elivra ランディングページ
+# Elivra - Landing Page
 
-Elivraの完全レスポンシブ対応ランディングページです。Figmaデザインに基づいて実装されています。
+A complete, responsive landing page for Elivra, an AI-powered companion service designed to provide security and companionship for elderly individuals and their families.
 
-## 🎨 デザイン
+## Overview
 
-このランディングページは、モダンで洗練されたデザインを採用しており、以下の特徴があります:
+This landing page showcases Elivra's services, features, and pricing plans. The design is fully responsive and optimized for desktop, tablet, and mobile devices, faithfully implementing the Figma design specifications.
 
-- **カラースキーム**: プライマリブルー (#4caac9)、オレンジ (#ff8c42)、ダークグリーン (#1e5a5b)
-- **レスポンシブデザイン**: モバイル、タブレット、デスクトップに完全対応
-- **アニメーション**: スクロール時のフェードイン効果
-- **インタラクティブ要素**: ホバー効果、スムーズスクロール
+## Features
 
-## 📱 レスポンシブ対応
+### Complete Sections
 
-### ブレークポイント
-- **モバイル**: < 768px
-- **タブレット**: 768px - 1024px
-- **デスクトップ**: > 1024px
+The landing page includes all essential sections for a comprehensive user experience:
 
-### モバイル機能
-- ハンバーガーメニュー
-- タッチフレンドリーなボタンサイズ
-- 縦並びのレイアウト
-- 最適化されたフォントサイズ
+**Hero Section** - Eye-catching introduction with background imagery and dual call-to-action buttons for purchasing gift cards and starting a free trial.
 
-## 🏗️ 構造
+**What is Elivra?** - Two-column layout explaining Elivra's core value proposition as a daily companion for elderly individuals who live alone or need extra support.
 
-### セクション
-1. **ヘッダー** - 固定ナビゲーション、ロゴ、CTAボタン
-2. **ヒーローセクション** - メインメッセージ、CTAボタン、週間サマリーボックス
-3. **フォーカス機能** - 6つの機能カード（グリッドレイアウト）
-4. **Elivraとは?** - 3つの主要機能の説明
-5. **Min Livsbok** - ライフブック機能の詳細、タイムライン
-6. **価格設定** - 3つのプラン（Bas、Familj、Premium）、ギフトカードオプション
-7. **セキュリティ** - データ保護とプライバシー
-8. **お客様の声** - 3つのテスティモニアル
-9. **最終CTA** - 行動喚起セクション
-10. **フッター** - リンク、著作権情報
+**About Min Livsbok** - Detailed description of the life story feature, including voice recording, photo sharing, AI-powered timeline organization, and secure family sharing capabilities.
 
-## 🛠️ 技術スタック
+**Min Livsbok Details** - Extended explanation of how the unique life story feature preserves memories for future generations.
 
-- **HTML5** - セマンティックマークアップ
-- **CSS3** - カスタムプロパティ、Flexbox、Grid
-- **TypeScript** - インタラクティブ機能
-- **バニラJS** - コンパイル後のJavaScript
+**How is it Created?** - Step-by-step guide explaining the simple process of creating a life story through conversations with Elivra.
 
-## 📂 ファイル構成
+**Pricing Plans** - Three-tier pricing structure (Bas, Familj, Premium) with clear feature lists and pricing at 99 kr/month, 149 kr/month, and 199 kr/month respectively.
+
+**Feature Comparison Table** - Comprehensive table comparing all features across the three pricing tiers, making it easy for users to choose the right plan.
+
+**FAQ Section** - Frequently asked questions addressing common concerns about smartphone requirements, multiple family members, and pricing structure.
+
+**Testimonials** - Customer reviews from Anna S., Erik L., and Margareta K., showcasing real experiences with Elivra's services.
+
+**Final CTA** - Compelling call-to-action encouraging users to try the service or purchase a gift card.
+
+**Footer** - Contact information including address (Hantverkaregatan 29/33, Linköping, Sweden), phone number, and email.
+
+### Design System
+
+The landing page implements a carefully crafted color palette based on the Figma design:
+
+- **Primary Blue (#3490AE)**: Used for logo, headings, primary buttons, and table headers
+- **Gray (#737373)**: Applied to body text for optimal readability
+- **Cream (#FAF7F2)**: Alternating section backgrounds for visual rhythm
+- **Peach (#FFB088)**: Accent color for emphasis
+- **Coral (#FF8A80)**: Secondary buttons and featured pricing card
+- **Light Pink (#FFF5F3)**: Testimonials section background
+
+### Responsive Design
+
+The landing page adapts seamlessly across all device sizes with three main breakpoints:
+
+**Desktop (1024px+)**: Full two-column layouts, large typography, and optimal spacing for wide screens.
+
+**Tablet (768px - 1024px)**: Adjusted spacing and slightly reduced font sizes while maintaining two-column layouts where appropriate.
+
+**Mobile (<768px)**: Single-column layouts, hamburger menu navigation, optimized button sizes for touch interaction, and stacked content for easy scrolling.
+
+### Interactive Elements
+
+The page includes several interactive features to enhance user engagement:
+
+- Sticky header navigation that remains accessible while scrolling
+- Mobile hamburger menu with smooth transitions
+- Hover effects on buttons with subtle elevation and shadow changes
+- Smooth scroll behavior for anchor links
+- Interactive pricing cards with hover states
+
+## Technology Stack
+
+The landing page is built with modern web technologies:
+
+- **HTML5**: Semantic markup for accessibility and SEO
+- **CSS3**: Advanced styling with custom properties (CSS variables), Flexbox, and Grid
+- **TypeScript**: Type-safe JavaScript for mobile menu interactions
+- **Responsive Images**: Optimized image loading for all device sizes
+
+## File Structure
 
 ```
 Elivra-publik/
-├── index.html          # メインHTMLファイル
-├── style.css           # すべてのスタイル
+├── index.html              # Main HTML file with all sections
+├── style.css               # Complete stylesheet with responsive design
 ├── src/
-│   └── main.ts         # TypeScriptソース
+│   └── main.ts            # TypeScript source for interactions
 ├── dist/
-│   └── main.js         # コンパイル済みJavaScript
-├── assets/             # 画像とメディア
-└── README.md           # このファイル
+│   └── main.js            # Compiled JavaScript
+├── assets/
+│   ├── samla_slakten.jpg           # Hero background image
+│   ├── testimonial_1.jpg           # Testimonial hero image
+│   ├── testimonial_2.jpg           # "What is Elivra?" section image
+│   ├── testimonial_3.jpg           # "About Min Livsbok" section image
+│   ├── tidskapsel.jpg              # Feature card image
+│   ├── aldrig_ensam.jpg            # Feature card image
+│   ├── trygghet_i_vardagen.jpg     # Feature card image
+│   ├── anhorig_appen.jpg           # Feature card image
+│   └── ge_bort_en_kamrat.jpg       # Feature card image
+└── README.md              # This file
 ```
 
-## 🚀 ローカル開発
+## Setup and Development
 
-### 必要要件
-- Node.js (TypeScriptコンパイル用)
-- 任意のウェブサーバー
+### Prerequisites
 
-### セットアップ
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Node.js and npm (for TypeScript compilation)
+- Git for version control
 
-1. リポジトリをクローン:
+### Local Development
+
+To run the landing page locally:
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/Chie1115/Elivra-publik.git
 cd Elivra-publik
 ```
 
-2. TypeScriptをコンパイル（変更を加えた場合）:
-```bash
-npm install -g typescript
-tsc src/main.ts --outDir dist --target ES2015 --lib ES2015,DOM
-```
-
-3. ローカルサーバーを起動:
+2. Start a local web server:
 ```bash
 python3 -m http.server 8000
 ```
 
-4. ブラウザで開く:
+3. Open your browser and navigate to:
 ```
 http://localhost:8000
 ```
 
-## ✨ 主な機能
+### TypeScript Compilation
 
-### インタラクティブ要素
-- **モバイルメニュー**: ハンバーガーアイコンでトグル
-- **スムーズスクロール**: アンカーリンクのスムーズな遷移
-- **スクロールアニメーション**: 要素が表示されるときのフェードイン
-- **ヘッダー効果**: スクロール時のシャドウ変化
+If you make changes to the TypeScript file:
 
-### ボタンスタイル
-- **プライマリ**: 青色の主要アクション
-- **オレンジ**: 強調アクション（推奨、ギフトカード）
-- **ホワイト**: ヒーローセクション用
-- **アウトライン**: セカンダリアクション
+1. Install TypeScript globally:
+```bash
+npm install -g typescript
+```
 
-### カードコンポーネント
-- **フォーカスカード**: 背景画像、グラデーションオーバーレイ
-- **機能カード**: アイコン、説明、ホバー効果
-- **価格カード**: 推奨バッジ、機能リスト
-- **テスティモニアルカード**: 引用符、著者情報
+2. Compile the TypeScript file:
+```bash
+tsc src/main.ts --outDir dist
+```
 
-## 🎯 最適化
+## Deployment
 
-- **パフォーマンス**: 軽量なバニラJS、最小限の依存関係
-- **アクセシビリティ**: セマンティックHTML、ARIAラベル
-- **SEO**: メタタグ、構造化データ対応
-- **モバイルファースト**: レスポンシブ画像、タッチ最適化
+The landing page is a static site and can be deployed to any web hosting service:
 
-## 📝 今後の改善点
+### GitHub Pages
 
-1. **画像の追加**: 実際の製品画像、テスティモニアル写真
-2. **アニメーション強化**: より洗練されたトランジション
-3. **フォーム統合**: お問い合わせフォーム、サインアップ
-4. **A/Bテスト**: コンバージョン最適化
-5. **多言語対応**: 英語版の追加
+1. Go to repository Settings
+2. Navigate to Pages section
+3. Select main branch as source
+4. Your site will be published at `https://chie1115.github.io/Elivra-publik/`
 
-## 📄 ライセンス
+### Other Hosting Options
 
-© 2024 Elivra. All rights reserved.
+- **Netlify**: Drag and drop the entire folder
+- **Vercel**: Connect your GitHub repository
+- **AWS S3**: Upload files to an S3 bucket with static website hosting enabled
+- **Traditional Web Hosting**: Upload files via FTP to your web server
 
-## 🤝 貢献
+## Browser Support
 
-プルリクエストを歓迎します。大きな変更の場合は、まずissueを開いて変更内容を議論してください。
+The landing page is compatible with all modern browsers:
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance Optimization
+
+The landing page is optimized for fast loading:
+
+- Minimal external dependencies
+- Optimized images with appropriate formats
+- Efficient CSS with no redundant rules
+- Compressed JavaScript output
+- Semantic HTML for better rendering
+
+## Accessibility
+
+The landing page follows web accessibility best practices:
+
+- Semantic HTML5 elements
+- Proper heading hierarchy
+- Alt text for images
+- Sufficient color contrast ratios
+- Keyboard navigation support
+- ARIA labels for interactive elements
+
+## Customization
+
+### Updating Colors
+
+Colors are defined as CSS custom properties in `style.css`:
+
+```css
+:root {
+    --primary-blue: #3490AE;
+    --gray: #737373;
+    --cream: #FAF7F2;
+    --peach: #FFB088;
+    --coral: #FF8A80;
+    --light-pink: #FFF5F3;
+}
+```
+
+### Updating Content
+
+All content is in Swedish and can be edited directly in `index.html`. The structure is clearly organized with HTML comments marking each section.
+
+### Adding New Sections
+
+To add a new section:
+
+1. Add the HTML markup in `index.html`
+2. Add corresponding styles in `style.css`
+3. Update navigation links if needed
+4. Test responsive behavior on all device sizes
+
+## Credits
+
+### Images
+
+All images are from Pexels and are free to use:
+
+- pexels-cottonbro-8847307.jpg
+- pexels-cottonbro-7232037.jpg
+- pexels-marcus-aurelius-6787970.jpg
+- pexels-marcus-aurelius-6787953.jpg
+
+### Design
+
+The design is based on Figma specifications provided by the Elivra team, faithfully implementing the color palette, layout, typography, and spacing.
+
+## License
+
+© 2025 Elivra. All rights reserved.
+
+## Contact
+
+For questions or support regarding this landing page:
+
+- **Address**: Hantverkaregatan 29/33, Linköping, Sweden
+- **Phone**: 070-0000000
+- **Email**: info@
+
+## Changelog
+
+### Version 1.0.0 (2025-11-24)
+
+- Initial release with complete landing page implementation
+- All sections from Figma design implemented
+- Full responsive design for mobile, tablet, and desktop
+- Interactive elements and animations
+- Pricing tables and feature comparison
+- FAQ section
+- Customer testimonials
+- Complete footer with contact information
+
+---
+
+Built with ❤️ for Elivra
