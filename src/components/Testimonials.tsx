@@ -20,28 +20,28 @@ export default function Testimonials() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm text-center">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed">
+            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
               "Elivra has been a lifesaver for our family. The caregiver is kind, patient, and truly cares about my mother's well-being. I highly recommend their services."
             </p>
-            <p className="font-semibold text-foreground text-center">Anna S.</p>
+            <p className="font-semibold text-foreground text-center mt-auto">Anna S.</p>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm text-center">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed">
+            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
               "The team at Elivra is professional, reliable, and compassionate. They go above and beyond to ensure my father receives the best possible care. We are so grateful for their support."
             </p>
-            <p className="font-semibold text-foreground text-center">Erik L.</p>
+            <p className="font-semibold text-foreground text-center mt-auto">Erik L.</p>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm text-center">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed">
+            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
               "I was hesitant to seek help at first, but Elivra made the process easy and comfortable. The caregiver is friendly, respectful, and always puts my needs first. I feel much more independent and confident with their support."
             </p>
-            <p className="font-semibold text-foreground text-center">Margareta K.</p>
+            <p className="font-semibold text-foreground text-center mt-auto">Margareta K.</p>
           </div>
         </div>
       </div>
