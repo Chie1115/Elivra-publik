@@ -2,7 +2,7 @@ import { Quote } from "lucide-react";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-20 bg-[#FFF5F3]">
       <div className="container">
         <h2 className="text-4xl font-semibold text-primary text-center mb-6">
           Vad våra kunder säger

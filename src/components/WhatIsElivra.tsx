@@ -21,7 +21,7 @@ export default function WhatIsElivra() {
             <img
               src="/assets/testimonial_3.jpg"
               alt="Par som använder Elivra tillsammans"
-              className="rounded-xl shadow-lg w-full"
+              className=" shadow-lg w-full"
             />
           </div>
         </div>

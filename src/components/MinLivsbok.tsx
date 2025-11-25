@@ -18,14 +18,14 @@ export default function MinLivsbok() {
   return (
     <>
       {/* Om Min Livsbok Section */}
-      <section id="min-livsbok" className="py-20 bg-[oklch(0.97_0.02_80)]">
+      <section id="min-livsbok" className="py-20 bg-[#FAF7F2]">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
               <img
                 src="/assets/testimonial_2.jpg"
                 alt="Par som tittar på Min Livsbok"
-                className="rounded-xl shadow-lg w-full"
+                className=" shadow-lg w-full"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -83,7 +83,7 @@ export default function MinLivsbok() {
       </section>
 
       {/* Hur skapas den? Section */}
-      <section className="py-20 bg-[oklch(0.97_0.02_80)]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="container">
           <h2 className="text-4xl font-semibold text-primary text-center mb-6">
             Hur skapas den?

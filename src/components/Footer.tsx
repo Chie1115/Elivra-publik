@@ -18,7 +18,7 @@ export function FinalCTA() {
   };
 
   return (
-    <section className="py-20 bg-[oklch(0.97_0.02_80)]">
+    <section className="py-20">
       <div className="container">
         <h2 className="text-4xl font-semibold text-primary text-center mb-6">
           Elivra – Trygghet och närhet för familjen, idag och i framtiden
@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-semibold mb-3">Adress</h3>
-            <p className="text-gray-300">Hantverkaregatan 29/33</p>
+            <p className="text-gray-300">Teknikringen 8D 58330 </p>
             <p className="text-gray-300">Linköping, Sweden</p>
           </div>
           <div>
