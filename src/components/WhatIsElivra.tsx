@@ -14,7 +14,7 @@ export default function WhatIsElivra() {
               Hon för samtal dygnet runt, tränar minnet och skapar trygghet för både användare och anhöriga.
             </p>
             <p className="text-base leading-relaxed">
-              <strong>Enkelt, på svenska och anpassat för äldre.</strong>
+              <strong>Enkelt, på svenska, anpassat för äldre och helt svenskutvecklad – för din integritet och trygghet.</strong>
             </p>
           </div>
           <div>

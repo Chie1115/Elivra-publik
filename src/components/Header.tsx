@@ -52,44 +52,41 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex justify-center gap-10 py-4 border-t border-b border-gray-200">
-          <button
-            onClick={() => scrollToSection("hem")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors relative group"
-          >
-            Hem
-            <span className="absolute bottom-[-17px] left-0 w-0 h-0.5 bg-[oklch(0.58_0.09_220)] group-hover:w-full transition-all" />
-          </button>
-          <button
-            onClick={() => scrollToSection("vad-ar-elivra")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors relative group"
-          >
-            Vad är Elivra?
-            <span className="absolute bottom-[-17px] left-0 w-0 h-0.5 bg-[oklch(0.58_0.09_220)] group-hover:w-full transition-all" />
-          </button>
-          <button
-            onClick={() => scrollToSection("min-livsbok")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors relative group"
-          >
-            Min Livsbok
-            <span className="absolute bottom-[-17px] left-0 w-0 h-0.5 bg-[oklch(0.58_0.09_220)] group-hover:w-full transition-all" />
-          </button>
-          <button
-            onClick={() => scrollToSection("priser")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors relative group"
-          >
-            Priser
-            <span className="absolute bottom-[-17px] left-0 w-0 h-0.5 bg-[oklch(0.58_0.09_220)] group-hover:w-full transition-all" />
-          </button>
-          <button
-            onClick={() => scrollToSection("trygghet")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors relative group"
-          >
-            Trygghet
-            <span className="absolute bottom-[-17px] left-0 w-0 h-0.5 bg-[oklch(0.58_0.09_220)] group-hover:w-full transition-all" />
-          </button>
-        </nav>
+       {/* Desktop Navigation */}
+<nav className="hidden md:flex justify-center gap-10 py-4">
+  <button
+    onClick={() => scrollToSection("hem")}
+    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+  >
+    Hem
+  </button>
+  <button
+    onClick={() => scrollToSection("vad-ar-elivra")}
+    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+  >
+    Vad är Elivra?
+  </button>
+  <button
+    onClick={() => scrollToSection("min-livsbok")}
+    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+  >
+    Min Livsbok
+  </button>
+  <button
+    onClick={() => scrollToSection("priser")}
+    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+  >
+    Priser
+  </button>
+  <button
+    onClick={() => scrollToSection("trygghet")}
+    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+  >
+    Trygghet
+  </button>
+</nav>
+
+
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -130,3 +127,4 @@ export default function Header() {
     </header>
   );
 }
+

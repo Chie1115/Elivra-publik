@@ -1,4 +1,4 @@
-import { Gift, PlayCircle } from "lucide-react";
+import { Gift, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -39,7 +39,7 @@ export function FinalCTA() {
             onClick={() => scrollToSection("priser")}
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
-            <PlayCircle className="h-5 w-5" />
+            <Heart className="h-5 w-5" />
             Prova gratis i 14 dagar
           </Button>
         </div>

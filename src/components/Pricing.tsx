@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Gift, PlayCircle } from "lucide-react";
+import { Gift, Heart } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Pricing() {
@@ -17,12 +17,12 @@ export default function Pricing() {
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
           {/* Bas Plan */}
-          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center hover:shadow-lg transition-shadow">
+          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center hover:shadow-lg transition-shadow flex flex-col">
             <h3 className="text-3xl font-semibold text-primary mb-5">Bas</h3>
             <div className="mb-8">
               <span className="text-4xl font-bold text-foreground">99 kr/mån</span>
             </div>
-            <ul className="mb-8 space-y-3 text-left">
+            <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
                 <span className="text-sm">Samtal + minnesträning</span>
@@ -42,7 +42,7 @@ export default function Pricing() {
           </div>
 
           {/* Familj Plan (Featured) */}
-          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center relative shadow-lg">
+          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center relative shadow-lg flex flex-col">
             <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold">
               Mest populär
             </span>
@@ -50,7 +50,7 @@ export default function Pricing() {
             <div className="mb-8">
               <span className="text-4xl font-bold text-foreground">149kr/mån</span>
             </div>
-            <ul className="mb-8 space-y-3 text-left">
+            <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
                 <span className="text-sm">Allt i Bas</span>
@@ -73,12 +73,12 @@ export default function Pricing() {
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center hover:shadow-lg transition-shadow">
+          <div className="bg-white border-2 border-primary rounded-xl p-10 text-center hover:shadow-lg transition-shadow flex flex-col">
             <h3 className="text-3xl font-semibold text-primary mb-5">Premium</h3>
             <div className="mb-8">
               <span className="text-4xl font-bold text-foreground">199 kr/mån</span>
             </div>
-            <ul className="mb-8 space-y-3 text-left">
+            <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
                 <span className="text-sm">Allt i Familj</span>
@@ -207,15 +207,18 @@ export default function Pricing() {
             </tbody>
           </table>
         </div>
+{/* CTA */}
+<div className="text-center mb-10">
+  <p className="text-lg font-semibold mb-2">
+    <strong>Presentkort – ge trygghet och minnen</strong>
+  </p>
+  <div className="mb-1">
+    <p>3 månader: 499 kr</p>
+    <p>6 månader: 899 kr</p>
+    <p>12 månader: 1599 kr</p>
+  </div>
+</div>
 
-        {/* CTA */}
-        <div className="text-center mb-10">
-          <p className="text-lg font-semibold mb-2">
-            <strong>Presentkort - ge trygghet och närhet</strong>
-          </p>
-          <p className="mb-1">Erbjudande i 3 eller 6 månader</p>
-          <p>Gratis frakt</p>
-        </div>
 
         <div className="flex flex-wrap gap-5 justify-center">
           <Button
@@ -229,7 +232,7 @@ export default function Pricing() {
             onClick={handleClick}
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
-            <PlayCircle className="h-5 w-5" />
+            <Heart className="h-5 w-5" />
             Prova gratis i 14 dagar
           </Button>
         </div>
