@@ -57,7 +57,7 @@ export default function FAQ() {
                   openIndex === index ? "max-h-40 py-4" : "max-h-0"
                 }`}
               >
-                <p className="text-white/90">{faq.answer}</p>
+                <p className="text-white/90 text-base">{faq.answer}</p>
               </div>
             </div>
           ))}

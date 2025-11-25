@@ -55,17 +55,17 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
             <h3 className="text-lg font-semibold mb-3">Adress</h3>
-            <p className="text-gray-300">Teknikringen 8D 58330 </p>
-            <p className="text-gray-300">Linköping, Sweden</p>
+            <p className="text-gray-300 text-base">Teknikringen 8D 58330 </p>
+            <p className="text-gray-300 text-base">Linköping, Sweden</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-3">Contact</h3>
-            <p className="text-gray-300">070-0000000</p>
-            <p className="text-gray-300">info@</p>
+            <p className="text-gray-300 text-base">070-0000000</p>
+            <p className="text-gray-300 text-base">info@</p>
           </div>
         </div>
         <div className="border-t border-gray-700 pt-6 text-center">
-          <p className="text-gray-400">&copy; 2025 Elivra</p>
+          <p className="text-gray-400 text-base">&copy; 2025 Elivra</p>
         </div>
       </div>
     </footer>

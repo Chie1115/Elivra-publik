@@ -25,11 +25,11 @@ export default function Pricing() {
             <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Samtal + minnesträning</span>
+                <span className="text-base">Samtal + minnesträning</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Livsbok: skapa & spara (text)</span>
+                <span className="text-base">Livsbok: skapa & spara (text)</span>
               </li>
             </ul>
             <Button
@@ -53,15 +53,15 @@ export default function Pricing() {
             <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Allt i Bas</span>
+                <span className="text-base">Allt i Bas</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Meddelanden + veckosammanfattning</span>
+                <span className="text-base">Meddelanden + veckosammanfattning</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Livsbok: röst + delning</span>
+                <span className="text-base">Livsbok: röst + delning</span>
               </li>
             </ul>
             <Button
@@ -81,15 +81,15 @@ export default function Pricing() {
             <ul className="mb-8 space-y-3 text-left flex-grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Allt i Familj</span>
+                <span className="text-base">Allt i Familj</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Extra kognitiva övningar</span>
+                <span className="text-base">Extra kognitiva övningar</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
-                <span className="text-sm">Livsbok: bild/ljud + teman & export</span>
+                <span className="text-base">Livsbok: bild/ljud + teman & export</span>
               </li>
             </ul>
             <Button
