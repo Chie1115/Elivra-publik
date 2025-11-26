@@ -4,13 +4,6 @@ A modern, responsive, and feature-rich landing page for **Elivra**, an AI-powere
 
 ---
 
-### ➤ [Live Demo (Placeholder)](https://your-live-demo-url.com)
-
-![Elivra Landing Page Screenshot](https://git.elivra.se/ChieShikanaiEklund/Elivra-publik/raw/branch/main/public/assets/screenshot.png)  
-*(Note: Please replace this with an actual screenshot of the project)*
-
-## About The Project
-
 This project is a complete implementation of the Elivra landing page, built with a modern frontend stack. It showcases the service's core features, pricing plans, and value proposition in a clean, elegant, and user-friendly interface. The primary goal is to convert visitors into customers by clearly communicating the benefits of Elivra and providing clear calls-to-action.
 
 The application is structured with a component-based architecture, making it easy to maintain, scale, and develop new features.
