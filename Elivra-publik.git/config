@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/Chie1115/Elivra-publik.git
+	tagOpt = --no-tags
+	fetch = +refs/*:refs/*
+	mirror = true
+	pushurl = https://git.elivra.se/ChieShikanaiEklund/Elivra-publik.git
