@@ -21,7 +21,7 @@ export function FinalCTA() {
     <section className="py-20">
       <div className="container">
         <h2 className="text-4xl font-semibold text-primary text-center mb-6">
-          Elivra – Trygghet och närhet för familjen, idag och i framtiden
+          Trygghet och närhet för familjen, idag och i framtiden
         </h2>
         <p className="text-base text-center max-w-3xl mx-auto mb-10 leading-relaxed">
           Se över dina alternativ nu! Prova gratis i 14 dagar eller köp ett presentkort för att ge trygghet och sällskap i present. Prova gratis i 14 dagar eller köp ett presentkort för att ge trygghet och sällskap i present.
