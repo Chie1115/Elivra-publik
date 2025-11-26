@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 bg-white transition-shadow ${
-        isScrolled ? "shadow-md" : "shadow-sm"
+        isScrolled ? "shadow-md" : ""
       }`}
     >
       <div className="container">
@@ -53,7 +53,7 @@ export default function Header() {
         </div>
 
        {/* Desktop Navigation */}
-<nav className="hidden md:flex justify-center gap-10 py-4">
+<nav className="hidden md:flex justify-center gap-10 py-4 mb-6">
   <button
     onClick={() => scrollToSection("hem")}
     className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
