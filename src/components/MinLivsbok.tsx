@@ -83,7 +83,7 @@ export default function MinLivsbok() {
       </section>
 
       {/* Hur skapas den? Section */}
-      <section className="py-20 bg-[#FAF7F2]">
+      <section className="py-20 ">
         <div className="container">
           <h2 className="text-4xl font-semibold text-primary text-center mb-6">
             Hur skapas den?

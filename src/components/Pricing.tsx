@@ -8,7 +8,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="priser" className="py-20">
+    <section id="priser" className="py-20 bg-[#FAF7F2]">
       <div className="container">
         <h2 className="text-4xl font-semibold text-primary text-center mb-12">
           Paket & Priser
@@ -104,9 +104,10 @@ export default function Pricing() {
 
         {/* Comparison Table */}
         <div className="overflow-x-auto mb-16">
+          <div className="max-w-4xl mx-auto"> 
           <table className="w-full bg-white rounded-lg shadow-md overflow-hidden">
             <thead>
-              <tr className="bg-gray-50">
+              <tr className="bg-primary text-white">
                 <th className="text-left py-4 px-6 font-semibold">Funktioner</th>
                 <th className="text-center py-4 px-6 font-semibold">Bas</th>
                 <th className="text-center py-4 px-6 font-semibold">Familj</th>
@@ -207,6 +208,9 @@ export default function Pricing() {
             </tbody>
           </table>
         </div>
+        </div>
+
+
 {/* CTA */}
 <div className="text-center mb-10">
   <p className="text-lg font-semibold mb-2">
