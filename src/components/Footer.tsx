@@ -33,7 +33,7 @@ export function FinalCTA() {
             className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
             <Gift className="h-5 w-5" />
-            Köp bördebevis
+            Köp värdebevis
           </Button>
           <Button
             onClick={() => scrollToSection("priser")}
