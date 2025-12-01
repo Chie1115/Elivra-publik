@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="container relative z-10 py-20">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
-            Ge trygghet och sällskap i present
+            Ger trygghet och sällskap 
           </h2>
           <p className="text-lg mb-10 opacity-95">
             En AI-assistent som pratar, lyssnar och tränar minnet – med Min Livsbok för att spara livets berättelser.
