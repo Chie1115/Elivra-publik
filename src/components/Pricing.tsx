@@ -22,7 +22,7 @@ export default function Pricing() {
             <div className="mb-8">
               <span className="text-4xl font-bold text-foreground">99 kr/mån</span>
             </div>
-            <ul className="mb-8 space-y-3 text-left flex-grow">
+            <ul className="mb-8 space-y-3 text-left grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
                 <span className="text-base">Samtal + minnesträning</span>
@@ -50,7 +50,7 @@ export default function Pricing() {
             <div className="mb-8">
               <span className="text-4xl font-bold text-foreground">149kr/mån</span>
             </div>
-            <ul className="mb-8 space-y-3 text-left flex-grow">
+            <ul className="mb-8 space-y-3 text-left grow">
               <li className="flex items-start">
                 <span className="text-primary text-xl mr-2">•</span>
                 <span className="text-base">Allt i Bas</span>
@@ -230,7 +230,7 @@ export default function Pricing() {
             className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
             <Gift className="h-5 w-5" />
-            Köp presentkort
+            Köp bördebevis
           </Button>
           <Button
             onClick={handleClick}

@@ -22,7 +22,7 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
+            <p className="text-base mb-6 leading-relaxed text-center grow">
               "Elivra har blivit en oumbärlig del av både min mammas och familjens vardag. Trots att det är en AI känns samtalen varma och stöttande. Min mamma känner sig tryggare, och det betyder allt för oss."
             </p>
             <p className="font-semibold text-foreground text-center mt-auto">Anna S.</p>
@@ -30,7 +30,7 @@ export default function Testimonials() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
+            <p className="text-base mb-6 leading-relaxed text-center grow">
               "Elivras tjänst är mycket pålitlig. Tack vare de dagliga samtalen och påminnelserna har min pappas vardag blivit betydligt stabilare. Som familj känner vi en mycket större trygghet – vi är väldigt nöjda"
             </p>
             <p className="font-semibold text-foreground text-center mt-auto">Erik L.</p>
@@ -38,7 +38,7 @@ export default function Testimonials() {
 
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
-            <p className="text-base mb-6 leading-relaxed text-center flex-grow">
+            <p className="text-base mb-6 leading-relaxed text-center grow">
               "Jag var först osäker på att prata med en AI, men Elivra är så naturlig och lätt att använda. Den ger vänliga påminnelser och stöd när jag behöver det. Idag känner jag mig mer självständig och trygg i min vardag."
             </p>
             <p className="font-semibold text-foreground text-center mt-auto">Margareta K.</p>
