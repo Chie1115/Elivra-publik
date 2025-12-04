@@ -10,7 +10,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // 100px以上スクロールされたら isScrolled を true にする
       setIsScrolled(window.scrollY > 100);
     };
 
@@ -21,7 +20,7 @@ export default function Header() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80; // ヘッダーの高さ分のオフセット
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -29,7 +28,7 @@ export default function Header() {
         top: offsetPosition,
         behavior: "smooth",
       });
-      setIsMenuOpen(false); // モバイルメニューを閉じる
+      setIsMenuOpen(false);
     }
   };
 
@@ -40,14 +39,11 @@ export default function Header() {
       }`}
     >
       <div className="container">
-        {/* トップセクション：ロゴと右上ボタン */}
         <div className="flex justify-between items-center py-4">
-          {/* ロゴを左端に配置 */}
           <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight">
             Elivra
           </h1>
-          
-          {/* 右上のオレンジボタン（デスクトップのみ） */}
+
           <div className="hidden md:flex space-x-3">
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
@@ -62,8 +58,7 @@ export default function Header() {
               För vård och omsorg
             </Button>
           </div>
-          
-          {/* モバイルメニューボタン */}
+
           <Button
             variant="ghost"
             size="icon"
@@ -107,15 +102,6 @@ export default function Header() {
           >
             Trygghet
           </button>
-          {/* ナビゲーション右側のボタン */}
-          <div className="flex space-x-3 border-l border-gray-300 pl-10">
-            <Button variant="outline" className="text-[oklch(0.58_0.09_220)] border-[oklch(0.58_0.09_220)] hover:bg-blue-50">
-              Skapa konto som anhörig
-            </Button>
-            <Button className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.55_0.09_220)] text-white">
-              Logga in
-            </Button>
-          </div>
         </nav>
 
         {/* Mobile Navigation */}
@@ -151,7 +137,8 @@ export default function Header() {
             >
               Trygghet
             </button>
-            {/* モバイルメニューのボタン */}
+
+            {/* Private / Vård buttons only (keep) */}
             <div className="flex flex-col space-y-3 pt-4 px-4">
               <Button 
                 className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
@@ -171,14 +158,6 @@ export default function Header() {
               >
                 För vård och omsorg
               </Button>
-              <div className="border-t border-gray-200 pt-3 mt-3 flex flex-col space-y-3">
-                <Button variant="outline" className="text-[oklch(0.58_0.09_220)] border-[oklch(0.58_0.09_220)] hover:bg-blue-50">
-                  Skapa konto som anhörig
-                </Button>
-                <Button className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.55_0.09_220)] text-white">
-                  Logga in
-                </Button>
-              </div>
             </div>
           </nav>
         )}
