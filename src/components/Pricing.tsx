@@ -214,7 +214,7 @@ export default function Pricing() {
 {/* CTA */}
 <div className="text-center mb-10">
   <p className="text-lg font-semibold mb-2">
-    <strong>Presentkort – ge trygghet och minnen</strong>
+    <strong>Köp värdebevis – ge trygghet och minnen</strong>
   </p>
   <div className="mb-1">
     <p>3 månader: 499 kr</p>
