@@ -5,12 +5,25 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import ComingSoon from "./pages/ComingSoon";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
+      <Route path="/" component={Home} />
+      <Route path="/for-privat" component={() => (
+        <ComingSoon 
+          title="För privat" 
+          description="個人向けのサービスをご利用いただけます。"
+        />
+      )} />
+      <Route path="/for-vard-och-omsorg" component={() => (
+        <ComingSoon 
+          title="För vård och omsorg" 
+          description="医療・介護機関向けのサービスをご利用いただけます。"
+        />
+      )} />
+      <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,20 +40,26 @@ export default function Header() {
       }`}
     >
       <div className="container">
-        {/* ロゴとボタンを横並びにするためのFlexbox設定 */}
-        <div className="flex justify-between items-center py-6 relative">
+        {/* トップセクション：ロゴと右上ボタン */}
+        <div className="flex justify-between items-center py-4">
           {/* ロゴを左端に配置 */}
-          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight mr-auto">
+          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight">
             Elivra
           </h1>
           
-          {/* デスクトップでのみ表示されるボタン群を右端に配置 */}
+          {/* 右上のオレンジボタン（デスクトップのみ） */}
           <div className="hidden md:flex space-x-3">
-            <Button variant="outline" className="text-gray-600 border-gray-300 hover:bg-gray-100">
-              Skapa konto som anhörig
+            <Button 
+              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
+              onClick={() => setLocation("/for-privat")}
+            >
+              För privat
             </Button>
-            <Button>
-              Logga in
+            <Button 
+              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
+              onClick={() => setLocation("/for-vard-och-omsorg")}
+            >
+              För vård och omsorg
             </Button>
           </div>
           
@@ -59,7 +67,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden absolute right-0"
+            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -67,39 +75,48 @@ export default function Header() {
           </Button>
         </div>
 
-       {/* Desktop Navigation (ロゴの下に中央揃えで表示) */}
-       <nav className="hidden md:flex justify-center gap-10 py-4 mb-6">
-         <button
-           onClick={() => scrollToSection("hem")}
-           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-         >
-           Hem
-         </button>
-         <button
-           onClick={() => scrollToSection("vad-ar-elivra")}
-           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-         >
-           Vad är Elivra?
-         </button>
-         <button
-           onClick={() => scrollToSection("min-livsbok")}
-           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-         >
-           Min Livsbok
-         </button>
-         <button
-           onClick={() => scrollToSection("priser")}
-           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-         >
-           Priser
-         </button>
-         <button
-           onClick={() => scrollToSection("trygghet")}
-           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-         >
-           Trygghet
-         </button>
-       </nav>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex justify-center gap-10 py-4 mb-4">
+          <button
+            onClick={() => scrollToSection("hem")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Hem
+          </button>
+          <button
+            onClick={() => scrollToSection("vad-ar-elivra")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Vad är Elivra?
+          </button>
+          <button
+            onClick={() => scrollToSection("min-livsbok")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Min Livsbok
+          </button>
+          <button
+            onClick={() => scrollToSection("priser")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Priser
+          </button>
+          <button
+            onClick={() => scrollToSection("trygghet")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Trygghet
+          </button>
+          {/* ナビゲーション右側のボタン */}
+          <div className="flex space-x-3 border-l border-gray-300 pl-10">
+            <Button variant="outline" className="text-[oklch(0.58_0.09_220)] border-[oklch(0.58_0.09_220)] hover:bg-blue-50">
+              Skapa konto som anhörig
+            </Button>
+            <Button className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.55_0.09_220)] text-white">
+              Logga in
+            </Button>
+          </div>
+        </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -130,18 +147,38 @@ export default function Header() {
             </button>
             <button
               onClick={() => scrollToSection("trygghet")}
-              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)]"
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
             >
               Trygghet
             </button>
-            {/* モバイルメニューにもログイン・登録ボタンを追加 */}
+            {/* モバイルメニューのボタン */}
             <div className="flex flex-col space-y-3 pt-4 px-4">
-                <Button variant="outline" className="text-gray-600 border-gray-300 hover:bg-gray-100">
-                    Skapa konto som anhörig
+              <Button 
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
+                onClick={() => {
+                  setLocation("/for-privat");
+                  setIsMenuOpen(false);
+                }}
+              >
+                För privat
+              </Button>
+              <Button 
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
+                onClick={() => {
+                  setLocation("/for-vard-och-omsorg");
+                  setIsMenuOpen(false);
+                }}
+              >
+                För vård och omsorg
+              </Button>
+              <div className="border-t border-gray-200 pt-3 mt-3 flex flex-col space-y-3">
+                <Button variant="outline" className="text-[oklch(0.58_0.09_220)] border-[oklch(0.58_0.09_220)] hover:bg-blue-50">
+                  Skapa konto som anhörig
                 </Button>
-                <Button>
-                    Logga in
+                <Button className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.55_0.09_220)] text-white">
+                  Logga in
                 </Button>
+              </div>
             </div>
           </nav>
         )}
