@@ -24,6 +24,7 @@ export default function RegisterPage() {
     email: "",
     billingAddress: "",
     password: "",
+    confirmPassword: "",
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -105,13 +106,17 @@ export default function RegisterPage() {
               </p>
               </div>
 
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  handleNext();
-                }}
-                className="space-y-6"
-              >
+	              <form
+	                onSubmit={(e) => {
+	                  e.preventDefault();
+	                  if (formData.password !== formData.confirmPassword) {
+	                    alert("Lösenorden matchar inte. Vänligen kontrollera.");
+	                    return;
+	                  }
+	                  handleNext();
+	                }}
+	                className="space-y-6"
+	              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="firstName" className="text-foreground font-semibold">
@@ -203,21 +208,36 @@ export default function RegisterPage() {
                 }}
                 className="space-y-6"
               >
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground font-semibold">
-                    E-postadress
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="maria@example.com"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="h-11 rounded-lg border-border/50 bg-white focus:ring-primary"
-                    required
-                  />
-                </div>
+	                  <div className="space-y-2">
+	                    <Label htmlFor="password" className="text-foreground font-semibold">
+	                      Lösenord
+	                    </Label>
+	                    <Input
+	                      id="password"
+	                      name="password"
+	                      type="password"
+	                      placeholder="Välj ett säkert lösenord"
+	                      value={formData.password}
+	                      onChange={handleInputChange}
+	                      className="h-11 rounded-lg border-border/50 bg-white focus:ring-primary"
+	                      required
+	                    />
+	                  </div>
+	                  <div className="space-y-2">
+	                    <Label htmlFor="confirmPassword" className="text-foreground font-semibold">
+	                      Bekräfta lösenord
+	                    </Label>
+	                    <Input
+	                      id="confirmPassword"
+	                      name="confirmPassword"
+	                      type="password"
+	                      placeholder="Upprepa lösenordet"
+	                      value={formData.confirmPassword}
+	                      onChange={handleInputChange}
+	                      className="h-11 rounded-lg border-border/50 bg-white focus:ring-primary"
+	                      required
+	                    />
+	                  </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="billingAddress" className="text-foreground font-semibold">
