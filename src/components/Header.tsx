@@ -96,12 +96,7 @@ export default function Header() {
           >
             Min Livsbok
           </button>
-          <button
-            onClick={() => scrollToSection("priser")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-          >
-            Priser
-          </button>
+
           <button
             onClick={() => scrollToSection("trygghet")}
             className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
@@ -131,12 +126,7 @@ export default function Header() {
             >
               Min Livsbok
             </button>
-            <button
-              onClick={() => scrollToSection("priser")}
-              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-            >
-              Priser
-            </button>
+
             <button
               onClick={() => scrollToSection("trygghet")}
               className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
