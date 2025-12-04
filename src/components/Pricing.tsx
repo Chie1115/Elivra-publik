@@ -8,6 +8,7 @@ export default function Pricing() {
   };
 
   return (
+    {/* Pricing section temporarily commented out as requested by user.
     <section id="priser" className="py-20 bg-[#FAF7F2]">
       <div className="container">
         <h2 className="text-4xl font-semibold text-primary text-center mb-12">
@@ -242,5 +243,6 @@ export default function Pricing() {
         </div>
       </div>
     </section>
+    */}`],path:
   );
 }
