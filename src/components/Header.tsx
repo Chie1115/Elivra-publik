@@ -8,6 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // 100px以上スクロールされたら isScrolled を true にする
       setIsScrolled(window.scrollY > 100);
     };
 
@@ -18,7 +19,7 @@ export default function Header() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = 80; // ヘッダーの高さ分のオフセット
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -26,7 +27,7 @@ export default function Header() {
         top: offsetPosition,
         behavior: "smooth",
       });
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // モバイルメニューを閉じる
     }
   };
 
@@ -37,10 +38,24 @@ export default function Header() {
       }`}
     >
       <div className="container">
-        <div className="flex justify-center items-center py-6 relative">
-          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight">
+        {/* ロゴとボタンを横並びにするためのFlexbox設定 */}
+        <div className="flex justify-between items-center py-6 relative">
+          {/* ロゴを左端に配置 */}
+          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight mr-auto">
             Elivra
           </h1>
+          
+          {/* デスクトップでのみ表示されるボタン群を右端に配置 */}
+          <div className="hidden md:flex space-x-3">
+            <Button variant="outline" className="text-gray-600 border-gray-300 hover:bg-gray-100">
+              Skapa konto som anhörig
+            </Button>
+            <Button>
+              Logga in
+            </Button>
+          </div>
+          
+          {/* モバイルメニューボタン */}
           <Button
             variant="ghost"
             size="icon"
@@ -52,41 +67,39 @@ export default function Header() {
           </Button>
         </div>
 
-       {/* Desktop Navigation */}
-<nav className="hidden md:flex justify-center gap-10 py-4 mb-6">
-  <button
-    onClick={() => scrollToSection("hem")}
-    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-  >
-    Hem
-  </button>
-  <button
-    onClick={() => scrollToSection("vad-ar-elivra")}
-    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-  >
-    Vad är Elivra?
-  </button>
-  <button
-    onClick={() => scrollToSection("min-livsbok")}
-    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-  >
-    Min Livsbok
-  </button>
-  <button
-    onClick={() => scrollToSection("priser")}
-    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-  >
-    Priser
-  </button>
-  <button
-    onClick={() => scrollToSection("trygghet")}
-    className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-  >
-    Trygghet
-  </button>
-</nav>
-
-
+       {/* Desktop Navigation (ロゴの下に中央揃えで表示) */}
+       <nav className="hidden md:flex justify-center gap-10 py-4 mb-6">
+         <button
+           onClick={() => scrollToSection("hem")}
+           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+         >
+           Hem
+         </button>
+         <button
+           onClick={() => scrollToSection("vad-ar-elivra")}
+           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+         >
+           Vad är Elivra?
+         </button>
+         <button
+           onClick={() => scrollToSection("min-livsbok")}
+           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+         >
+           Min Livsbok
+         </button>
+         <button
+           onClick={() => scrollToSection("priser")}
+           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+         >
+           Priser
+         </button>
+         <button
+           onClick={() => scrollToSection("trygghet")}
+           className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+         >
+           Trygghet
+         </button>
+       </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -121,10 +134,18 @@ export default function Header() {
             >
               Trygghet
             </button>
+            {/* モバイルメニューにもログイン・登録ボタンを追加 */}
+            <div className="flex flex-col space-y-3 pt-4 px-4">
+                <Button variant="outline" className="text-gray-600 border-gray-300 hover:bg-gray-100">
+                    Skapa konto som anhörig
+                </Button>
+                <Button>
+                    Logga in
+                </Button>
+            </div>
           </nav>
         )}
       </div>
     </header>
   );
 }
-
