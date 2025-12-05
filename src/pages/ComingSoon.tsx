@@ -47,13 +47,17 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <div className="absolute inset-0 bg-black opacity-60"></div> 
 
       {/* ロゴとリンク */}
-      <header className="relative z-20 p-6">
+      <header className="relative z-20">
+        <div className="container">
+          <div className="flex justify-between items-center py-4">
         <button 
           onClick={() => setLocation("/")} 
           className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
         >
           Elivra
         </button>
+          </div>
+        </div>
       </header>
 
       {/* メインコンテンツ (中央寄せ) */}
