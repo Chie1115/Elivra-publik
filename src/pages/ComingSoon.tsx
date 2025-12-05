@@ -50,7 +50,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <header className="relative z-20 p-6">
         <button 
           onClick={() => setLocation("/")} 
-          className="text-4xl font-semibold text-white tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
+          className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
         >
           Elivra
         </button>
@@ -61,7 +61,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
         <div className="w-full max-w-lg p-4">
           
           {/* コマー・スナートのテキスト */}
-          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10">
+          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
             Kommer Snart
           </h1>
 
