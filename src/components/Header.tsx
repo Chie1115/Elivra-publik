@@ -18,24 +18,18 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    // まずホームページに戻る
-    setLocation("/");
-    
-    // ページ遷移後にスクロールを実行
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        const headerOffset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
       setIsMenuOpen(false);
-    }, 100);
+    }
   };
 
   return (
@@ -46,6 +40,7 @@ export default function Header() {
     >
       <div className="container">
         <div className="flex justify-between items-center py-4">
+          {/* ロゴをh1に戻す（リンク機能はComingSoon.tsxに移動） */}
           <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight">
             Elivra
           </h1>
@@ -96,7 +91,12 @@ export default function Header() {
           >
             Min Livsbok
           </button>
-
+          <button
+            onClick={() => scrollToSection("priser")}
+            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
+          >
+            Priser
+          </button>
           <button
             onClick={() => scrollToSection("trygghet")}
             className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
@@ -126,7 +126,12 @@ export default function Header() {
             >
               Min Livsbok
             </button>
-
+            <button
+              onClick={() => scrollToSection("priser")}
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
+            >
+              Priser
+            </button>
             <button
               onClick={() => scrollToSection("trygghet")}
               className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"

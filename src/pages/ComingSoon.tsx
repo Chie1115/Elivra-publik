@@ -1,10 +1,8 @@
-import { useState } from "react"; // <--- 追加: useStateのインポート
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { toast } from "sonner";
+import { useLocation } from "wouter"; // useLocationをインポート
 
 interface ComingSoonProps {
   title: string;
@@ -13,103 +11,89 @@ interface ComingSoonProps {
 
 export default function ComingSoon({ title, description }: ComingSoonProps) {
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [, setLocation] = useLocation(); // setLocationを取得
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email || !name) {
-      toast.error("Ange både namn och e-postadress。");
+    if (!email) {
+      toast.error("Ange din e-postadress.");
       return;
     }
 
     setIsSubmitting(true);
     
     try {
+      // フォーム送信のシミュレーション
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      toast.success("Tack för din registrering. Vi återkommer till dig。");
+      toast.success("Tack! Vi meddelar dig när vi är redo.");
       setEmail("");
-      setName("");
     } catch (error) {
-      toast.error("Registreringen misslyckades. Försök igen。");
+      toast.error("Registreringen misslyckades. Försök igen.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      {/* mainタグに背景画像とオーバーレイを追加 */}
-      <main className="flex-1 flex items-center justify-center py-12 px-4 relative">
-        
-        {/* 背景画像とオーバーレイのコンテナ */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: `url('/assets/coming-soon-bg.jpg')` }} // <--- 画像パスを設定
+    // min-h-screenで画面全体を覆い、背景画像を設定
+    <div 
+      className="min-h-screen flex flex-col relative bg-cover bg-center"
+      style={{ backgroundImage: `url('/assets/coming-soon-bg.jpg')` }}
+    >
+      {/* 不透明度60%の黒いオーバーレイ */}
+      <div className="absolute inset-0 bg-black opacity-60"></div> 
+
+      {/* ロゴとリンク */}
+      <header className="relative z-20 p-6">
+        <button 
+          onClick={() => setLocation("/")} 
+          className="text-4xl font-semibold text-white tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
         >
-          {/* 不透明度60%の黒いオーバーレイ */}
-          <div className="absolute inset-0 bg-black opacity-60"></div> 
-        </div>
+          Elivra
+        </button>
+      </header>
 
-        {/* コンテンツを前面に表示 (z-10) */}
-        <div className="w-full max-w-md z-10">
-          <div className="bg-white rounded-lg shadow-lg p-8">
+      {/* メインコンテンツ (中央寄せ) */}
+      <main className="flex-1 flex items-center justify-center relative z-10">
+        <div className="w-full max-w-lg p-4">
+          
+          {/* コマー・スナートのテキスト */}
+          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10">
+            Kommer Snart
+          </h1>
 
-            <h1 className="text-3xl font-bold text-center mb-2 text-[oklch(0.58_0.09_220)]">
-              {title}
-            </h1>
-
-            <p className="text-center text-gray-600 mb-8">
-              Tjänsten förbereds just nu. Registrera dig och invänta vårt svar.
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Namn</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Ditt namn"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  disabled={isSubmitting}
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="email">E-postadress</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="example@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={isSubmitting}
-                  required
-                />
-              </div>
-
-              <Button 
-                type="submit" 
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Registrerar..." : "Registrera dig"}
-              </Button>
-            </form>
-
-            <p className="text-center text-sm text-gray-500 mt-6">
-              {description}
-            </p>
-          </div>
+          {/* フォーム */}
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Input
+              id="email"
+              type="email"
+              placeholder="Ange din e-postadress"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={isSubmitting}
+              required
+              className="sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
+            />
+            <Button 
+              type="submit" 
+              className="bg-[#FF9966] hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" // Figmaのデザインに合わせて色と高さを調整
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Skickar..." : "Meddela mig"}
+            </Button>
+          </form>
+          
+          {/* 説明文 (今回は非表示) */}
+          {/* <p className="text-center text-sm text-white mt-6">
+            {description}
+          </p> */}
         </div>
       </main>
-      <Footer />
+      
+      {/* フッターは削除 */}
     </div>
   );
 }
-
