@@ -90,7 +90,12 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
             />
             <Button 
               type="submit" 
+<<<<<<< HEAD
               className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base"
+=======
+              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" // Figmaのデザインに合わせて色と高さを調整
+              disabled={isSubmitting}
+>>>>>>> 0f712d8 (change button color)
             >
               {isSubmitting ? "Skickar..." : "Meddela mig"}
             </Button>
