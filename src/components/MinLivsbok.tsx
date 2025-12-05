@@ -59,12 +59,7 @@ export default function MinLivsbok() {
                   <span>Dela säkert med dina närmaste</span>
                 </li>
               </ul>
-              {/* <Button
-                onClick={() => scrollToSection("priser")}
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                Se mer
-              </Button> */}
+
             </div>
           </div>
         </div>
