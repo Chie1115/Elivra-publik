@@ -12,6 +12,14 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
 
+      {/* 新しいルートを追加 */}
+      <Route path="/coming-soon" component={() => (
+        <ComingSoon 
+          title="Kommer Snart"
+          description="Tjänsten för Köp värdebevis, Prova gratis i 14 dagar och Skapa konto förbereds just nu. Registrera dig och invänta vårt svar."
+        />
+      )} />
+
       <Route path="/for-privat" component={() => (
         <ComingSoon 
           title="För privat"
@@ -46,4 +54,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,20 +1,23 @@
 import { Gift, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter"; // <--- 1. useLocationをインポート
 
 export default function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  // const scrollToSection = (id: string) => { // <--- 4. scrollToSection関数を削除
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     const headerOffset = 80;
+  //     const elementPosition = element.getBoundingClientRect().top;
+  //     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  //     window.scrollTo({
+  //       top: offsetPosition,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
+
+  const [, setLocation] = useLocation(); // <--- 2. setLocation関数を取得
 
   return (
     <section
@@ -33,14 +36,14 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-5 justify-center">
             <Button
-              onClick={() => scrollToSection("priser")}
+              onClick={() => setLocation("/coming-soon")} // <--- 3. 遷移先に変更
               className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
             >
               <Gift className="h-5 w-5" />
               Köp värdebevis
             </Button>
             <Button
-              onClick={() => scrollToSection("priser")}
+              onClick={() => setLocation("/coming-soon")} // <--- 3. 遷移先に変更
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
             >
               <Heart className="h-5 w-5" />

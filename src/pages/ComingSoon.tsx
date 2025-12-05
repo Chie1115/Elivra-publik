@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; // <--- 追加: useStateのインポート
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,7 +20,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
     e.preventDefault();
     
     if (!email || !name) {
-      toast.error("Ange både namn och e-postadress.");
+      toast.error("Ange både namn och e-postadress。");
       return;
     }
 
@@ -29,11 +29,11 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      toast.success("Tack för din registrering. Vi återkommer till dig.");
+      toast.success("Tack för din registrering. Vi återkommer till dig。");
       setEmail("");
       setName("");
     } catch (error) {
-      toast.error("Registreringen misslyckades. Försök igen.");
+      toast.error("Registreringen misslyckades. Försök igen。");
     } finally {
       setIsSubmitting(false);
     }
@@ -42,8 +42,20 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 flex items-center justify-center py-12 px-4">
-        <div className="w-full max-w-md">
+      {/* mainタグに背景画像とオーバーレイを追加 */}
+      <main className="flex-1 flex items-center justify-center py-12 px-4 relative">
+        
+        {/* 背景画像とオーバーレイのコンテナ */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center" 
+          style={{ backgroundImage: `url('/assets/coming-soon-bg.jpg')` }} // <--- 画像パスを設定
+        >
+          {/* 不透明度60%の黒いオーバーレイ */}
+          <div className="absolute inset-0 bg-black opacity-60"></div> 
+        </div>
+
+        {/* コンテンツを前面に表示 (z-10) */}
+        <div className="w-full max-w-md z-10">
           <div className="bg-white rounded-lg shadow-lg p-8">
 
             <h1 className="text-3xl font-bold text-center mb-2 text-[oklch(0.58_0.09_220)]">
@@ -100,3 +112,4 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
     </div>
   );
 }
+

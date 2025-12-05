@@ -1,4 +1,8 @@
+import { useLocation } from "wouter"; // <--- useLocationをインポート
+
 export default function DesignedForPeace() {
+  const [, setLocation] = useLocation(); // <--- setLocation関数を取得
+
   return (
     <section id="utformad-for-sinnesfrid" className="py-20 bg-white">
       <div className="container">
@@ -50,7 +54,10 @@ export default function DesignedForPeace() {
           <p className="text-base text-gray-text mb-8">
             Skapa ditt Elivra-konto idag och börja bygga säkrare, mer anslutna relationer.
           </p>
-          <button className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <button 
+            onClick={() => setLocation("/coming-soon")} // <--- 遷移先に変更
+            className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+          >
             Skapa konto
           </button>
         </div>
