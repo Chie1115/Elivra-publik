@@ -33,13 +33,13 @@ export default function MinLivsbok() {
                 Om Min Livsbok
               </h2>
               <p className="mb-4 text-base leading-relaxed">
-                Samla minnen, bilder och små berättelser.
+                Samla minnen, bilder och berättelser – stora som små.
               </p>
               <p className="mb-4 text-base leading-relaxed">
-                Elivra hjälper dig att lägga dem i rätt tid och tema – barndom, ungdom, arbete eller familj.
+                Elivra hjälper dig att lägga allt på rätt plats: barndomen, ungdomen, arbetslivet, familjen och alla fina ögonblick däremellan.
               </p>
               <p className="mb-6 text-base leading-relaxed">
-                Dela tryggt med dina närmaste.
+                Dela tryggt med familjen – eller behåll för dig själv.
               </p>
               <ul className="mb-6 space-y-2">
                 <li className="flex items-start">
@@ -52,11 +52,11 @@ export default function MinLivsbok() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary text-2xl mr-3 leading-none">•</span>
-                  <span>Automatisk tidslinje med AI</span>
+                  <span>Automatisk tidslinje</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary text-2xl mr-3 leading-none">•</span>
-                  <span>Dela säkert med familjen</span>
+                  <span>Dela säkert med dina närmaste</span>
                 </li>
               </ul>
               {/* <Button
@@ -74,10 +74,11 @@ export default function MinLivsbok() {
       <section className="py-20">
         <div className="container">
           <h2 className="text-4xl font-semibold text-primary text-center mb-6">
-            Min Livsbok - Din unika livsberättelse
+            Min Livsbok – din historia, bevarad för framtiden
           </h2>
           <p className="text-base text-center max-w-3xl mx-auto leading-relaxed">
-            Med Elivra får din unika livsberättelse nytt liv. Allt du vill dela, från minnen till små ögonblick, samlas och bevaras för kommande generationer. Tillsammans skapar vi en tidslinje som är lika unik som du – en berättelse att återbesöka och dela med familjen.
+            Alla människor har en livsberättelse värd att sparas.
+            Med Elivra samlas dina minnen på ett ställe – så att barn och barnbarn kan ta del av dem även i framtiden.
           </p>
         </div>
       </section>

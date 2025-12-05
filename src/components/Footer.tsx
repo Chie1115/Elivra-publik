@@ -24,7 +24,7 @@ export function FinalCTA() {
           Trygghet och närhet för familjen, idag och i framtiden
         </h2>
         <p className="text-base text-center max-w-3xl mx-auto mb-10 leading-relaxed">
-          Se över dina alternativ nu! Prova gratis i 14 dagar eller köp ett presentkort för att ge trygghet och sällskap i present. Prova gratis i 14 dagar eller köp ett presentkort för att ge trygghet och sällskap i present.
+          Utforska dina möjligheter redan nu. Prova gratis i 14 dagar eller köp ett värdebevis och ge trygghet och sällskap i gåva.
         </p>
 
         <div className="flex flex-wrap gap-5 justify-center">

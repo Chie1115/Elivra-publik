@@ -23,7 +23,7 @@ export default function Testimonials() {
           <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm flex flex-col">
             <Quote className="text-primary h-10 w-10 mb-4 mx-auto" />
             <p className="text-base mb-6 leading-relaxed text-center grow">
-              "Elivra har blivit en oumbärlig del av både min mammas och familjens vardag. Trots att det är en AI känns samtalen varma och stöttande. Min mamma känner sig tryggare, och det betyder allt för oss."
+              "Elivra har gett min mamma sällskap när hon känner sig ensam. Samtalen är lugna och varma, och hon känner sig tryggare än på länge."
             </p>
             <p className="font-semibold text-foreground text-center mt-auto">Anna S.</p>
           </div>

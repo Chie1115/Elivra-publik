@@ -29,7 +29,7 @@ export default function Hero() {
             Ger trygghet och sällskap 
           </h2>
           <p className="text-lg mb-10 opacity-95">
-            En AI-assistent som pratar, lyssnar och tränar minnet – med Min Livsbok för att spara livets berättelser.
+            En digital följeslagare som pratar, lyssnar och hjälper dig att hålla minnet aktivt – och som låter dig spara livets berättelser i Min Livsbok.
           </p>
           <div className="flex flex-wrap gap-5 justify-center">
             <Button

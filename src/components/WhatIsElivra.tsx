@@ -8,13 +8,13 @@ export default function WhatIsElivra() {
               Vad är Elivra?
             </h2>
             <p className="mb-4 text-base leading-relaxed">
-              Elivra är en vän i vardagen – för den som bor själv eller behöver lite extra stöd.
+              Elivra är en trygg följeslagare i vardagen – för dig som bor själv, för dig som ibland glömmer, eller för dig som bara vill ha någon som lyssnar.
             </p>
             <p className="mb-4 text-base leading-relaxed">
-              Hon för samtal dygnet runt, tränar minnet och skapar trygghet för både användare och anhöriga.
+              Hon finns där dygnet runt, pratar lugnt, påminner när det behövs och ger både användare och anhöriga en större trygghet.
             </p>
             <p className="text-base leading-relaxed">
-              <strong>Enkelt, på svenska, anpassat för äldre och helt svenskutvecklad – för din integritet och trygghet.</strong>
+              <strong>Enkel att använda, helt på svenska och utvecklad med stor omtanke om din integritet.</strong>
             </p>
           </div>
           <div>
