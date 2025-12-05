@@ -54,24 +54,39 @@ export function FinalCTA() {
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto flex flex-col justify-between h-full min-h-[200px] py-12">
+      <div className="container mx-auto flex flex-col justify-between py-12">
         {/* 上部のグリッド内容 */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Adress</h3>
-            <p className="text-gray-300 text-base">Teknikringen 8D 58330</p>
-            <p className="text-gray-300 text-base">Linköping, Sweden</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="text-lg font-semibold mb-3">Elivra</h3>
+            <p className="text-gray-300 text-base">
+              Elivra är en tjänst som hjälper dig att samla dina minnen och din livsberättelse.
+            </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-3">Contact</h3>
+            <h3 className="text-lg font-semibold mb-3">Kontakt</h3>
+            <p className="text-gray-300 text-base">info@elivra.se</p>
             <p className="text-gray-300 text-base">070-0000000</p>
-            <p className="text-gray-300 text-base">info@</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Adress</h3>
+            <p className="text-gray-300 text-base">Teknikringen 8D</p>
+            <p className="text-gray-300 text-base">58330 Linköping, Sweden</p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Länkar</h3>
+            <ul className="space-y-2">
+              <li><a href="#hem" className="text-gray-300 hover:text-white transition-colors">Hem</a></li>
+              <li><a href="#vad-ar-elivra" className="text-gray-300 hover:text-white transition-colors">Vad är Elivra?</a></li>
+              <li><a href="#min-livsbok" className="text-gray-300 hover:text-white transition-colors">Min Livsbok</a></li>
+              <li><a href="#trygghet" className="text-gray-300 hover:text-white transition-colors">Trygghet</a></li>
+            </ul>
           </div>
         </div>
 
         {/* フッター下部のコピーライト */}
-        <div className="text-center mt-auto">
-          <p className="text-gray-400 text-base">&copy; 2025 Elivra</p>
+        <div className="text-center pt-8 border-t border-gray-700">
+          <p className="text-gray-400 text-sm">&copy; 2025 Elivra. Alla rättigheter reserverade.</p>
         </div>
       </div>
     </footer>
