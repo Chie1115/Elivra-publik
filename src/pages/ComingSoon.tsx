@@ -98,7 +98,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
+              className="w-full sm:w-64 py-6 text-base"
             />
             <Button 
               type="submit" 
