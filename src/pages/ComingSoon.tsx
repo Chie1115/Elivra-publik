@@ -100,7 +100,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               required
               onInvalid={(e) => e.currentTarget.setCustomValidity('Vänligen fyll i detta fält.')}
               onInput={(e) => e.currentTarget.setCustomValidity('')}
-              className="w-full sm:w-64 py-6 text-base"
+              className="w-96 py-6 text-base"
             />
             <Button 
               type="submit" 
