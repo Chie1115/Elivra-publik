@@ -65,7 +65,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <main className="flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
-<<<<<<< HEAD
+          {/* コマー・スナートのテキスト */}
           <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
             Kommer Snart
           </h1>
@@ -89,10 +89,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
 
 >>>>>>> 914a3fd (change comming soon page)
           {/* フォーム */}
-          <form 
-            onSubmit={handleSubmit} 
-            className="flex flex-row gap-3 justify-center items-center w-full max-w-lg"
-          >
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Input
               id="email"
               type="email"
@@ -101,8 +98,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-<<<<<<< HEAD
-              className="w-full sm:w-64 py-6 text-base"
+              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
             />
             <Button 
               type="submit" 
