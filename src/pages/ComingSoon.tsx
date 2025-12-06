@@ -65,12 +65,12 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
           {/* コマー・スナートのテキスト */}
-          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-white text-center mb-10">
             Kommer Snart
           </h1>
 
           {/* フォーム */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-sm sm:max-w-none">
             <Input
               id="email"
               type="email"
@@ -79,7 +79,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
+              className="w-full sm:w-64 py-6 text-base"
             />
             <Button 
               type="submit" 
