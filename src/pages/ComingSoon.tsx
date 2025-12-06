@@ -70,7 +70,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
           </h1>
 
           {/* フォーム */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-sm sm:max-w-none">
+          <form onSubmit={handleSubmit} className="flex flex-row gap-3 justify-center items-center w-full max-w-lg">
             <Input
               id="email"
               type="email"
@@ -81,7 +81,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               required
               onInvalid={(e) => e.currentTarget.setCustomValidity('Vänligen fyll i detta fält.')}
               onInput={(e) => e.currentTarget.setCustomValidity('')}
-              className="w-full sm:w-64 py-6 text-base"
+              className="w-96 py-6 text-base"
             />
             <Button 
               type="submit" 
