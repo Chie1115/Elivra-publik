@@ -65,7 +65,6 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <main className="flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
-          {/* コマー・スナートのテキスト */}
           <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
             Kommer Snart
           </h1>
@@ -80,16 +79,13 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
           Kommer Snart
           </h1>
 
-
           <p className="text-white text-center text-lg md:text-xl mb-8 whitespace-normal md:whitespace-nowrap">
-          Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
+            Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
           </p>
-
-
 
 >>>>>>> 914a3fd (change comming soon page)
           {/* フォーム */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-sm sm:max-w-none">
+          <form onSubmit={handleSubmit} className="flex flex-row gap-3 justify-center items-center w-full max-w-lg">
             <Input
               id="email"
               type="email"
@@ -98,25 +94,11 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-              onInvalid={(e) => e.currentTarget.setCustomValidity('Vänligen fyll i detta fält.')}
-              onInput={(e) => e.currentTarget.setCustomValidity('')}
-              className="w-96 py-6 text-base"
-            />
-            <Button 
-              type="submit" 
-<<<<<<< HEAD
-              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base"
-=======
-              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" // Figmaのデザインに合わせて色と高さを調整
-              disabled={isSubmitting}
->>>>>>> 0f712d8 (change button color)
-=======
-              className="w-full sm:w-64 py-6 text-base" 
+              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
             />
             <Button 
               type="submit" 
               className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" 
->>>>>>> 914a3fd (change comming soon page)
             >
               {isSubmitting ? "Skickar..." : "Meddela mig"}
             </Button>
