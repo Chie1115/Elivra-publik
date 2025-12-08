@@ -67,9 +67,10 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
             Kommer Snart
           </h1>
 
-          <p className="text-white text-center text-lg md:text-xl mb-6">
-            Ange din e-postadress så kontaktar vi dig när tjänsen är redo。
+          <p className="text-white text-center text-lg md:text-xl mb-6 whitespace-normal md:whitespace-nowrap">
+          Ange din e-postadress så kontaktar vi dig när tjänsen är redo。
           </p>
+
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-sm sm:max-w-none mb-4">
             <Input
