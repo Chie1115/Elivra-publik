@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
+import B2BPage from "./pages/B2BPage";
 
 function Router() {
   return (
@@ -27,12 +28,7 @@ function Router() {
         />
       )} />
 
-      <Route path="/for-vard-och-omsorg" element={ (
-        <ComingSoon 
-          title="För vård och omsorg"
-          description="Du kommer att kunna använda våra tjänster för vård- och omsorgsverksamheter."
-        />
-      )} />
+      <Route path="/for-vard-och-omsorg" element={<B2BPage />} />
 
       <Route path="/404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
