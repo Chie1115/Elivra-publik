@@ -48,12 +48,6 @@ export default function Header() {
           <div className="hidden md:flex space-x-3">
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => navigate("/for-privat")}
-            >
-              För privat
-            </Button>
-            <Button 
-              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
               onClick={() => navigate("/for-vard-och-omsorg")}
             >
               För vård och omsorg
@@ -131,15 +125,7 @@ export default function Header() {
 
             {/* Private / Vård buttons only (keep) */}
             <div className="flex flex-col space-y-3 pt-4 px-4">
-              <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                onClick={() => {
-                  navigate("/for-privat");
-                  setIsMenuOpen(false);
-                }}
-              >
-                För privat
-              </Button>
+             
               <Button 
                 className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
                 onClick={() => {
@@ -156,3 +142,5 @@ export default function Header() {
     </header>
   );
 }
+
+
