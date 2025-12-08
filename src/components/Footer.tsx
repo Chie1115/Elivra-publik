@@ -66,7 +66,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-3">Kontakt</h3>
             <p className="text-gray-300 text-base">info@elivra.se</p>
-            <p className="text-gray-300 text-base">070-0000000</p>
+           
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-3">Adress</h3>
