@@ -65,6 +65,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <main className="flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
+<<<<<<< HEAD
           <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
             Kommer Snart
           </h1>
@@ -73,6 +74,20 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
             Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
           </p>
 
+=======
+          {/* コマー・スナートのテキスト */}
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
+          Kommer Snart
+          </h1>
+
+
+          <p className="text-white text-center text-lg md:text-xl mb-8 whitespace-normal md:whitespace-nowrap">
+          Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
+          </p>
+
+
+
+>>>>>>> 914a3fd (change comming soon page)
           {/* フォーム */}
           <form 
             onSubmit={handleSubmit} 
@@ -86,6 +101,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
+<<<<<<< HEAD
               className="w-full sm:w-64 py-6 text-base"
             />
             <Button 
@@ -96,6 +112,13 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" // Figmaのデザインに合わせて色と高さを調整
               disabled={isSubmitting}
 >>>>>>> 0f712d8 (change button color)
+=======
+              className="w-full sm:w-64 py-6 text-base" 
+            />
+            <Button 
+              type="submit" 
+              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" 
+>>>>>>> 914a3fd (change comming soon page)
             >
               {isSubmitting ? "Skickar..." : "Meddela mig"}
             </Button>
