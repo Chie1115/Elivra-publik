@@ -65,9 +65,16 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
           {/* コマー・スナートのテキスト */}
-          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
-            Kommer Snart
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
+          Kommer Snart
           </h1>
+
+
+          <p className="text-white text-center text-lg md:text-xl mb-8 whitespace-normal md:whitespace-nowrap">
+          Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
+          </p>
+
+
 
           {/* フォーム */}
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -79,12 +86,11 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
+              className="w-full sm:w-64 py-6 text-base" 
             />
             <Button 
               type="submit" 
-              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" // Figmaのデザインに合わせて色と高さを調整
-              disabled={isSubmitting}
+              className="bg-primary hover:bg-[#FF8844] text-white font-semibold py-6 px-8 text-base" 
             >
               {isSubmitting ? "Skickar..." : "Meddela mig"}
             </Button>
