@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [, setLocation] = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +48,13 @@ export default function Header() {
           <div className="hidden md:flex space-x-3">
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => setLocation("/for-privat")}
+              onClick={() => navigate("/for-privat")}
             >
               För privat
             </Button>
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => setLocation("/for-vard-och-omsorg")}
+              onClick={() => navigate("/for-vard-och-omsorg")}
             >
               För vård och omsorg
             </Button>
@@ -134,7 +134,7 @@ export default function Header() {
               <Button 
                 className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
                 onClick={() => {
-                  setLocation("/for-privat");
+                  navigate("/for-privat");
                   setIsMenuOpen(false);
                 }}
               >
@@ -143,7 +143,7 @@ export default function Header() {
               <Button 
                 className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
                 onClick={() => {
-                  setLocation("/for-vard-och-omsorg");
+                  navigate("/for-vard-och-omsorg");
                   setIsMenuOpen(false);
                 }}
               >

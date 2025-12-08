@@ -32,7 +32,7 @@ This project is built with a curated set of modern web technologies:
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Routing**: [Wouter](https://github.com/molefrog/wouter)
+- **Routing**: [React Router](https://reactrouter.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 

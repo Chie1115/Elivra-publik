@@ -1,10 +1,10 @@
 import { Gift, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter"; // <--- useLocationをインポート
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 export function FinalCTA() {
-  const [, setLocation] = useLocation(); // <--- setLocation関数を取得
+  const navigate = useNavigate();
 
   // const scrollToSection = (id: string) => { // <--- scrollToSection関数を削除
   //   const element = document.getElementById(id);
@@ -32,14 +32,14 @@ export function FinalCTA() {
 
         <div className="flex flex-wrap gap-5 justify-center">
           <Button
-            onClick={() => setLocation("/coming-soon")} // <--- 遷移先に変更
+            onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
             className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
             <Gift className="h-5 w-5" />
             Köp värdebevis
           </Button>
           <Button
-            onClick={() => setLocation("/coming-soon")} // <--- 遷移先に変更
+            onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
             className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
           >
             <Heart className="h-5 w-5" />
@@ -92,4 +92,3 @@ export default function Footer() {
     </footer>
   );
 }
-

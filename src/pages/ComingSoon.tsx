@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useLocation } from "wouter";
+import { useNavigate } from "react-router-dom";
 
 interface ComingSoonProps {
   title: string;
@@ -11,7 +11,7 @@ interface ComingSoonProps {
 export default function ComingSoon({ title, description }: ComingSoonProps) {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [, setLocation] = useLocation();
+  const navigate = useNavigate();
 
   // メッセージ管理用
   const [message, setMessage] = useState("");
@@ -53,7 +53,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
         <div className="container">
           <div className="flex justify-between items-center py-4">
             <button 
-              onClick={() => setLocation("/")} 
+              onClick={() => navigate("/")} 
               className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
             >
               Elivra
@@ -73,17 +73,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
             Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
           </p>
 
-=======
-          {/* コマー・スナートのテキスト */}
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
-          Kommer Snart
-          </h1>
 
-          <p className="text-white text-center text-lg md:text-xl mb-8 whitespace-normal md:whitespace-nowrap">
-            Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
-          </p>
-
->>>>>>> 914a3fd (change comming soon page)
           {/* フォーム */}
           <form onSubmit={handleSubmit} className="flex flex-row gap-3 justify-center items-center w-full max-w-lg">
             <Input

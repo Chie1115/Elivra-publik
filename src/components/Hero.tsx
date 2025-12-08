@@ -1,6 +1,6 @@
 import { Gift, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter"; // <--- 1. useLocationをインポート
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   // const scrollToSection = (id: string) => { // <--- 4. scrollToSection関数を削除
@@ -17,7 +17,7 @@ export default function Hero() {
   //   }
   // };
 
-  const [, setLocation] = useLocation(); // <--- 2. setLocation関数を取得
+  const navigate = useNavigate();
 
   return (
     <section
@@ -36,14 +36,14 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-5 justify-center">
             <Button
-              onClick={() => setLocation("/coming-soon")} // <--- 3. 遷移先に変更
+              onClick={() => navigate("/coming-soon")} // <--- 3. 遷移先に変更
               className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
             >
               <Gift className="h-5 w-5" />
               Köp värdebevis
             </Button>
             <Button
-              onClick={() => setLocation("/coming-soon")} // <--- 3. 遷移先に変更
+              onClick={() => navigate("/coming-soon")} // <--- 3. 遷移先に変更
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
             >
               <Heart className="h-5 w-5" />

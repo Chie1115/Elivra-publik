@@ -1,7 +1,7 @@
-import { useLocation } from "wouter"; // <--- useLocationをインポート
+import { useNavigate } from "react-router-dom";
 
 export default function DesignedForPeace() {
-  const [, setLocation] = useLocation(); // <--- setLocation関数を取得
+  const navigate = useNavigate();
 
   return (
     <section id="utformad-for-sinnesfrid" className="py-20 bg-white">
@@ -55,7 +55,7 @@ export default function DesignedForPeace() {
             Skapa ditt Elivra-konto idag och börja bygga säkrare, mer anslutna relationer.
           </p>
           <button 
-            onClick={() => setLocation("/coming-soon")} // <--- 遷移先に変更
+            onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
             className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
           >
             Skapa konto
