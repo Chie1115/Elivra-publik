@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import { useNavigate } from "react-router-dom"; // React Router の useNavigate を使用
 
 interface ComingSoonProps {
   title: string;
@@ -11,18 +12,13 @@ interface ComingSoonProps {
 export default function ComingSoon({ title, description }: ComingSoonProps) {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-
-  // メッセージ管理用
-  const [message, setMessage] = useState("");
-  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
+  const navigate = useNavigate(); // トップページ遷移用
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email) {
-      setMessage("Ange din e-postadress.");
-      setMessageType("error");
+      toast.error("Ange din e-postadress.");
       return;
     }
 
@@ -30,13 +26,10 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
     
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setMessage("Tack! Vi meddelar dig när vi är redo.");
-      setMessageType("success");
+      toast.success("Tack! Vi meddelar dig när vi är redo.");
       setEmail("");
     } catch (error) {
-      setMessage("Registreringen misslyckades. Försök igen.");
-      setMessageType("error");
+      toast.error("Registreringen misslyckades. Försök igen.");
     } finally {
       setIsSubmitting(false);
     }
@@ -65,17 +58,15 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
       <main className="flex-1 flex items-center justify-center relative z-10">
         <div className="w-full max-w-lg p-4 flex flex-col items-center">
           
-          <h1 className="text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-nowrap">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-white text-center mb-10 whitespace-normal md:whitespace-nowrap">
             Kommer Snart
           </h1>
 
-          <p className="text-white text-center text-lg md:text-xl mb-8 whitespace-normal md:whitespace-nowrap">
-            Ange din e-postadress så kontaktar vi dig när tjänsten är redo.
+          <p className="text-white text-center text-lg md:text-xl mb-8">
+            Ange din e-postadress så kontaktar vi dig när tjänsen är redo。
           </p>
 
-
-          {/* フォーム */}
-          <form onSubmit={handleSubmit} className="flex flex-row gap-3 justify-center items-center w-full max-w-lg">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full max-w-sm sm:max-w-none">
             <Input
               id="email"
               type="email"
@@ -84,7 +75,7 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
               required
-              className="w-full sm:w-64 py-6 text-base" // Figmaのデザインに合わせて高さを調整
+              className="w-full sm:w-64 py-6 text-base"
             />
             <Button 
               type="submit" 
@@ -94,18 +85,6 @@ export default function ComingSoon({ title, description }: ComingSoonProps) {
             </Button>
           </form>
 
-          {/* ▼ メッセージ表示部分 ▼ */}
-          {message && (
-            <p
-              className={`mt-4 text-center text-lg ${
-                messageType === "success"
-                  ? "text-green-300"
-                  : "text-red-300"
-              }`}
-            >
-              {message}
-            </p>
-          )}
         </div>
       </main>
     </div>
