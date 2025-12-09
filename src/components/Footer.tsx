@@ -1,6 +1,6 @@
 import { Gift, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
 
 export function FinalCTA() {
@@ -52,6 +52,32 @@ export function FinalCTA() {
 }
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
+  const goToSection = (id: string) => {
+    // If already on home, just scroll
+    if (location.pathname === "/") {
+      scrollToSection(id);
+      return;
+    }
+
+    // Navigate to home then scroll after navigation has settled
+    navigate("/");
+    // small delay to allow DOM to update
+    setTimeout(() => scrollToSection(id), 50);
+  };
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto flex flex-col justify-between py-12">
@@ -76,10 +102,18 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-3">Länkar</h3>
             <ul className="space-y-2">
-              <li><a href="#hem" className="text-gray-300 hover:text-white transition-colors">Hem</a></li>
-              <li><a href="#vad-ar-elivra" className="text-gray-300 hover:text-white transition-colors">Vad är Elivra?</a></li>
-              <li><a href="#min-livsbok" className="text-gray-300 hover:text-white transition-colors">Min Livsbok</a></li>
-              <li><a href="#trygghet" className="text-gray-300 hover:text-white transition-colors">Trygghet</a></li>
+              <li>
+                <button onClick={() => goToSection("hem")} className="text-gray-300 hover:text-white transition-colors">Hem</button>
+              </li>
+              <li>
+                <button onClick={() => goToSection("vad-ar-elivra")} className="text-gray-300 hover:text-white transition-colors">Vad är Elivra?</button>
+              </li>
+              <li>
+                <button onClick={() => goToSection("min-livsbok")} className="text-gray-300 hover:text-white transition-colors">Min Livsbok</button>
+              </li>
+              <li>
+                <button onClick={() => goToSection("trygghet")} className="text-gray-300 hover:text-white transition-colors">Trygghet</button>
+              </li>
             </ul>
           </div>
         </div>
