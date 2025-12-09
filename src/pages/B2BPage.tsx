@@ -19,9 +19,9 @@ const Section = ({ id, title, children, className = "" }: { id: string, title: R
 // Helper component for card layout
 const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => (
   <div className="p-4 md:p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
-    <Icon className="w-10 h-10 text-[#FF9966] mb-4 flex-shrink-0" />
+    <Icon className="w-10 h-10 text-[#FF9966] mb-4 shrink-0" />
     <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-800 line-clamp-2">{title}</h3>
-    <p className="text-sm md:text-base text-gray-600 leading-relaxed break-words">{description}</p>
+    <p className="text-sm md:text-base text-gray-600 leading-relaxed break-normal">{description}</p>
   </div>
 );
 
