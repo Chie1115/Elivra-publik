@@ -13,7 +13,7 @@ export default function ContactPage() {
   const [feedback, setFeedback] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target as HTMLInputElement;
+    const { id, value } = e.target;
     setForm((prev) => ({ ...prev, [id]: value }));
   };
 
