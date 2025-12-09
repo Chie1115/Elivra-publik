@@ -20,12 +20,13 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section
-      id="hem"
-      className="relative min-h-[509px] flex items-center bg-cover bg-center"
-      style={{ backgroundImage: "url(/assets/samla_slakten.jpg)" }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/40" />
+   <section
+  id="hem"
+  className="relative aspect-16/7 md:aspect-16/5 flex items-center bg-cover bg-center"
+  style={{ backgroundImage: "url(/assets/samla_slakten.jpg)" }}
+>
+
+      <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/40" />
       <div className="container relative z-10 py-20">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
