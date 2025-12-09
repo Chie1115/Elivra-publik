@@ -55,8 +55,8 @@ export default function DesignedForPeace() {
             Skapa ditt Elivra-konto idag och börja bygga säkrare, mer anslutna relationer.
           </p>
           <button 
-            onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
-            className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+            onClick={() => navigate("/coming-soon")}
+            className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:scale-105 active:scale-95"
           >
             Skapa konto
           </button>

@@ -27,7 +27,7 @@ export default function FAQ() {
   return (
     <section
       id="trygghet"
-      className="py-20 bg-gradient-to-b from-primary/90 to-primary/70"
+      className="py-20 bg-linear-to-b from-primary/90 to-primary/70"
     >
       <div className="container">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
