@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, MessageSquare, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Helper component for section layout
 const Section = ({ id, title, children, className = "" }: { id: string, title: string, children: React.ReactNode, className?: string }) => (
@@ -263,9 +263,31 @@ const KontaktSection = () => (
 
 
 export default function B2BPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* Custom Header for B2B Page */}
+      <header className="sticky top-0 z-50 bg-white shadow-md">
+        <div className="container">
+          <div className="flex justify-between items-center py-4">
+            <h1 
+              className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" 
+              onClick={() => navigate("/")}
+            >
+              Elivra
+            </h1>
+            <Button 
+              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
+              onClick={() => navigate("/")}
+            >
+              För privat
+            </Button>
+          </div>
+        </div>
+      </header>
+      {/* End Custom Header */}
+
       <main>
         <HeroSection />
         <VarforSection />

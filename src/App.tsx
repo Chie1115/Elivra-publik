@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
 import B2BPage from "./pages/B2BPage";
+import ContactPage from "./pages/Contact";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
       )} />
 
       <Route path="/for-vard-och-omsorg" element={<B2BPage />} />
+      <Route path="/contact" element={<ContactPage />} />
 
       <Route path="/404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
