@@ -3,19 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  // const scrollToSection = (id: string) => { // <--- 4. scrollToSection関数を削除
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     const headerOffset = 80;
-  //     const elementPosition = element.getBoundingClientRect().top;
-  //     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-  //     window.scrollTo({
-  //       top: offsetPosition,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
 
   const navigate = useNavigate();
 
