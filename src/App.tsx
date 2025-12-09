@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
 import B2BPage from "./pages/B2BPage";
-import ContactPage from "./pages/Contact";
+import ContactPage from "./pages/ContactPage";
 
 function Router() {
   return (
