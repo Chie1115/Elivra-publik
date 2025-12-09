@@ -44,21 +44,12 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Top bar: back arrow, logo, and För privat button */}
+      {/* Top bar: logo and För privat button */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => navigate(-1)}
-              aria-label="Tillbaka"
-              className="p-2 rounded-md hover:bg-gray-100"
-            >
-              <ArrowLeft className="w-5 h-5 text-gray-700" />
-            </button>
-            <button onClick={() => navigate('/')} className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer">
-              Elivra
-            </button>
-          </div>
+          <button onClick={() => navigate('/')} className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer">
+            Elivra
+          </button>
 
           <div>
             <Button className="bg-[#FF9966] hover:bg-[#FF8844] text-white" onClick={() => navigate('/')}>För privat</Button>
@@ -67,6 +58,16 @@ export default function ContactPage() {
       </div>
 
       <main className="flex-1 container mx-auto px-4 py-16">
+        {/* Back arrow in top left of main content */}
+        <button
+          onClick={() => navigate(-1)}
+          aria-label="Tillbaka"
+          className="mb-6 p-2 rounded-md hover:bg-gray-100 flex items-center space-x-2"
+        >
+          <ArrowLeft className="w-5 h-5 text-gray-700" />
+          <span className="text-sm text-gray-700">Tillbaka</span>
+        </button>
+
         <div className="max-w-3xl mx-auto bg-white rounded-xl shadow p-8">
           <h1 className="text-3xl font-bold mb-4">Kontakt</h1>
           <p className="text-gray-600 mb-6">Fyll i formuläret nedan så återkommer vi inom kort.</p>
