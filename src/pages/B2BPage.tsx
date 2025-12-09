@@ -246,13 +246,13 @@ export default function B2BPage() {
           <div className="flex justify-between items-center py-4">
             <h1 
               className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" 
-              onClick={() => navigate("/")}
+              onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
             >
               Elivra
             </h1>
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => navigate("/")}
+              onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
             >
               För privat
             </Button>
