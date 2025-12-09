@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isB2BPage = location.pathname === "/for-vard-och-omsorg";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,12 +49,21 @@ export default function Header() {
           </h1>
 
           <div className="hidden md:flex space-x-3">
-            <Button 
-              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => navigate("/")}
-            >
-              För privat
-            </Button>
+            {isB2BPage ? (
+              <Button 
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
+                onClick={() => navigate("/")}
+              >
+                För privat
+              </Button>
+            ) : (
+              <Button 
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
+                onClick={() => navigate("/for-vard-och-omsorg")}
+              >
+                För vård och omsorg
+              </Button>
+            )}
           </div>
 
           <Button
@@ -125,16 +137,27 @@ export default function Header() {
 
             {/* Private / Vård buttons only (keep) */}
             <div className="flex flex-col space-y-3 pt-4 px-4">
-             
-              <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                onClick={() => {
-                  navigate("/");
-                  setIsMenuOpen(false);
-                }}
-              >
-                För privat
-              </Button>
+              {isB2BPage ? (
+                <Button 
+                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
+                  onClick={() => {
+                    navigate("/");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  För privat
+                </Button>
+              ) : (
+                <Button 
+                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
+                  onClick={() => {
+                    navigate("/for-vard-och-omsorg");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  För vård och omsorg
+                </Button>
+              )}
             </div>
           </nav>
         )}
