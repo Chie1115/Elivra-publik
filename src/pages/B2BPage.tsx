@@ -5,7 +5,7 @@ import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, Message
 import { Link, useNavigate } from "react-router-dom";
 
 // Helper component for section layout
-const Section = ({ id, title, children, className = "" }: { id: string, title: string, children: React.ReactNode, className?: string }) => (
+const Section = ({ id, title, children, className = "" }: { id: string, title: React.ReactNode, children: React.ReactNode, className?: string }) => (
   <section id={id} className={`py-16 md:py-24 ${className}`}>
     <div className="container max-w-6xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
@@ -29,9 +29,9 @@ const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, tit
 const HeroSection = () => (
   <div className="bg-gray-50 pt-20 pb-16 md:pt-32 md:pb-24">
     <div className="container max-w-6xl mx-auto text-center">
-      <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-gray-900">
-        Intelligent trygghetsassistans för hemtjänst, hemsjukvård och trygghetsboenden
-      </h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-gray-900"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
+
+
       <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto">
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
@@ -49,7 +49,7 @@ const HeroSection = () => (
       </div>
       <ul className="mt-12 text-lg text-gray-700 space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
         <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-500" /> Lokalt AI – ingen rådata till molnet</li>
-        <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-500" /> Elivra-låda på plats med radar, mikrofoner och högtalare</li>
+        <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-500" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
         <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-500" /> Stöd för trepartssamtal</li>
       </ul>
     </div>
@@ -78,58 +78,26 @@ const VarforSection = () => (
 
 // 3. Sektion: Lösning – nu med låda, kommunikation och analys
 const LosningSection = () => (
-  <Section id="losning" title="Så fungerar Elivra – från sensorer till stöd i samtalet" className="bg-gray-50">
+  <Section id="losning" title={<span className="whitespace-nowrap">Så fungerar Elivra – från sensorer till stöd i samtalet</span>} className="bg-gray-50">
     <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
       Elivra kombinerar sensorer, lokalt AI, röstkommunikation och strukturerad analys i en helhetslösning för kommunal och privat äldreomsorg.
     </p>
     <div className="grid md:grid-cols-2 gap-10">
       <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 1 – Elivra-lådan på plats</h3>
-        <p className="text-gray-600">
-          Elivra-lådan är en diskret enhet som placeras i brukarens hem eller på boendet. All analys sker lokalt i lådan – bara nödvändig textlogg kan skickas vidare. Den kan utrustas med:
-        </p>
-        <ul className="list-disc list-inside text-gray-600 space-y-2">
-          <li>Kortdistansradar för rörelse- och närvarokoll (t.ex. fall, stillhet, nattliga mönster)</li>
-          <li>Mikrofoner för röstinteraktion och trygghetsdialog</li>
-          <li>Högtalare för påminnelser, information och samtalsstöd</li>
-          <li>(Valbart) Kamera och skärm för video vid särskilda behov</li>
-        </ul>
+        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 1 – Installation av Elivra-Hem</h3>
+        <p className="text-gray-600">En diskret analysenhet installeras i användarens hem. Den är utrustad med radar för att upptäcka fall och rörelsemönster, mikrofoner för röstinteraktion och högtalare för information.</p>
       </div>
       <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 2 – Direktkommunikation & trepartssamtal</h3>
-        <p className="text-gray-600">
-          Elivra kan integreras med telefon och mobila enheter för att:
-        </p>
-        <ul className="list-disc list-inside text-gray-600 space-y-2">
-          <li>Vara med i vårdsamtal som stöd (trepartssamtal brukare – vård – anhörig/Elivra)</li>
-          <li>Hjälpa brukaren att förstå vad som sagts och vad nästa steg är</li>
-          <li>Stödja vid telefonförsäljning och andra riskabla kontakter genom att lyssna och tydliggöra innehållet</li>
-          <li>Skapa kortfattade sammanfattningar efter samtal som kan delas med anhöriga eller personal enligt överenskomna behörigheter</li>
-        </ul>
+        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 2 – Direktkommunikation och trepartssamtal</h3>
+        <p className="text-gray-600">Elivra integreras med telefoner för att stödja samtal mellan vårdgivare, användare och anhöriga. Systemet hjälper till att förstå och sammanfatta konversationer för att underlätta kommunikationen.</p>
       </div>
       <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 3 – Larm, avvikelser och triagering</h3>
-        <p className="text-gray-600">
-          Elivra är byggd för att minska både brus och mörkertal:
-        </p>
-        <ul className="list-disc list-inside text-gray-600 space-y-2">
-          <li>Larm genereras när sensorer eller röstinteraktion indikerar avvikande situationer</li>
-          <li>Systemet kan hjälpa till att strukturera avvikelserapporter och underlätta dokumentation</li>
-          <li>Notifieringar skickas till rätt roll: hemtjänst, hemsjukvård, samordnare eller anhöriga</li>
-          <li>Vid brådskande situationer kan Elivra stödja rutiner för 112-samtal genom förtydliganden och sammanfattningar till personal</li>
-        </ul>
+        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 3 – Larm, avvikelser och triage</h3>
+        <p className="text-gray-600">Systemet larmar automatiskt relevanta parter (som hemtjänst, sjuksköterskor eller anhöriga) vid avvikande händelser, till exempel fall. Det kan också ge stöd vid nödsamtal till 112.</p>
       </div>
       <div className="space-y-8">
         <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 4 – Elivra Cognitive Index (ECI) och beslutsstöd</h3>
-        <p className="text-gray-600">
-          För verksamheter som vill följa kognitiv utveckling över tid erbjuder vi Elivra Cognitive Index (ECI):
-        </p>
-        <ul className="list-disc list-inside text-gray-600 space-y-2">
-          <li>Samlar strukturerad information from samtal och interaktion (textbaserat)</li>
-          <li>Ger en översiktlig bild av hur språk, minne och orientering utvecklas över tid</li>
-          <li>Kan användas som stöd för vårdplanering och överlämningar – aldrig som ersättning för medicinsk bedömning</li>
-          <li>Anpassningsbar efter lokala riktlinjer och krav på journalföring</li>
-        </ul>
+        <p className="text-gray-600">Genom att analysera dagliga konversationer följer systemet långsiktiga trender i kognitiva förmågor som språk och minne. Datan används som ett stöd för vårdplanering, inte som en ersättning för medicinsk bedömning.</p>
       </div>
     </div>
   </Section>
@@ -170,15 +138,15 @@ const ForVemSection = () => (
 
 // 5. Sektion: B2B-moduler – “Byggblock” för kommun och vårdgivare
 const ModulerSection = () => (
-  <Section id="moduler" title="B2B-moduler – välj det som passar er verksamhet" className="bg-gray-50">
-    <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+  <Section id="moduler" title={<span className="whitespace-nowrap">B2B-moduler – välj det som passar er verksamhet</span>} className="bg-gray-50">
+    <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto md:whitespace-nowrap">
       Elivra levereras i moduler som kan kombineras stegvis. Ni kan börja litet och växa vidare.
     </p>
     <div className="grid md:grid-cols-3 gap-6">
       <Card
         icon={Shield}
         title="Sensor & lådplattform"
-        description="Elivra-lådan med lokala sensorer, AI och notifieringar. Grundplattformen för hemtjänst, hemsjukvård och boenden."
+        description="Elivra-hem med lokala sensorer, AI och notifieringar. Grundplattformen för hemtjänst, hemsjukvård och boenden."
       />
       <Card
         icon={MessageSquare}
@@ -187,8 +155,8 @@ const ModulerSection = () => (
       />
       <Card
         icon={Users}
-        title="Anhörigportal"
-        description="“Elivra Social Kontext” – en säker plats där anhöriga kan dela vardagsinformation, födelsedagar, bilder och resor som stärker brukarens minne och trygghet."
+        title="Anhörigapp"
+        description="“Elivra Friends” – en säker plats där anhöriga kan dela vardagsinformation, födelsedagar, bilder och resor som stärker brukarens minne och trygghet."
       />
       <Card
         icon={Zap}
@@ -199,6 +167,11 @@ const ModulerSection = () => (
         icon={BarChart3}
         title="Analys & ECI"
         description="För verksamheter som vill följa kognitiva mönster över tid och få bättre beslutsunderlag."
+      />
+      <Card
+        icon={Heart}
+        title="Elivra Friends"
+        description="En social plattform för certifierade användare som värnar om god ton och skapar en trygg, positiv digital miljö."
       />
     </div>
   </Section>
@@ -245,9 +218,9 @@ const KontaktSection = () => (
         Vill ni se hur Elivra kan passa in i er organisation? Boka en genomgång där vi går igenom:
       </p>
       <ul className="text-left list-disc list-inside text-lg text-gray-600 space-y-2 mx-auto max-w-md mb-8">
-        <li>Er nuvarande vård- eller omsorgsprocess</li>
-        <li>Hur Elivra-lådan, sensorerna och kommunikationen kan införas stegvis</li>
-        <li>Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
+        <li className="md:whitespace-nowrap">Er nuvarande vård- eller omsorgsprocess</li>
+        <li className="md:whitespace-nowrap">Hur Elivra-hem, sensorerna och kommunikationen kan införas stegvis</li>
+        <li className="md:whitespace-nowrap">Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
       </ul>
       <div className="text-center">
         <Link to="/contact">
