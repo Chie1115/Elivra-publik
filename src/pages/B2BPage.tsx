@@ -82,22 +82,22 @@ const LosningSection = () => (
     <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
       Elivra kombinerar sensorer, lokalt AI, röstkommunikation och strukturerad analys i en helhetslösning för kommunal och privat äldreomsorg.
     </p>
-    <div className="grid md:grid-cols-2 gap-10">
-      <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 1 – Installation av Elivra-Hem</h3>
-        <p className="text-gray-600">En diskret analysenhet installeras i användarens hem. Den är utrustad med radar för att upptäcka fall och rörelsemönster, mikrofoner för röstinteraktion och högtalare för information.</p>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
+        <h3 className="text-lg font-bold text-teal-700 mb-4">Del 1 – Installation av Elivra-Hem</h3>
+        <p className="text-gray-600 text-sm">En diskret analysenhet installeras i användarens hem. Den är utrustad med radar för att upptäcka fall och rörelsemönster, mikrofoner för röstinteraktion och högtalare för information.</p>
       </div>
-      <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 2 – Direktkommunikation och trepartssamtal</h3>
-        <p className="text-gray-600">Elivra integreras med telefoner för att stödja samtal mellan vårdgivare, användare och anhöriga. Systemet hjälper till att förstå och sammanfatta konversationer för att underlätta kommunikationen.</p>
+      <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
+        <h3 className="text-lg font-bold text-teal-700 mb-4">Del 2 – Direktkommunikation och trepartssamtal</h3>
+        <p className="text-gray-600 text-sm">Elivra integreras med telefoner för att stödja samtal mellan vårdgivare, användare och anhöriga. Systemet hjälper till att förstå och sammanfatta konversationer för att underlätta kommunikationen.</p>
       </div>
-      <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 3 – Larm, avvikelser och triage</h3>
-        <p className="text-gray-600">Systemet larmar automatiskt relevanta parter (som hemtjänst, sjuksköterskor eller anhöriga) vid avvikande händelser, till exempel fall. Det kan också ge stöd vid nödsamtal till 112.</p>
+      <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
+        <h3 className="text-lg font-bold text-teal-700 mb-4">Del 3 – Larm, avvikelser och triage</h3>
+        <p className="text-gray-600 text-sm">Systemet larmar automatiskt relevanta parter (som hemtjänst, sjuksköterskor eller anhöriga) vid avvikande händelser, till exempel fall. Det kan också ge stöd vid nödsamtal till 112.</p>
       </div>
-      <div className="space-y-8">
-        <h3 className="text-2xl font-bold text-gray-800 border-b pb-2">Del 4 – Elivra Cognitive Index (ECI) och beslutsstöd</h3>
-        <p className="text-gray-600">Genom att analysera dagliga konversationer följer systemet långsiktiga trender i kognitiva förmågor som språk och minne. Datan används som ett stöd för vårdplanering, inte som en ersättning för medicinsk bedömning.</p>
+      <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
+        <h3 className="text-lg font-bold text-teal-700 mb-4">Del 4 – Elivra Cognitive Index (ECI) och beslutsstöd</h3>
+        <p className="text-gray-600 text-sm">Genom att analysera dagliga konversationer följer systemet långsiktiga trender i kognitiva förmågor som språk och minne. Datan används som ett stöd för vårdplanering, inte som en ersättning för medicinsk bedömning.</p>
       </div>
     </div>
   </Section>
