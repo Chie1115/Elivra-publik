@@ -41,16 +41,16 @@ export default function Header() {
       <div className="container">
         <div className="flex justify-between items-center py-4">
           {/* ロゴをh1に戻す（リンク機能はComingSoon.tsxに移動） */}
-          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight">
+          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" onClick={() => navigate("/")}>
             Elivra
           </h1>
 
           <div className="hidden md:flex space-x-3">
             <Button 
               className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => navigate("/for-vard-och-omsorg")}
+              onClick={() => navigate("/")}
             >
-              För vård och omsorg
+              För privat
             </Button>
           </div>
 
@@ -129,11 +129,11 @@ export default function Header() {
               <Button 
                 className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
                 onClick={() => {
-                  navigate("/for-vard-och-omsorg");
+                  navigate("/");
                   setIsMenuOpen(false);
                 }}
               >
-                För vård och omsorg
+                För privat
               </Button>
             </div>
           </nav>

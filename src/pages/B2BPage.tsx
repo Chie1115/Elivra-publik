@@ -18,10 +18,10 @@ const Section = ({ id, title, children, className = "" }: { id: string, title: s
 
 // Helper component for card layout
 const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => (
-  <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-    <Icon className="w-10 h-10 text-[#FF9966] mb-4" />
-    <h3 className="text-xl font-semibold mb-3 text-gray-800">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+  <div className="p-4 md:p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
+    <Icon className="w-10 h-10 text-[#FF9966] mb-4 flex-shrink-0" />
+    <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-800 line-clamp-2">{title}</h3>
+    <p className="text-sm md:text-base text-gray-600 leading-relaxed break-words">{description}</p>
   </div>
 );
 
@@ -36,9 +36,11 @@ const HeroSection = () => (
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
       <div className="flex justify-center space-x-4">
-        <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
-          Boka demo <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link to="/contact">
+          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
+            Boka demo <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
         <Link to="#losning">
           <Button size="lg" variant="outline" className="text-[#FF9966] border-[#FF9966] hover:bg-[#FF9966]/10 text-lg px-8 py-6">
             Läs om lösningen
@@ -248,9 +250,11 @@ const KontaktSection = () => (
         <li>Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
       </ul>
       <div className="text-center">
-        <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
-          Boka demo nu <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link to="/contact">
+          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
+            Boka demo nu <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
         {/* Assuming a contact form component would go here, but for now, just the CTA button */}
       </div>
     </div>
