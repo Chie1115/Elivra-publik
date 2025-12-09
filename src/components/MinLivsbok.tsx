@@ -71,15 +71,15 @@ export default function MinLivsbok() {
           <h2 className="text-4xl font-semibold text-primary text-center mb-6">
             Min Livsbok – din historia, bevarad för framtiden
           </h2>
-          <p className="text-base text-center max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-center max-w-3xl mx-auto mb-8 leading-relaxed">
             Alla människor har en livsberättelse värd att sparas.
             Med Elivra samlas dina minnen på ett ställe – så att barn och barnbarn kan ta del av dem även i framtiden.
           </p>
-          <div className="mt-8">
+          <div className="mb-12">
             <img
               src="/assets/images/min_livsbok_memory.jpg"
               alt="En person som håller i en inramad bild"
-              className="w-full h-auto rounded-lg shadow-xl"
+              className="rounded-xl shadow-lg w-full max-w-4xl mx-auto"
             />
           </div>
         </div>
