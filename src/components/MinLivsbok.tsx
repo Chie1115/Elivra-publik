@@ -75,6 +75,13 @@ export default function MinLivsbok() {
             Alla människor har en livsberättelse värd att sparas.
             Med Elivra samlas dina minnen på ett ställe – så att barn och barnbarn kan ta del av dem även i framtiden.
           </p>
+          <div className="mt-8">
+            <img
+              src="/assets/images/min_livsbok_memory.jpg"
+              alt="En person som håller i en inramad bild"
+              className="w-full h-auto rounded-lg shadow-xl"
+            />
+          </div>
         </div>
       </section>
 
