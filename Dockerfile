@@ -4,11 +4,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Enable corepack and prepare pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
 # Copy package files
-COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN npm ci --legacy-peer-deps
+RUN pnpm install --frozen-lockfile
 
 # Copy application source
 COPY . .
@@ -21,11 +24,14 @@ FROM node:20-alpine AS production
 
 WORKDIR /app
 
+# Enable corepack and prepare pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
 # Copy package files
-COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.yaml ./
 
 # Install production dependencies only
-RUN npm ci --omit=dev --legacy-peer-deps
+RUN pnpm install --frozen-lockfile --prod
 
 # Copy built application and server from builder
 COPY --from=builder /app/dist ./dist
