@@ -23,7 +23,7 @@ export function FinalCTA() {
   return (
     <section className="py-20">
       <div className="container">
-        <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
           Trygghet och närhet för familjen, idag och i framtiden
         </h2>
         <p className="text-base text-center max-w-3xl mx-auto mb-10 leading-relaxed">

@@ -7,7 +7,7 @@ export default function DesignedForPeace() {
     <section id="utformad-for-sinnesfrid" className="py-20 bg-white">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-semibold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
             Utformad för sinnesfrid
           </h2>
           <p className="text-lg text-gray-text max-w-3xl mx-auto">

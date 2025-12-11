@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const ElivraFriendsSection = () => (
   <section id="elivra-friends" className="py-20 bg-gray-50">
     <div className="container">
-      <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
         Elivra Friends – Din trygga sociala plattform
       </h2>
       <div className="max-w-3xl mx-auto text-center text-lg text-gray-600 space-y-6">
@@ -50,7 +50,7 @@ export default function MinLivsbok() {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-4xl font-semibold text-primary mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
                 Om Min Livsbok
               </h2>
               <p className="mb-4 text-base leading-relaxed">
@@ -89,7 +89,7 @@ export default function MinLivsbok() {
       {/* Min Livsbok - Din unika livsberättelse Section */}
       <section className="py-20">
         <div className="container">
-          <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
             Min Livsbok – din historia, bevarad för framtiden
           </h2>
           <p className="text-base text-center max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -109,7 +109,7 @@ export default function MinLivsbok() {
       {/* Hur skapas den? Section */}
       <section className="py-12">
         <div className="container">
-          <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
             Hur skapas den?
           </h2>
           <p className="text-base text-center max-w-3xl mx-auto mb-8 leading-relaxed">

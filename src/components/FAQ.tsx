@@ -30,7 +30,7 @@ export default function FAQ() {
       className="py-20 bg-linear-to-b from-primary/90 to-primary/70"
     >
       <div className="container">
-        <h2 className="text-4xl font-bold text-white text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
           FAQ
         </h2>
 

@@ -4,7 +4,7 @@ export default function WhatIsElivra() {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-semibold text-primary mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
               Vad är Elivra?
             </h2>
             <p className="mb-4 text-base leading-relaxed">

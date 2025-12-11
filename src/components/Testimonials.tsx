@@ -4,7 +4,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-20 bg-[#FFF5F3]">
       <div className="container">
-        <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
           Vad våra kunder säger
         </h2>
         <p className="text-base text-center max-w-3xl mx-auto mb-12 leading-relaxed">
