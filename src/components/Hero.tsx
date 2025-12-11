@@ -25,14 +25,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-5 justify-center px-2">
             <Button
               onClick={() => navigate("/coming-soon")} // <--- 3. 遷移先に変更
-              className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-full sm:w-auto"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-auto"
             >
               <Gift className="h-4 w-4 md:h-5 md:w-5" />
               Köp värdebevis
             </Button>
             <Button
               onClick={() => navigate("/coming-soon")} // <--- 3. 遷移先に変更
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-full sm:w-auto"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-auto"
             >
               <Heart className="h-4 w-4 md:h-5 md:w-5" />
               Prova gratis i 14 dagar
