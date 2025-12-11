@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/40" />
       <div className="container relative z-10 py-20">
         <div className="max-w-3xl mx-auto text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-bold mb-5 leading-tight">
             Ger trygghet och sällskap 
           </h2>
           <p className="text-lg mb-10 opacity-95">
