@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 
 const ElivraFriendsSection = () => (
-  <section id="elivra-friends" className="py-20 bg-gray-50">
-    <div className="container">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
-        <span className="relative inline-block"><span className="relative z-10">Elivra Friends – Din trygga sociala plattform</span><span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300 z-0"></span></span>
+  <section id="elivra-friends" className="py-12 md:py-20 bg-gray-50">
+    <div className="container px-4">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
+        <span className="bg-linear-to-b from-transparent from-60% to-yellow-300 to-60% box-decoration-clone">
+          Elivra Friends – Din trygga sociala plattform
+        </span>
       </h2>
-      <div className="max-w-3xl mx-auto text-center text-lg text-gray-600 space-y-6">
+      <div className="max-w-3xl mx-auto text-center text-base md:text-lg text-gray-600 space-y-4 md:space-y-6 px-4">
         <p>
           Elivra Friends är en exklusiv social plattform skapad för dig och dina närmaste. Här kan certifierade användare dela minnen, bilder och vardagsinformation i en trygg och positiv digital miljö. Vi värnar om god ton och skapar en plats där du kan känna dig helt säker.
         </p>
@@ -39,9 +41,9 @@ export default function MinLivsbok() {
   return (
     <>
       {/* Om Min Livsbok Section */}
-      <section id="min-livsbok" className="py-20 bg-[#FAF7F2]">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section id="min-livsbok" className="py-12 md:py-20 bg-[#FAF7F2]">
+        <div className="container px-4">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="order-2 md:order-1">
               <img
                 src="/assets/testimonial_2.jpg"
@@ -50,7 +52,7 @@ export default function MinLivsbok() {
               />
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
                 Om Min Livsbok
               </h2>
               <p className="mb-4 text-base leading-relaxed">

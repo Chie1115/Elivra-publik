@@ -41,41 +41,43 @@ export default function Header() {
         isScrolled ? "shadow-md" : ""
       }`}
     >
-      <div className="container">
-        <div className="flex justify-between items-center py-4">
+      <div className="container px-4">
+        <div className="flex justify-between items-center py-3 md:py-4 gap-1">
           {/* ロゴをh1に戻す（リンク機能はComingSoon.tsxに移動） */}
-          <h1 className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" onClick={() => { navigate("/"); window.scrollTo(0, 0); }}>
+          <h1 className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer shrink-0" onClick={() => { navigate("/"); window.scrollTo(0, 0); }}>
             Elivra
           </h1>
 
-          <div className="hidden md:flex space-x-3">
+          {/* Always visible buttons */}
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
             <Button 
-              className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"}
+              className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
               onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
             >
               Privat
             </Button>
             <Button 
-              className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"}
+              className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
               onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
             >
-              vård och omsorg
+              <span className="hidden sm:inline">vård och omsorg</span>
+              <span className="sm:hidden">vård</span>
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex justify-center gap-10 py-4 mb-4">
+        <nav className="hidden lg:flex justify-center gap-10 py-4 mb-4">
           <button
             onClick={() => scrollToSection("hem")}
             className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
@@ -105,7 +107,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden bg-white border-b border-gray-200 py-5">
+          <nav className="lg:hidden bg-white border-b border-gray-200 py-5">
             <button
               onClick={() => scrollToSection("hem")}
               className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"

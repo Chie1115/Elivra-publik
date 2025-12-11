@@ -6,9 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 // Helper component for section layout
 const Section = ({ id, title, children, className = "" }: { id: string, title: React.ReactNode, children: React.ReactNode, className?: string }) => (
-  <section id={id} className={`py-16 md:py-24 ${className}`}>
-    <div className="container max-w-6xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
+  <section id={id} className={`py-12 md:py-16 lg:py-24 ${className}`}>
+    <div className="container max-w-6xl mx-auto px-4">
+      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
         {title}
       </h2>
       {children}
@@ -19,8 +19,8 @@ const Section = ({ id, title, children, className = "" }: { id: string, title: R
 // Helper component for card layout
 const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => (
   <div className="p-4 md:p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
-    <Icon className="w-10 h-10 text-[#FF9966] mb-4 shrink-0" />
-    <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-800 line-clamp-2">{title}</h3>
+    <Icon className="w-8 h-8 md:w-10 md:h-10 text-[#FF9966] mb-3 md:mb-4 shrink-0" />
+    <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-2 md:mb-3 text-gray-800 line-clamp-2">{title}</h3>
     <p className="text-sm md:text-base text-gray-600 leading-relaxed break-normal">{description}</p>
   </div>
 );
@@ -43,19 +43,19 @@ const HeroSection = () => (
       <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto">
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
-      <div className="flex justify-center space-x-4">
-        <Link to="/contact">
-          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
-            Boka demo <ArrowRight className="ml-2 h-5 w-5" />
+      <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 px-4">
+        <Link to="/contact" className="w-full sm:w-auto">
+          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg w-full">
+            Boka demo <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
           </Button>
         </Link>
-        <Link to="#losning">
-          <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20 text-lg px-8 py-6">
+        <Link to="#losning" className="w-full sm:w-auto">
+          <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20 text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 w-full">
             Läs om lösningen
           </Button>
         </Link>
       </div>
-      <ul className="mt-12 text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
+      <ul className="mt-8 md:mt-12 text-sm md:text-base lg:text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8 px-4">
         <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
         <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
         <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-400" /> Stöd för trepartssamtal</li>
@@ -98,8 +98,8 @@ const VarforSection = () => (
 
 // 3. Sektion: Lösning – nu med låda, kommunikation och analys
 const LosningSection = () => (
-  <Section id="losning" title={<span className="whitespace-nowrap">Så fungerar Elivra – från sensorer till stöd i samtalet</span>} className="bg-gray-50">
-    <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+  <Section id="losning" title="Så fungerar Elivra – från sensorer till stöd i samtalet" className="bg-gray-50">
+    <p className="text-center text-base md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto px-4">
       Elivra kombinerar sensorer, lokalt AI, röstkommunikation och strukturerad analys i en helhetslösning för kommunal och privat äldreomsorg.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -156,10 +156,10 @@ const ForVemSection = () => (
   </Section>
 );
 
-// 5. Sektion: B2B-moduler – “Byggblock” för kommun och vårdgivare
+// 5. Sektion: B2B-moduler – "Byggblock" för kommun och vårdgivare
 const ModulerSection = () => (
-  <Section id="moduler" title={<span className="whitespace-nowrap">B2B-moduler – välj det som passar er verksamhet</span>} className="bg-gray-50">
-    <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto md:whitespace-nowrap">
+  <Section id="moduler" title="B2B-moduler – välj det som passar er verksamhet" className="bg-gray-50">
+    <p className="text-center text-base md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto px-4">
       Elivra levereras i moduler som kan kombineras stegvis. Ni kan börja litet och växa vidare.
     </p>
     <div className="grid md:grid-cols-3 gap-6">
@@ -262,23 +262,23 @@ export default function B2BPage() {
     <div className="min-h-screen">
       {/* Custom Header for B2B Page */}
       <header className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="container">
-          <div className="flex justify-between items-center py-4">
+        <div className="container px-4">
+          <div className="flex justify-between items-center py-3 md:py-4">
             <h1 
-              className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" 
+              className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" 
               onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
             >
               Elivra
             </h1>
-            <div className="flex space-x-3">
+            <div className="flex gap-2 md:gap-3">
               <Button 
-                className="bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"
+                className="bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base lg:text-lg px-3 md:px-6 py-3 md:py-5"
                 onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
               >
                 Privat
               </Button>
               <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5"
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base lg:text-lg px-3 md:px-6 py-3 md:py-5"
                 onClick={() => { navigate("/for-vard-och-omsorg"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
               >
                 vård och omsorg

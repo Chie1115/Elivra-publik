@@ -27,21 +27,21 @@ export default function FAQ() {
   return (
     <section
       id="trygghet"
-      className="py-20 bg-linear-to-b from-primary/90 to-primary/70"
+      className="py-12 md:py-20 bg-linear-to-b from-primary/90 to-primary/70"
     >
-      <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+      <div className="container px-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-white">
           FAQ
         </h2>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-3 md:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden"
             >
               <button
-                className="w-full text-left px-6 py-4 flex justify-between items-center text-white text-xl font-semibold transition-colors hover:bg-white/20"
+                className="w-full text-left px-4 md:px-6 py-3 md:py-4 flex justify-between items-center text-white text-base md:text-xl font-semibold transition-colors hover:bg-white/20"
                 onClick={() => toggleIndex(index)}
               >
                 {faq.question}

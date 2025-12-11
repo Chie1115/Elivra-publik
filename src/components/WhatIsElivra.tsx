@@ -1,10 +1,10 @@
 export default function WhatIsElivra() {
   return (
-    <section id="vad-ar-elivra" className="py-20">
-      <div className="container">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section id="vad-ar-elivra" className="py-12 md:py-20">
+      <div className="container px-4">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
               Vad är Elivra?
             </h2>
             <p className="mb-4 text-base leading-relaxed">

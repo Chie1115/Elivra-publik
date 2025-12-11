@@ -21,28 +21,28 @@ export function FinalCTA() {
   // };
 
   return (
-    <section className="py-20">
-      <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
+    <section className="py-12 md:py-20">
+      <div className="container px-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
           Trygghet och närhet för familjen, idag och i framtiden
         </h2>
-        <p className="text-base text-center max-w-3xl mx-auto mb-10 leading-relaxed">
+        <p className="text-sm md:text-base text-center max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed px-4">
           Utforska dina möjligheter redan nu. Prova gratis i 14 dagar eller köp ett värdebevis och ge trygghet och sällskap i gåva.
         </p>
 
-        <div className="flex flex-wrap gap-5 justify-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-5 justify-center px-4">
           <Button
             onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
-            className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 px-7 py-6 text-base"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center gap-2 px-6 md:px-7 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
           >
-            <Gift className="h-5 w-5" />
+            <Gift className="h-4 w-4 md:h-5 md:w-5" />
             Köp värdebevis
           </Button>
           <Button
             onClick={() => navigate("/coming-soon")} // <--- 遷移先に変更
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center gap-2 px-7 py-6 text-base"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center justify-center gap-2 px-6 md:px-7 py-5 md:py-6 text-sm md:text-base w-full sm:w-auto"
           >
-            <Heart className="h-5 w-5" />
+            <Heart className="h-4 w-4 md:h-5 md:w-5" />
             Prova gratis i 14 dagar
           </Button>
         </div>

@@ -4,20 +4,20 @@ export default function DesignedForPeace() {
   const navigate = useNavigate();
 
   return (
-    <section id="utformad-for-sinnesfrid" className="py-20 bg-white">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
+    <section id="utformad-for-sinnesfrid" className="py-12 md:py-20 bg-white">
+      <div className="container px-4">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-[oklch(0.58_0.09_220)]">
             Utformad för sinnesfrid
           </h2>
-          <p className="text-lg text-gray-text max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-text max-w-3xl mx-auto px-4">
             Elivra förbinder äldre, familjer och vårdgivare med tydlig, respektfull kommunikation och betrodda relationer.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {/* För äldre */}
-          <div className="bg-pink-50 rounded-lg p-8">
+          <div className="bg-pink-50 rounded-lg p-6 md:p-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               För äldre
             </h3>
