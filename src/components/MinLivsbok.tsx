@@ -4,7 +4,7 @@ const ElivraFriendsSection = () => (
   <section id="elivra-friends" className="py-20 bg-gray-50">
     <div className="container">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[oklch(0.58_0.09_220)]">
-        Elivra Friends – Din trygga sociala plattform
+        <span className="relative inline-block"><span className="relative z-10">Elivra Friends – Din trygga sociala plattform</span><span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300 z-0"></span></span>
       </h2>
       <div className="max-w-3xl mx-auto text-center text-lg text-gray-600 space-y-6">
         <p>
@@ -86,6 +86,7 @@ export default function MinLivsbok() {
         </div>
       </section>
 
+   
       {/* Min Livsbok - Din unika livsberättelse Section */}
       <section className="py-20">
         <div className="container">
