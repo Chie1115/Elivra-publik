@@ -133,31 +133,30 @@ export default function Header() {
               Trygghet
             </button>
 
-            {/* Private / Vård buttons only (keep) */}
+            {/* Privat and Vård och omsorg buttons added for mobile menu */}
             <div className="flex flex-col space-y-3 pt-4 px-4">
-              {isB2BPage ? (
-                <Button 
-                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                  onClick={() => {
-                    navigate("/");
-                    window.scrollTo(0, 0);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  För privat
-                </Button>
-              ) : (
-                <Button 
-                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                  onClick={() => {
-                    navigate("/for-vard-och-omsorg");
-                    window.scrollTo(0, 0);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  För vård och omsorg
-                </Button>
-              )}
+              {/* Privat Button */}
+              <Button 
+                className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full text-base py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] w-full text-base py-3"}
+                onClick={() => { 
+                  navigate("/"); 
+                  window.scrollTo(0, 0); 
+                  setIsMenuOpen(false); 
+                }}
+              >
+                Privat
+              </Button>
+              {/* Vård och omsorg Button */}
+              <Button 
+                className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full text-base py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] w-full text-base py-3"}
+                onClick={() => { 
+                  navigate("/for-vard-och-omsorg"); 
+                  window.scrollTo(0, 0); 
+                  setIsMenuOpen(false); 
+                }}
+              >
+                För vård och omsorg
+              </Button>
             </div>
           </nav>
         )}
