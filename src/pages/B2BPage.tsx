@@ -113,7 +113,7 @@ const LosningSection = () => (
       </div>
       <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
         <h3 className="text-lg font-bold text-teal-700 mb-4">Del 3 – Larm, avvikelser och triage</h3>
-        <p className="text-gray-600 text-sm">Systemet larmar automatiskt relevanta parter (som hemtjänst, sjuksköterskor eller anhöriga) vid avvikande händelser, till exempel fall. Det kan också ge stöd vid nödsamtal till 112.</p>
+        <p className="text-gray-600 text-sm">Systemet larmar automatiskt relevanta parter (som hemtjänst, sjuksköterskor eller anhöriga) vid avvikande händelser, till exempel fall. </p>
       </div>
       <div className="p-6 border-2 border-teal-500 rounded-lg bg-white">
         <h3 className="text-lg font-bold text-teal-700 mb-4">Del 4 – Elivra Cognitive Index (ECI) och beslutsstöd</h3>
