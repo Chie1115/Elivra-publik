@@ -55,8 +55,8 @@ const HeroSection = () => (
           </Button>
         </Link>
       </div>
-      <ul className="mt-8 md:mt-12 text-sm md:text-base lg:text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8 px-4">
-        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
+     <ul className="mt-12 text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
+	        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
         <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
         <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-400" /> Stöd för trepartssamtal</li>
       </ul>
