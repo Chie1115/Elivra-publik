@@ -49,35 +49,21 @@ export default function Header() {
           </h1>
 
           {/* Always visible buttons */}
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0 lg:gap-3">
-            <div className="hidden sm:flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
-              <Button 
-                className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
-                onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
-              >
-                Privat
-              </Button>
-              <Button 
-                className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-xs sm:text-sm md:text-base lg:text-lg px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
-                onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
-              >
-                <span className="hidden sm:inline">vård och omsorg</span>
-                <span className="sm:hidden">vård</span>
-              </Button>
-            </div>
-            {/* Mobile Button: Privat vård och omsorg */}
-            <Button
-              className={`sm:hidden ${isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-xs px-2 py-2" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-xs px-2 py-2"}`}
-              onClick={() => {
-                const targetPath = isB2BPage ? "/" : "/for-vard-och-omsorg";
-                navigate(targetPath);
-                window.scrollTo(0, 0);
-              }}
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
+<Button 
+              className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
+              onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
             >
-              {isB2BPage ? "Privat" : "Vård och omsorg"}
+              Privat
             </Button>
-
-            <Button
+<Button 
+              className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
+              onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
+            >
+              <span className="hidden sm:inline">vård och omsorg</span>
+              <span className="sm:hidden">vård</span>
+            </Button>
+<Button
               variant="ghost"
               size="icon"
               className="lg:hidden shrink-0"
