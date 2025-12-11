@@ -49,21 +49,18 @@ export default function Header() {
           </h1>
 
           <div className="hidden md:flex space-x-3">
-            {isB2BPage ? (
-              <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-                onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
-              >
-                För privat
-              </Button>
-            ) : (
-              <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-                onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
-              >
-                För vård och omsorg
-              </Button>
-            )}
+            <Button 
+              className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"}
+              onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
+            >
+              Privat
+            </Button>
+            <Button 
+              className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"}
+              onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
+            >
+              vård och omsorg
+            </Button>
           </div>
 
           <Button

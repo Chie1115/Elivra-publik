@@ -27,12 +27,20 @@ const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, tit
 
 // 1. Hero-sektion
 const HeroSection = () => (
-  <div className="bg-gray-50 pt-20 pb-16 md:pt-32 md:pb-24">
-    <div className="container max-w-6xl mx-auto text-center">
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-gray-900"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
+  <div className="relative pt-20 pb-16 md:pt-32 md:pb-24 min-h-[500px] md:min-h-[700px] overflow-hidden">
+    <div className="absolute inset-0 w-full h-full">
+      <img 
+        src="/assets/elderly-care.jpg" 
+        alt="Elderly care" 
+        className="w-full h-full object-cover object-[center_30%]"
+      />
+      <div className="absolute inset-0 bg-black/50"></div>
+    </div>
+    <div className="container max-w-6xl mx-auto text-center relative z-10">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
 
 
-      <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto">
+      <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto">
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
       <div className="flex justify-center space-x-4">
@@ -42,15 +50,15 @@ const HeroSection = () => (
           </Button>
         </Link>
         <Link to="#losning">
-          <Button size="lg" variant="outline" className="text-[#FF9966] border-[#FF9966] hover:bg-[#FF9966]/10 text-lg px-8 py-6">
+          <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20 text-lg px-8 py-6">
             Läs om lösningen
           </Button>
         </Link>
       </div>
-      <ul className="mt-12 text-lg text-gray-700 space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
-        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-500" /> Lokalt AI – ingen rådata till molnet</li>
-        <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-500" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
-        <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-500" /> Stöd för trepartssamtal</li>
+      <ul className="mt-12 text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
+        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
+        <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
+        <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-400" /> Stöd för trepartssamtal</li>
       </ul>
     </div>
   </div>
@@ -250,12 +258,20 @@ export default function B2BPage() {
             >
               Elivra
             </h1>
-            <Button 
-              className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0"
-              onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
-            >
-              För privat
-            </Button>
+            <div className="flex space-x-3">
+              <Button 
+                className="bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-lg px-6 py-5"
+                onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
+              >
+                Privat
+              </Button>
+              <Button 
+                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-lg px-6 py-5"
+                onClick={() => { navigate("/for-vard-och-omsorg"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
+              >
+                vård och omsorg
+              </Button>
+            </div>
           </div>
         </div>
       </header>
