@@ -131,33 +131,6 @@ export default function Header() {
             >
               Trygghet
             </button>
-
-            {/* Private / Vård buttons only (keep) */}
-            <div className="flex flex-col space-y-3 pt-4 px-4">
-              {isB2BPage ? (
-                <Button 
-                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                  onClick={() => {
-                    navigate("/");
-                    window.scrollTo(0, 0);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  För privat
-                </Button>
-              ) : (
-                <Button 
-                  className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 w-full"
-                  onClick={() => {
-                    navigate("/for-vard-och-omsorg");
-                    window.scrollTo(0, 0);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  För vård och omsorg
-                </Button>
-              )}
-            </div>
           </nav>
         )}
       </div>
