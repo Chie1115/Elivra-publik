@@ -67,14 +67,25 @@ const HeroSection = () => (
 // 2. Sektion: Varför – men mer B2B & systemperspektiv
 const VarforSection = () => (
   <Section id="varfor" title="Varför Elivra behövs i modern äldreomsorg" className="bg-white">
+    {/* 親要素に text-center を適用 */}
     <div className="max-w-3xl mx-auto text-center text-lg text-gray-600 space-y-6">
+      
+      {/* 2つの段落に分ける */}
       <p>
-        Hemtjänst och hemsjukvård brottas med hög belastning, fragmenterad information och begränsad tid hos brukaren. Samtidigt ökar kraven på dokumentation, kvalitet och transparens gentemot anhöriga.
+        Hemtjänst och hemsjukvård brottas med hög belastning, fragmenterad information och begränsad tid hos brukaren.
       </p>
+      <p>
+        Samtidigt ökar kraven på dokumentation, kvalitet och transparens gentemot anhöriga.
+      </p>
+      
+      {/* この段落も中央揃えになる */}
       <p className="font-semibold text-gray-800">
         Elivra är utvecklad tillsammans med vård, omsorg och teknikexperter för att:
       </p>
-      <ul className="text-left list-disc list-inside space-y-2 mx-auto max-w-md">
+      
+      {/* 箇条書きのブロック */}
+      {/* mx-auto でブロック自体を中央に配置し、pl-8 でインデントを調整 */}
+      <ul className="text-left list-disc list-outside space-y-2 mx-auto max-w-md pl-8">
         <li>Tidigt fånga upp avvikande situationer i hemmet</li>
         <li>Ge brukaren en ”kognitiv kamrat” som kan hjälpa till att minnas och förstå</li>
         <li>Minska missförstånd i vårdkontakter genom trepartssamtal och röststöd</li>
@@ -83,6 +94,7 @@ const VarforSection = () => (
     </div>
   </Section>
 );
+
 
 // 3. Sektion: Lösning – nu med låda, kommunikation och analys
 const LosningSection = () => (
