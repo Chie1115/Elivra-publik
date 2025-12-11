@@ -1,5 +1,26 @@
 import { Button } from "@/components/ui/button";
 
+const ElivraFriendsSection = () => (
+  <section id="elivra-friends" className="py-20 bg-gray-50">
+    <div className="container">
+      <h2 className="text-4xl font-semibold text-primary text-center mb-6">
+        Elivra Friends – Din trygga sociala plattform
+      </h2>
+      <div className="max-w-3xl mx-auto text-center text-lg text-gray-600 space-y-6">
+        <p>
+          Elivra Friends är en exklusiv social plattform skapad för dig och dina närmaste. Här kan certifierade användare dela minnen, bilder och vardagsinformation i en trygg och positiv digital miljö. Vi värnar om god ton och skapar en plats där du kan känna dig helt säker.
+        </p>
+        <ul className="text-left list-disc list-outside space-y-2 mx-auto max-w-md pl-8">
+          <li>Certifierade användare för en trygg miljö</li>
+          <li>Dela bilder och minnen med familjen</li>
+          <li>Skapa en positiv och god ton i alla interaktioner</li>
+          <li>Helt integrerat med Min Livsbok</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+);
+
 export default function MinLivsbok() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -117,7 +138,10 @@ export default function MinLivsbok() {
             </li>
           </ul>
         </div>
-      </section>
-    </>
-  );
-}
+	      </section>
+
+	      {/* Elivra Friends Section */}
+	      <ElivraFriendsSection />
+	    </>
+	  );
+	}
