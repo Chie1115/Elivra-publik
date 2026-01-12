@@ -158,7 +158,7 @@ const ForVemSection = () => (
 
 // 5. Sektion: B2B-moduler – "Byggblock" för kommun och vårdgivare
 const ModulerSection = () => (
-  <Section id="moduler" title="B2B-moduler – välj det som passar er verksamhet" className="bg-gray-50">
+  <Section id="moduler" title="Moduler – välj det som passar er verksamhet" className="bg-gray-50">
     <p className="text-center text-base md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto px-4">
       Elivra levereras i moduler som kan kombineras stegvis. Ni kan börja litet och växa vidare.
     </p>
