@@ -30,32 +30,33 @@ const HeroSection = () => (
   <div className="relative pt-20 pb-16 md:pt-32 md:pb-24 min-h-[500px] md:min-h-[700px] overflow-hidden">
     <div className="absolute inset-0 w-full h-full">
       <img 
-        src="/assets/elderly-care.jpg" 
+        src="/assets/hero-bg-blue.jpeg" 
         alt="Elderly care" 
         className="w-full h-full object-cover object-[center_30%]"
       />
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-white/30"></div>
     </div>
     <div className="container max-w-6xl mx-auto text-center relative z-10">
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-black"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
 
 
-      <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-4xl mx-auto">
+      <p className="text-xl md:text-2xl text-black/90 mb-10 max-w-4xl mx-auto">
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
       <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 px-4">
         <Link to="/contact" className="w-full sm:w-auto">
-          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg w-full">
+          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-black
+           text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg w-full">
             Boka demo <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
           </Button>
         </Link>
         <Link to="#losning" className="w-full sm:w-auto">
-          <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20 text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 w-full">
+          <Button size="lg" variant="outline" className="text-black bg-[#FF9966] hover:bg-white/20 text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 w-full">
             Läs om lösningen
           </Button>
         </Link>
       </div>
-     <ul className="mt-12 text-lg text-white space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
+     <ul className="mt-12 text-lg text-black space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
 	        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
         <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
         <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-400" /> Stöd för trepartssamtal</li>
