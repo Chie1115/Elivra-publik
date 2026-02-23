@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import PrivatPage from "./pages/PrivatPage";
 import ComingSoon from "./pages/ComingSoon";
 import B2BPage from "./pages/B2BPage";
 import ContactPage from "./pages/ContactPage";
@@ -25,12 +26,7 @@ function Router() {
         />
       )} />
 
-      <Route path="/for-privat" element={ (
-        <ComingSoon 
-          title="För privat"
-          description="Du kommer att kunna använda våra tjänster för privatpersoner."
-        />
-      )} />
+      <Route path="/for-privat" element={<PrivatPage />} />
 
       <Route path="/foretag" element={ (
         <ComingSoon 
