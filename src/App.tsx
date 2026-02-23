@@ -12,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 import IntegritetspolicyPage from "./pages/IntegritetspolicyPage";
 import VillkorPage from "./pages/VillkorPage";
 import PatentPendingPage from "./pages/PatentPendingPage";
+import FöretagPage from "./pages/FöretagPage";
 
 function Router() {
   return (
@@ -28,12 +29,7 @@ function Router() {
 
       <Route path="/for-privat" element={<PrivatPage />} />
 
-      <Route path="/foretag" element={ (
-        <ComingSoon 
-          title="För Företag"
-          description="Företagslösningar för att dokumentera och bevara företagets historia och kultur."
-        />
-      )} />
+      <Route path="/foretag" element={<FöretagPage />} />
 
       <Route path="/for-vard-och-omsorg" element={<B2BPage />} />
       <Route path="/contact" element={<ContactPage />} />
