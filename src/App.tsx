@@ -8,6 +8,9 @@ import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
 import B2BPage from "./pages/B2BPage";
 import ContactPage from "./pages/ContactPage";
+import IntegritetspolicyPage from "./pages/IntegritetspolicyPage";
+import VillkorPage from "./pages/VillkorPage";
+import PatentPendingPage from "./pages/PatentPendingPage";
 
 function Router() {
   return (
@@ -31,6 +34,9 @@ function Router() {
 
       <Route path="/for-vard-och-omsorg" element={<B2BPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/integritetspolicy" element={<IntegritetspolicyPage />} />
+      <Route path="/villkor" element={<VillkorPage />} />
+      <Route path="/patent-pending" element={<PatentPendingPage />} />
 
       <Route path="/404" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />

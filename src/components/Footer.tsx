@@ -1,7 +1,8 @@
-import { Gift, Heart } from "lucide-react";
+import { Gift, Heart, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
+import { useState, useEffect } from "react";
 
 export function FinalCTA() {
   const navigate = useNavigate();
@@ -54,6 +55,20 @@ export function FinalCTA() {
 export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -79,7 +94,7 @@ export default function Footer() {
     setTimeout(() => scrollToSection(id), 50);
   };
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white relative">
       <div className="container mx-auto flex flex-col justify-between py-12">
         {/* 上部のグリッド内容 */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -120,9 +135,33 @@ export default function Footer() {
 
         {/* フッター下部のコピーライト */}
         <div className="text-center pt-8 border-t border-gray-700">
-          <p className="text-gray-400 text-sm">&copy; 2025 Elivra. Alla rättigheter reserverade.</p>
+          <p className="text-gray-400 text-sm mb-3">
+            &copy; 2026 Elivra AB |{" "}
+            <a href="/integritetspolicy" className="hover:text-white transition-colors">
+              Integritetspolicy
+            </a>
+            {" | "}
+            <a href="/villkor" className="hover:text-white transition-colors">
+              Villkor
+            </a>
+            {" | "}
+            <a href="/patent-pending" className="hover:text-white transition-colors">
+              Patent Pending
+            </a>
+          </p>
         </div>
       </div>
+
+      {/* トップに戻るボタン */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+          aria-label="トップに戻る"
+        >
+          <ArrowUp className="h-6 w-6" />
+        </button>
+      )}
     </footer>
   );
 }
