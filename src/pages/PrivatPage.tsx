@@ -25,10 +25,10 @@ export default function PrivatPage() {
           </div>
 
           <div className="container relative z-10 text-center px-6 max-w-2xl py-20">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-[#1E293B]">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gray-900">
               Du är inte ensam -<br />oavsett var du är
             </h1>
-            <p className="text-base md:text-lg text-[#475569] mb-8 font-medium">
+            <p className="text-xl md:text-2xl font-bold text-gray-800 mb-8">
               Trygghet direkt i mobilen – för dig eller<br className="hidden sm:block" />
               någon du bryr dig om.
             </p>
