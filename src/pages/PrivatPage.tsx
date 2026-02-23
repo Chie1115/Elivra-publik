@@ -13,7 +13,7 @@ export default function PrivatPage() {
       <main className="flex-1">
 
         {/* ===== 1. Hero Section ===== */}
-        <section className="relative min-h-[340px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[520px] flex items-center justify-center overflow-hidden">
           {/* Background: hero-bg-green (teal/green wave) */}
           <div className="absolute inset-0 z-0">
             <img
@@ -24,7 +24,7 @@ export default function PrivatPage() {
             <div className="absolute inset-0 bg-white/30" />
           </div>
 
-          <div className="container relative z-10 text-center px-6 max-w-2xl py-16">
+          <div className="container relative z-10 text-center px-6 max-w-2xl py-20">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-[#1E293B]">
               Du är inte ensam -<br />oavsett var du är
             </h1>

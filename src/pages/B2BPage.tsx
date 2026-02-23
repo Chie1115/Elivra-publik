@@ -27,7 +27,7 @@ const Card = ({ icon: Icon, title, description }: { icon: React.ElementType, tit
 
 // 1. Hero-sektion
 const HeroSection = () => (
-  <div className="relative pt-20 pb-16 md:pt-32 md:pb-24 min-h-[500px] md:min-h-[700px] overflow-hidden">
+  <div className="relative min-h-[520px] flex items-center overflow-hidden">
     <div className="absolute inset-0 w-full h-full">
       <img 
         src="/assets/hero-bg-blue.jpeg" 
@@ -36,7 +36,7 @@ const HeroSection = () => (
       />
       <div className="absolute inset-0 bg-white/30"></div>
     </div>
-    <div className="container max-w-6xl mx-auto text-center relative z-10">
+    <div className="container max-w-6xl mx-auto text-center relative z-10 py-20">
       <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-black"><span className="block md:whitespace-nowrap">Intelligent trygghetsassistans för hemtjänst,</span><span className="block md:whitespace-nowrap">hemsjukvård och trygghetsboenden</span></h1>
 
 
