@@ -17,10 +17,10 @@ export default function Hero() {
       <div className="container relative z-10 py-16 md:py-20 px-4">
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-5 leading-tight">
-            Ger trygghet och sällskap 
+            Du är inte ensam - oavsett var du är 
           </h2>
           <p className="text-sm md:text-base lg:text-lg mb-6 md:mb-10 opacity-95 px-2">
-            En digital följeslagare som pratar, lyssnar och hjälper dig att hålla minnet aktivt – och som låter dig spara livets berättelser i Min Livsbok.
+            Trygghet direkt i mobilen – för dig eller någon du bryr dig om.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-5 justify-center px-2">
             <Button
@@ -28,14 +28,14 @@ export default function Hero() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-full sm:w-auto"
             >
               <Gift className="h-4 w-4 md:h-5 md:w-5" />
-              Köp värdebevis
+              Kom igång 
             </Button>
             <Button
               onClick={() => navigate("/coming-soon")} // <--- 3. 遷移先に変更
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex items-center justify-center gap-2 px-5 md:px-7 py-4 md:py-6 text-sm md:text-base w-full sm:w-auto"
             >
               <Heart className="h-4 w-4 md:h-5 md:w-5" />
-              Prova gratis i 14 dagar
+              Kontakta oss
             </Button>
           </div>
         </div>

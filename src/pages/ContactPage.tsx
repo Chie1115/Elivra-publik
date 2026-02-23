@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -44,18 +45,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Top bar: logo and För privat button */}
-      <div className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <button onClick={() => navigate('/')} className="text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer">
-            Elivra
-          </button>
-
-          <div>
-            <Button className="bg-[#FF9966] hover:bg-[#FF8844] text-white" onClick={() => navigate('/')}>För privat</Button>
-          </div>
-        </div>
-      </div>
+      <Header />
 
       <main className="flex-1 container mx-auto px-4 py-16">
         {/* Back arrow in top left of main content */}

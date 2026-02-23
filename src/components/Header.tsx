@@ -10,6 +10,7 @@ export default function Header() {
   const location = useLocation();
 
   const isB2BPage = location.pathname === "/for-vard-och-omsorg";
+  const isForetagPage = location.pathname === "/foretag";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,66 +43,72 @@ export default function Header() {
       }`}
     >
       <div className="container px-4">
-        <div className="flex justify-between items-center py-3 md:py-4 gap-1">
-          {/* ロゴをh1に戻す（リンク機能はComingSoon.tsxに移動） */}
+        {/* Top row: Page selection buttons */}
+        <div className="flex justify-start items-center py-2 md:py-3 gap-1 sm:gap-2 md:gap-3">
+          <Button 
+            className={!isB2BPage && !isForetagPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
+          >
+            Privat
+          </Button>
+          <Button 
+            className={isForetagPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            onClick={() => { navigate("/foretag"); window.scrollTo(0, 0); }}
+          >
+            Företag
+          </Button>
+          <Button 
+            className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
+          >
+            vård och omsorg
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="lg:hidden shrink-0"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+        </div>
+
+        {/* Bottom row: Logo and Desktop Nav */}
+        <div className="flex justify-between items-center py-3 md:py-4 gap-4 border-t border-gray-200">
+          {/* Logo */}
           <h1 className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer shrink-0" onClick={() => { navigate("/"); window.scrollTo(0, 0); }}>
             Elivra
           </h1>
 
-          {/* Always visible buttons */}
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
-<Button 
-              className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
-              onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
+          {/* Desktop Navigation - Hidden on mobile */}
+          <nav className="hidden lg:flex gap-8 flex-1 ml-8">
+            <button
+              onClick={() => scrollToSection("hem")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
             >
-              Privat
-            </Button>
-<Button 
-              className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
-              onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
+              Hem
+            </button>
+            <button
+              onClick={() => scrollToSection("vad-ar-elivra")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
             >
-              vård och omsorg
-            </Button>
-<Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden shrink-0"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              Vad är Elivra?
+            </button>
+            <button
+              onClick={() => scrollToSection("min-livsbok")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+              Min Livsbok
+            </button>
+            <button
+              onClick={() => scrollToSection("trygghet")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
+            >
+              Trygghet
+            </button>
+          </nav>
         </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex justify-center gap-10 py-4 mb-4">
-          <button
-            onClick={() => scrollToSection("hem")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-          >
-            Hem
-          </button>
-          <button
-            onClick={() => scrollToSection("vad-ar-elivra")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-          >
-            Vad är Elivra?
-          </button>
-          <button
-            onClick={() => scrollToSection("min-livsbok")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-          >
-            Min Livsbok
-          </button>
-
-          <button
-            onClick={() => scrollToSection("trygghet")}
-            className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors"
-          >
-            Trygghet
-          </button>
-        </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (

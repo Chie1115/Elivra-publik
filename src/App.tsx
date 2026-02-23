@@ -32,6 +32,13 @@ function Router() {
         />
       )} />
 
+      <Route path="/foretag" element={ (
+        <ComingSoon 
+          title="För Företag"
+          description="Företagslösningar för att dokumentera och bevara företagets historia och kultur."
+        />
+      )} />
+
       <Route path="/for-vard-och-omsorg" element={<B2BPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/integritetspolicy" element={<IntegritetspolicyPage />} />

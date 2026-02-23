@@ -1,12 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 
 export default function PatentPendingPage() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <Header />
       {/* ヘッダー */}
       <header className="bg-[#7FCBC4] py-12 relative">
         <Button

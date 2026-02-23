@@ -1,4 +1,4 @@
-// import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, MessageSquare, BarChart3 } from "lucide-react";
@@ -260,34 +260,7 @@ export default function B2BPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Custom Header for B2B Page */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="container px-4">
-          <div className="flex justify-between items-center py-3 md:py-4">
-            <h1 
-              className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer" 
-              onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
-            >
-              Elivra
-            </h1>
-            <div className="flex gap-2 md:gap-3">
-              <Button 
-                className="bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base lg:text-lg px-3 md:px-6 py-3 md:py-5"
-                onClick={() => { navigate("/"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
-              >
-                Privat
-              </Button>
-              <Button 
-                className="bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base lg:text-lg px-3 md:px-6 py-3 md:py-5"
-                onClick={() => { navigate("/for-vard-och-omsorg"); setTimeout(() => window.scrollTo({ top: 0, behavior: 'auto' }), 0); }}
-              >
-                vård och omsorg
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-      {/* End Custom Header */}
+      <Header />
 
       <main>
         <HeroSection />
