@@ -52,7 +52,7 @@ export default function Header() {
           <div className="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
 <Button 
               className={!isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm sm:text-sm md:text-base lg:text-lg px-3 sm:px-3 md:px-6 py-2 sm:py-3 md:py-5"}
-              onClick={() => { navigate("/"); window.scrollTo(0, 0); }}
+              onClick={() => { navigate("/for-privat"); window.scrollTo(0, 0); }}
             >
               Privat
             </Button>
