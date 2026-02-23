@@ -21,9 +21,16 @@ import {
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 const HeroSection = () => (
-  <section className="relative min-h-[520px] flex items-center overflow-hidden bg-gradient-to-br from-[#e8f0fb] via-[#dce8f8] to-[#c8ddf5]">
-    {/* subtle wave/circuit background */}
-    <div className="absolute inset-0 opacity-20 bg-[url('/assets/hero-bg-white.jpeg')] bg-cover bg-center" />
+  <section className="relative min-h-[520px] flex items-center overflow-hidden">
+    {/* Background: hero-bg-green (teal/green wave) */}
+    <div className="absolute inset-0 z-0">
+      <img
+        src="/assets/hero-bg-green.jpeg"
+        alt=""
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-white/30" />
+    </div>
     <div className="relative z-10 container max-w-5xl mx-auto px-6 py-20">
       <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
         Ett enda samtal kan kosta<br />miljoner.
