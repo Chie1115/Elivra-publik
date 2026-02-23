@@ -78,7 +78,7 @@ export default function Header() {
         {/* Bottom row: Logo and Desktop Nav */}
         <div className="flex justify-between items-center py-3 md:py-4 gap-4 border-t border-gray-200">
           {/* Logo */}
-          <h1 className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer shrink-0" onClick={() => { navigate("/"); window.scrollTo(0, 0); }}>
+          <h1 className="text-2xl md:text-4xl font-semibold text-[oklch(0.58_0.09_220)] tracking-tight cursor-pointer shrink-0" onClick={() => { navigate("/for-privat"); window.scrollTo(0, 0); }}>
             Elivra
           </h1>
 
