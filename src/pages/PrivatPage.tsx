@@ -159,21 +159,20 @@ export default function PrivatPage() {
               {/* Card 3: Kontakta någon snabbt – yellow + orange overlapping */}
               <div className="bg-[#29A8C4] rounded-2xl p-4 flex flex-col items-center gap-3">
                 <p className="text-white font-bold text-sm text-center">Kontakta någon snabbt</p>
-                {/* Overlapping phones: yellow bottom-left, orange top-right protruding above */}
-                <div className="w-full relative" style={{ height: "280px" }}>
-                  {/* Yellow alert – left, lower */}
+                <div className="w-full flex-1 flex items-end justify-center relative">
+                  {/* Yellow alert behind */}
                   <img
                     src="/assets/wg-screen-alert-yellow.png"
                     alt="L1 alert"
-                    className="absolute rounded-2xl shadow-lg object-cover object-top"
-                    style={{ aspectRatio: "9/19", width: "60%", left: "0%", bottom: "0" }}
+                    className="absolute left-[2%] bottom-0 w-[50%] rounded-xl shadow-md object-cover object-top z-10"
+                    style={{ aspectRatio: "9/19" }}
                   />
-                  {/* Orange alert – right, taller, protrudes above yellow */}
+                  {/* Orange alert in front */}
                   <img
                     src="/assets/wg-screen-alert-orange.png"
                     alt="L2 alert"
-                    className="absolute rounded-2xl shadow-2xl object-cover object-top z-10"
-                    style={{ aspectRatio: "9/19", width: "65%", right: "0%", top: "0" }}
+                    className="relative w-[75%] rounded-xl shadow-xl object-cover object-top ml-auto"
+                    style={{ aspectRatio: "9/19" }}
                   />
                 </div>
               </div>
