@@ -25,7 +25,7 @@ const HeroSection = () => (
     {/* Background: hero-bg-green (teal/green wave) */}
     <div className="absolute inset-0 z-0">
       <img
-        src="/assets/hero-bg-green.jpeg"
+        src="/assets/hero-bg-white.jpeg"
         alt=""
         className="w-full h-full object-cover"
       />

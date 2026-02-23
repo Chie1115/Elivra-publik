@@ -47,12 +47,12 @@ const HeroSection = () => (
         <Link to="/contact" className="w-full sm:w-auto">
           <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-black
            text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg w-full">
-            Boka demo <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+            Boka rådgivning  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
           </Button>
         </Link>
         <Link to="#losning" className="w-full sm:w-auto">
           <Button size="lg" variant="outline" className="text-black bg-[#FF9966] hover:bg-white/20 text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 w-full">
-            Läs om lösningen
+            Kontakta oss
           </Button>
         </Link>
       </div>
@@ -246,7 +246,7 @@ const KontaktSection = () => (
       <div className="text-center">
         <Link to="/contact">
           <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
-            Boka demo nu <ArrowRight className="ml-2 h-5 w-5" />
+            Kontakta oss <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </Link>
         {/* Assuming a contact form component would go here, but for now, just the CTA button */}
