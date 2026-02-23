@@ -117,86 +117,92 @@ export default function PrivatPage() {
         </section>
 
         {/* ===== 3. WalkGuard Detail Section ===== */}
-        <section className="py-14 bg-[#F8FAFC] border-t border-slate-100">
-          <div className="container px-6 max-w-4xl mx-auto">
+        <section className="py-14 bg-white border-t border-slate-100">
+          <div className="container px-6 max-w-5xl mx-auto">
 
             <div className="mb-8">
               <p className="text-sm font-bold text-[#0EA5E9] mb-1">Elivra WalkGuard</p>
               <h2 className="text-3xl font-bold text-[#1E293B] mb-3">Du går. Du vakar.</h2>
-              <p className="text-[#475569] text-sm max-w-lg">
-                Delar din väg med någon du litar på.<br />
-                Reagerar bara när något händer.
-              </p>
+              <p className="text-[#475569] text-sm">Delar din väg med någon du litar på.</p>
+              <p className="text-[#475569] text-sm font-semibold">Reagerar bara när något händer.</p>
             </div>
 
-            {/* 4 app screenshots in a row */}
-            <div className="grid grid-cols-4 gap-4 mb-10">
-              {/* Screenshot 1: Home screen */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-full aspect-[9/19] rounded-xl overflow-hidden shadow-md border border-slate-200">
+            {/* 4 cards with teal background */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+
+              {/* Card 1: Börja gå direkt */}
+              <div className="bg-[#29A8C4] rounded-2xl p-4 flex flex-col items-center gap-3">
+                <p className="text-white font-bold text-sm text-center">Börja gå direkt</p>
+                <div className="w-full flex-1 flex items-end justify-center">
                   <img
                     src="/assets/wg-screen-home.jpeg"
                     alt="Börja gå direkt"
-                    className="w-full h-full object-cover object-top"
+                    className="w-[85%] rounded-xl shadow-lg object-cover object-top"
+                    style={{ aspectRatio: "9/19" }}
                   />
                 </div>
-                <p className="text-xs text-center text-[#475569] font-medium leading-tight">
-                  Börja gå direkt
-                </p>
               </div>
 
-              {/* Screenshot 2: Map screen */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-full aspect-[9/19] rounded-xl overflow-hidden shadow-md border border-slate-200">
+              {/* Card 2: Du vet alltid var du är */}
+              <div className="bg-[#29A8C4] rounded-2xl p-4 flex flex-col items-center gap-3">
+                <p className="text-white font-bold text-sm text-center">Du vet alltid var du är</p>
+                <div className="w-full flex-1 flex items-end justify-center">
                   <img
                     src="/assets/wg-screen-map.jpeg"
                     alt="Du vet alltid var du är"
-                    className="w-full h-full object-cover object-top"
+                    className="w-[85%] rounded-xl shadow-lg object-cover object-top"
+                    style={{ aspectRatio: "9/19" }}
                   />
                 </div>
-                <p className="text-xs text-center text-[#475569] font-medium leading-tight">
-                  Du vet alltid var du är
-                </p>
               </div>
 
-              {/* Screenshot 3: Alert yellow/orange */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-full aspect-[9/19] rounded-xl overflow-hidden shadow-md border border-slate-200">
+              {/* Card 3: Kontakta någon snabbt – yellow + orange overlapping */}
+              <div className="bg-[#29A8C4] rounded-2xl p-4 flex flex-col items-center gap-3">
+                <p className="text-white font-bold text-sm text-center">Kontakta någon snabbt</p>
+                <div className="w-full flex-1 flex items-end justify-center relative">
+                  {/* Yellow alert behind */}
+                  <img
+                    src="/assets/wg-screen-alert-yellow.png"
+                    alt="L1 alert"
+                    className="absolute left-[2%] bottom-0 w-[62%] rounded-xl shadow-md object-cover object-top"
+                    style={{ aspectRatio: "9/19" }}
+                  />
+                  {/* Orange alert in front */}
                   <img
                     src="/assets/wg-screen-alert-orange.png"
-                    alt="Kontakta någon snabbt"
-                    className="w-full h-full object-cover object-top"
+                    alt="L2 alert"
+                    className="relative z-10 w-[62%] rounded-xl shadow-xl object-cover object-top ml-auto"
+                    style={{ aspectRatio: "9/19" }}
                   />
                 </div>
-                <p className="text-xs text-center text-[#475569] font-medium leading-tight">
-                  Kontakta någon snabbt
-                </p>
               </div>
 
-              {/* Screenshot 4: Alert red */}
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-full aspect-[9/19] rounded-xl overflow-hidden shadow-md border border-slate-200">
+              {/* Card 4: Larma vid behov */}
+              <div className="bg-[#29A8C4] rounded-2xl p-4 flex flex-col items-center gap-3">
+                <p className="text-white font-bold text-sm text-center">
+                  Larma vid behov<br />
+                  Du väljer vem som kontaktas
+                </p>
+                <div className="w-full flex-1 flex items-end justify-center">
                   <img
                     src="/assets/wg-screen-alert-red.png"
                     alt="Larma vid behov"
-                    className="w-full h-full object-cover object-top"
+                    className="w-[85%] rounded-xl shadow-lg object-cover object-top"
+                    style={{ aspectRatio: "9/19" }}
                   />
                 </div>
-                <p className="text-xs text-center text-[#475569] font-medium leading-tight">
-                  Larma vid behov<br />
-                  <span className="text-[10px] text-slate-400">Du väljer som som kontaktas</span>
-                </p>
               </div>
+
             </div>
 
             {/* CTA row */}
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 border-t border-slate-200">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
               <div>
                 <p className="font-semibold text-[#1E293B]">Börja gå med lugn i fickan</p>
                 <p className="text-sm text-[#64748B]">Ladda ner WalkGuard</p>
               </div>
               <div className="flex flex-col items-center gap-1">
-                <p className="text-xs text-[#64748B] font-medium">Ladda ned på App Store</p>
+                <p className="text-sm font-bold text-[#1E293B]">Ladda ned på App Store</p>
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                   alt="App Store"
