@@ -81,7 +81,6 @@ export default function Header() {
             Elivra
           </h1>
 
-<<<<<<< HEAD
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden lg:flex gap-8 flex-1 ml-8">
             <button
