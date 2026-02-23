@@ -1,26 +1,12 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import WhatIsElivra from "@/components/WhatIsElivra";
-import MinLivsbok from "@/components/MinLivsbok";
-import DesignedForPeace from "@/components/DesignedForPeace";
-import FAQ from "@/components/FAQ";
-import Testimonials from "@/components/Testimonials";
-import Footer, { FinalCTA } from "@/components/Footer";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <WhatIsElivra />
-        <MinLivsbok />
-        <DesignedForPeace />
-        <FAQ />
-        <Testimonials />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/for-privat", { replace: true });
+  }, [navigate]);
+
+  return null;
 }
