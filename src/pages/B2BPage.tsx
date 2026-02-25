@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, MessageSquare, BarChart3 } from "lucide-react";
+import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, MessageSquare, BarChart3, Send } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 // Helper component for section layout
@@ -106,7 +107,7 @@ const VarforSection = () => (
 
 // 3. Sektion: Lösning – nu med låda, kommunikation och analys
 const LosningSection = () => (
-  <Section id="losning" title="Så fungerar Elivra – från sensorer till stöd i samtalet" className="bg-gray-50">
+  <Section id="losning" title="Så fungerar Elivra" className="bg-gray-50">
     <p className="text-center text-base md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto px-4">
       Elivra kombinerar sensorer, lokalt AI, röstkommunikation och strukturerad analys i en helhetslösning för kommunal och privat äldreomsorg.
     </p>
@@ -238,30 +239,126 @@ const FordelarSection = () => (
   </Section>
 );
 
-// 7. Kontakt / Boka demo – små justeringar
-const KontaktSection = () => (
-  <Section id="kontakt" title="Boka en genomgång" className="bg-gray-100">
-    <div className="max-w-4xl mx-auto p-8 bg-white rounded-xl shadow-lg">
-      <p className="text-center text-xl text-gray-700 mb-8">
-        Vill ni se hur Elivra kan passa in i er organisation? Boka en genomgång där vi går igenom:
-      </p>
-      <ul className="text-left list-disc list-inside text-lg text-gray-600 space-y-2 mx-auto max-w-md mb-8">
-        <li className="md:whitespace-nowrap">Er nuvarande vård- eller omsorgsprocess</li>
-        <li className="md:whitespace-nowrap">Hur Elivra-hem, sensorerna och kommunikationen kan införas stegvis</li>
-        <li className="md:whitespace-nowrap">Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
-      </ul>
-      <div className="text-center">
-        <Link 
-          to="/contact"
-          className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white text-base px-8 py-4 font-semibold bg-white rounded-full transition-colors inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
-        >
-          Kontakta oss <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-        </Link>
-        {/* Assuming a contact form component would go here, but for now, just the CTA button */}
+// 7. Kontakt / Boka demo – フォーム実装
+const KontaktSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // ここにフォーム送信ロジックを追加
+    console.log("Form submitted:", formData);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      alert("Tack för din förfrågan! Vi återkommer inom kort.");
+      setFormData({ name: "", phone: "", email: "", message: "" });
+    }, 1000);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  return (
+    <Section id="kontakt" title="Boka en genomgång" className="bg-gray-100">
+      <div className="max-w-xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+        <p className="text-gray-700 mb-6">
+          Vill ni se hur Elivra kan passa in i er organisation? Boka en genomgång där vi går igenom:
+        </p>
+        <ul className="text-left list-disc list-inside text-gray-600 space-y-2 mb-8 pl-2">
+          <li>Er nuvarande vård- eller omsorgsprocess</li>
+          <li>Hur Elivra-hem, sensorerna och kommunikationen kan införas stegvis</li>
+          <li>Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
+        </ul>
+        
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
+              För- och efternamn
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Namn"
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)] focus:border-transparent"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-semibold text-gray-800 mb-2">
+                Telefonnummer
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="07x-xxx xx xx"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)] focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-800 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="you@company.com"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)] focus:border-transparent"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold text-gray-800 mb-2">
+              Meddelande
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Skriv här..."
+              rows={4}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)] focus:border-transparent resize-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] disabled:bg-gray-400 text-white font-semibold px-8 py-4 rounded-full transition-colors inline-flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+          >
+            {isSubmitting ? "Skickar..." : "Skicka"}
+            <Send className="w-5 h-5" />
+          </button>
+        </form>
+
+        <p className="text-sm text-gray-600 text-center mt-6">
+          Vi använder era uppgifter enbart för att hantera denna förfrågan.<br />
+          Inga automatiska utskick, ingen försäljning utan samtycke.
+        </p>
       </div>
-    </div>
-  </Section>
-);
+    </Section>
+  );
+};
 
 
 export default function B2BPage() {
