@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 export default function PrivatPage() {
@@ -19,6 +18,7 @@ export default function PrivatPage() {
             <img
               src="/assets/hero-bg-green.jpeg"
               alt=""
+              role="presentation"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-white/30" />
@@ -33,21 +33,18 @@ export default function PrivatPage() {
               någon du bryr dig om.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="bg-[#1E293B] hover:bg-[#0F172A] text-white px-10 py-5 text-base rounded-md font-bold shadow"
+              <button
+                className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white px-8 py-4 text-base font-semibold rounded-full shadow transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
                 onClick={() => navigate("/coming-soon")}
               >
                 Kom igång
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-[#1E293B] text-[#1E293B] px-10 py-5 text-base rounded-md font-bold hover:bg-slate-50"
+              </button>
+              <button
+                className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white px-8 py-4 text-base font-semibold rounded-full bg-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
                 onClick={() => navigate("/contact")}
               >
                 Kontakta oss
-              </Button>
+              </button>
             </div>
           </div>
         </section>
@@ -70,7 +67,7 @@ export default function PrivatPage() {
                 </p>
 
                 {/* Phone mockup with real app screenshot */}
-                <div className="w-[160px] h-[320px] bg-[#0A1628] rounded-[2rem] border-[5px] border-[#1E3A5F] overflow-hidden shadow-2xl mb-6">
+                <div className="w-[160px] h-[320px] bg-[#0F3A52] rounded-[2rem] border-[5px] border-sky-400/40 overflow-hidden shadow-2xl mb-6">
                   <img
                     src="/assets/wg-screen-home.jpeg"
                     alt="WalkGuard app"

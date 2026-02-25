@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Zap, Users, Brain, Heart, Lightbulb, Scale, MessageSquare, BarChart3 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -31,7 +30,8 @@ const HeroSection = () => (
     <div className="absolute inset-0 w-full h-full">
       <img 
         src="/assets/hero-bg-blue.jpeg" 
-        alt="Elderly care" 
+        alt="" 
+        role="presentation"
         className="w-full h-full object-cover object-[center_30%]"
       />
       <div className="absolute inset-0 bg-white/30"></div>
@@ -44,22 +44,23 @@ const HeroSection = () => (
         Elivra kombinerar lokala sensorer, AI och säker röstkommunikation för att upptäcka avvikelser i tid, stödja svaga röster i vården och minska belastningen på personal – utan att röja integriteten.
       </p>
       <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 px-4">
-        <Link to="/contact" className="w-full sm:w-auto">
-          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-black
-           text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg w-full">
-            Boka rådgivning  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
-          </Button>
+        <Link 
+          to="/contact" 
+          className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white text-base px-8 py-4 font-semibold shadow-lg w-full sm:w-auto rounded-full transition-colors inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Boka rådgivning <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
         </Link>
-        <Link to="#losning" className="w-full sm:w-auto">
-          <Button size="lg" variant="outline" className="text-black bg-[#FF9966] hover:bg-white/20 text-sm md:text-base lg:text-lg px-6 md:px-8 py-5 md:py-6 w-full">
-            Kontakta oss
-          </Button>
+        <Link 
+          to="#losning" 
+          className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white text-base px-8 py-4 font-semibold bg-white w-full sm:w-auto rounded-full transition-colors inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Kontakta oss
         </Link>
       </div>
-     <ul className="mt-12 text-lg text-black space-y-2 md:flex md:justify-center md:space-y-0 md:space-x-8">
-	        <li className="flex items-center justify-center md:justify-start"><Shield className="w-5 h-5 mr-2 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
-        <li className="flex items-center justify-center md:justify-start"><Zap className="w-5 h-5 mr-2 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
-        <li className="flex items-center justify-center md:justify-start"><Users className="w-5 h-5 mr-2 text-green-400" /> Stöd för trepartssamtal</li>
+     <ul className="mt-12 space-y-3 md:flex md:justify-center md:space-y-0 md:space-x-8">
+	        <li className="flex items-start md:items-center gap-2 text-base md:text-lg text-black"><Shield className="w-5 h-5 shrink-0 mt-0.5 md:mt-0 text-green-400" /> Lokalt AI – ingen rådata till molnet</li>
+        <li className="flex items-start md:items-center gap-2 text-base md:text-lg text-black"><Zap className="w-5 h-5 shrink-0 mt-0.5 md:mt-0 text-green-400" /> Elivra-hem på plats med radar, mikrofoner och högtalare</li>
+        <li className="flex items-start md:items-center gap-2 text-base md:text-lg text-black"><Users className="w-5 h-5 shrink-0 mt-0.5 md:mt-0 text-green-400" /> Stöd för trepartssamtal</li>
       </ul>
     </div>
   </div>
@@ -84,14 +85,20 @@ const VarforSection = () => (
         Elivra är utvecklad tillsammans med vård, omsorg och teknikexperter för att:
       </p>
       
-      {/* 箇条書きのブロック */}
-      {/* mx-auto でブロック自体を中央に配置し、pl-8 でインデントを調整 */}
-      <ul className="text-left list-disc list-outside space-y-2 mx-auto max-w-md pl-8">
-        <li>Tidigt fånga upp avvikande situationer i hemmet</li>
-        <li>Ge brukaren en ”kognitiv kamrat” som kan hjälpa till att minnas och förstå</li>
-        <li>Minska missförstånd i vårdkontakter genom trepartssamtal och röststöd</li>
-        <li>Skapa spårbar, säker och begriplig dokumentation – utan att invadera privatlivet</li>
-      </ul>
+      {/* 箇条書きのブロック - チェックマーク付き */}
+      <div className="text-left mx-auto space-y-3">
+        {[
+          "Tidigt fånga upp avvikande situationer i hemmet",
+          "Ge brukaren en \"kognitiv kamrat\" som kan hjälpa till att minnas och förstå",
+          "Minska missförstånd i vårdkontakter genom trepartssamtal och röststöd",
+          "Skapa spårbar, säker och begriplig dokumentation – utan att invadera privatlivet",
+        ].map((item) => (
+          <div key={item} className="flex items-center gap-3">
+            <span className="text-[#e8a020] font-bold text-xl">✓</span>
+            <span className="font-semibold text-gray-800">{item}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </Section>
 );
@@ -244,10 +251,11 @@ const KontaktSection = () => (
         <li className="md:whitespace-nowrap">Tekniska och juridiska frågor kring integritet, GDPR och AI</li>
       </ul>
       <div className="text-center">
-        <Link to="/contact">
-          <Button size="lg" className="bg-[#FF9966] hover:bg-[#FF8844] text-white text-lg px-8 py-6 shadow-lg">
-            Kontakta oss <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+        <Link 
+          to="/contact"
+          className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white text-base px-8 py-4 font-semibold bg-white rounded-full transition-colors inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Kontakta oss <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
         </Link>
         {/* Assuming a contact form component would go here, but for now, just the CTA button */}
       </div>

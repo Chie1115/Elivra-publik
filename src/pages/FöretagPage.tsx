@@ -27,6 +27,7 @@ const HeroSection = () => (
       <img
         src="/assets/hero-bg-white.jpeg"
         alt=""
+        role="presentation"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-white/30" />
@@ -38,22 +39,24 @@ const HeroSection = () => (
       <p className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
         AI-genererade röster används redan i riktade företagsattacker.
       </p>
-      <p className="text-lg font-bold text-[#1a5fa8] mb-1">
+      <p className="text-lg font-bold text-[oklch(0.58_0.09_220)] mb-1">
         Enterprise Voice Firewall
       </p>
       <p className="text-base text-gray-700 mb-10">
         Fungerar med er befintliga växel – utan att påverka samtalen.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <Link to="/contact">
-          <button className="bg-[#0d3b6e] hover:bg-[#0a2d55] text-white font-semibold px-8 py-4 rounded-full text-base transition-colors">
-            Boka teknisk genomgång
-          </button>
+        <Link 
+          to="/contact"
+          className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white font-semibold px-8 py-4 rounded-full text-base transition-colors inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Boka teknisk genomgång
         </Link>
-        <Link to="/contact">
-          <button className="border-2 border-[#0d3b6e] text-[#0d3b6e] hover:bg-[#0d3b6e] hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-colors bg-white/60">
-            Kontakta oss
-          </button>
+        <Link 
+          to="/contact"
+          className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-colors bg-white/60 inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Kontakta oss
         </Link>
       </div>
     </div>
@@ -64,7 +67,7 @@ const HeroSection = () => (
 const AttackerSection = () => (
   <section className="py-16 bg-white">
     <div className="container max-w-4xl mx-auto px-6 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#1a5fa8] mb-6">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#1a9fa8] mb-6">
         Röstbaserade attacker ökar snabbt
       </h2>
       <p className="text-gray-700 mb-2">
@@ -87,9 +90,9 @@ const AttackerSection = () => (
         ].map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="border border-[#1a5fa8] rounded-2xl p-8 flex flex-col items-center gap-4"
+            className="border border-[oklch(0.58_0.09_220)] rounded-2xl p-8 flex flex-col items-center gap-4"
           >
-            <Icon className="w-10 h-10 text-[#1a5fa8]" />
+            <Icon className="w-10 h-10 text-[oklch(0.58_0.09_220)]" />
             <p className="font-semibold text-gray-800 text-center">{label}</p>
           </div>
         ))}
@@ -102,7 +105,7 @@ const AttackerSection = () => (
 const SakerhetslagerSection = () => (
   <section className="py-16 bg-[#eef4fb]">
     <div className="container max-w-5xl mx-auto px-6 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#0d3b6e] mb-3">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#1a9fa8] mb-3">
         Ett säkerhetslager för affärskritiska samtal
       </h2>
       <p className="font-semibold text-gray-700 mb-10">
@@ -117,9 +120,9 @@ const SakerhetslagerSection = () => (
         ].map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="border border-[#1a5fa8] rounded-2xl p-6 flex flex-col items-center gap-4 bg-white"
+            className="border border-[oklch(0.58_0.09_220)] rounded-2xl p-6 flex flex-col items-center gap-4 bg-white"
           >
-            <Icon className="w-8 h-8 text-[#1a5fa8]" />
+            <Icon className="w-8 h-8 text-[oklch(0.58_0.09_220)]" />
             <p className="text-sm text-gray-700 text-center">{label}</p>
           </div>
         ))}
@@ -135,7 +138,7 @@ const SakerhetslagerSection = () => (
 const HurDetFungerarSection = () => (
   <section className="py-16 bg-white">
     <div className="container max-w-4xl mx-auto px-6 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#0d3b6e] mb-3">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#1a9fa8] mb-3">
         Hur det fungerar
       </h2>
       <p className="font-semibold text-gray-700 mb-12">
@@ -145,17 +148,17 @@ const HurDetFungerarSection = () => (
       {/* Flow diagram */}
       <div className="flex items-center justify-center gap-4 mb-12 flex-wrap">
         <div className="flex flex-col items-center gap-2">
-          <Phone className="w-12 h-12 text-[#0d3b6e]" />
+          <Phone className="w-12 h-12 text-[oklch(0.58_0.09_220)]" />
           <span className="text-sm font-medium text-gray-700">Samtal</span>
         </div>
-        <div className="flex-1 border-t-2 border-dashed border-[#1a5fa8] min-w-[40px] max-w-[80px]" />
+        <div className="flex-1 border-t-2 border-dashed border-[1a5fa8] min-w-[40px] max-w-[80px]" />
         <div className="flex flex-col items-center gap-2">
-          <div className="w-16 h-16 bg-[#0d3b6e] rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 bg-[oklch(0.58_0.09_220)] rounded-full flex items-center justify-center">
             <Activity className="w-8 h-8 text-white" />
           </div>
-          <span className="text-sm font-bold text-[#0d3b6e]">Elivra Analys</span>
+          <span className="text-sm font-bold text-[oklch(0.58_0.09_220)]">Elivra Analys</span>
         </div>
-        <div className="flex-1 border-t-2 border-dashed border-[#1a5fa8] min-w-[40px] max-w-[80px]" />
+        <div className="flex-1 border-t-2 border-dashed border-[oklch(0.58_0.09_220)] min-w-[40px] max-w-[80px]" />
         <div className="flex flex-col items-center gap-2">
           <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
             <UserCheck className="w-7 h-7 text-gray-500" />
@@ -199,11 +202,11 @@ const HurDetFungerarSection = () => (
 const ForVemSection = () => (
   <section className="py-16 bg-[#eef4fb]">
     <div className="container max-w-3xl mx-auto px-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-2">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#0d3b6e] text-center mb-2">
         För verksamheter där samtalet är{" "}
         <span className="text-[#1a9fa8]">affärskritiskt</span>
       </h2>
-      <div className="mt-10 space-y-6">
+      <div className="mt-10 space-y-6 max-w-xl mx-auto">
         {[
           { icon: Headphones, label: "Kundtjänst och support" },
           { icon: Calculator, label: "Ekonomifunktioner" },
@@ -212,14 +215,14 @@ const ForVemSection = () => (
           { icon: Lock, label: "Organisationer med känsliga transaktioner" },
         ].map(({ icon: Icon, label }) => (
           <div key={label} className="flex items-center gap-5">
-            <div className="w-12 h-12 bg-[#0d3b6e] rounded-lg flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 bg-[oklch(0.58_0.09_220)] rounded-lg flex items-center justify-center shrink-0">
               <Icon className="w-6 h-6 text-white" />
             </div>
             <span className="text-gray-800 font-medium text-lg">{label}</span>
           </div>
         ))}
       </div>
-      <p className="mt-10 text-gray-600 text-sm">
+      <p className="mt-10 text-gray-600 text-sm text-center">
         När rösten används för beslut eller betalningsgodkännanden krävs skydd.
       </p>
     </div>
@@ -230,7 +233,7 @@ const ForVemSection = () => (
 const SvenskutveckladSection = () => (
   <section className="py-16 bg-white">
     <div className="container max-w-3xl mx-auto px-6 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#0d3b6e] mb-10">
         Svenskutvecklad.{" "}
         <span className="text-[#1a9fa8]">Anpassad för Europa.</span>
       </h2>
@@ -258,7 +261,7 @@ const SvenskutveckladSection = () => (
 const DataplaceringSection = () => (
   <section className="py-16 bg-[#eef4fb]">
     <div className="container max-w-4xl mx-auto px-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#1a9fa8] text-center mb-12">
         Dataplacering och datahantering
       </h2>
       <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -276,15 +279,17 @@ const DataplaceringSection = () => (
         </div>
       </div>
       <div className="flex flex-col sm:flex-row justify-center gap-4">
-        <Link to="/contact">
-          <button className="bg-[#0d3b6e] hover:bg-[#0a2d55] text-white font-semibold px-8 py-4 rounded-full text-base transition-colors">
-            Boka teknisk genomgång
-          </button>
+        <Link 
+          to="/contact"
+          className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white font-semibold px-8 py-4 rounded-full text-base transition-colors inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Boka teknisk genomgång
         </Link>
-        <Link to="/contact">
-          <button className="border-2 border-[#0d3b6e] text-[#0d3b6e] hover:bg-[#0d3b6e] hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-colors bg-white">
-            Kontakta oss
-          </button>
+        <Link 
+          to="/contact"
+          className="border-2 border-[oklch(0.58_0.09_220)] text-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.58_0.09_220)] hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-colors bg-white inline-block text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
+        >
+          Kontakta oss
         </Link>
       </div>
     </div>
@@ -337,7 +342,7 @@ const KontaktSection = () => {
                 placeholder="Namn"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a5fa8]"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)]"
                 required
               />
             </div>
@@ -349,7 +354,7 @@ const KontaktSection = () => {
                   placeholder="07x-xxx xx xx"
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a5fa8]"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[oklch(0.58_0.09_220)]"
                 />
               </div>
               <div>
@@ -415,9 +420,9 @@ const KontaktSection = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-[#0d3b6e] hover:bg-[#0a2d55] text-white font-semibold px-10 py-4 rounded-full text-base transition-colors inline-flex items-center gap-2"
+                className="bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white font-semibold px-10 py-4 rounded-full text-base transition-colors inline-flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.58_0.09_220)] focus-visible:ring-offset-2"
               >
-                Skicka <Send className="w-4 h-4" />
+                Skicka <Send className="w-4 h-4" aria-hidden="true" />
               </button>
             </div>
           </form>

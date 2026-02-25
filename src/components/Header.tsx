@@ -47,19 +47,19 @@ export default function Header() {
         {/* Top row: Page selection buttons */}
         <div className="flex justify-start items-center py-2 md:py-3 gap-1 sm:gap-2 md:gap-3">
           <Button 
-            className={isPrivatPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            className={isPrivatPage ? "bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[oklch(0.58_0.09_220)] border-2 border-[oklch(0.58_0.09_220)] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
             onClick={() => { navigate("/for-privat"); window.scrollTo(0, 0); }}
           >
             Privat
           </Button>
           <Button 
-            className={isForetagPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            className={isForetagPage ? "bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[oklch(0.58_0.09_220)] border-2 border-[oklch(0.58_0.09_220)] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
             onClick={() => { navigate("/foretag"); window.scrollTo(0, 0); }}
           >
             Företag
           </Button>
           <Button 
-            className={isB2BPage ? "bg-[#FF9966] hover:bg-[#FF8844] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[#FF9966] border-2 border-[#FF9966] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
+            className={isB2BPage ? "bg-[oklch(0.58_0.09_220)] hover:bg-[oklch(0.53_0.09_220)] text-white border-0 text-sm md:text-base px-3 md:px-6 py-2 md:py-3" : "bg-transparent hover:bg-gray-100 text-[oklch(0.58_0.09_220)] border-2 border-[oklch(0.58_0.09_220)] text-sm md:text-base px-3 md:px-6 py-2 md:py-3"}
             onClick={() => { navigate("/for-vard-och-omsorg"); window.scrollTo(0, 0); }}
           >
             vård och omsorg

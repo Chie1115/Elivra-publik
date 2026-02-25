@@ -94,48 +94,69 @@ export default function Footer() {
     setTimeout(() => scrollToSection(id), 50);
   };
   return (
-    <footer className="bg-gray-900 text-white relative">
-      <div className="container mx-auto flex flex-col justify-between py-12">
+    <footer className="bg-[#0F3A52] text-white relative">
+      <div className="container mx-auto px-4 md:px-6">
         {/* 上部のグリッド内容 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-2 md:col-span-1">
-            <h3 className="text-lg font-semibold mb-3">Elivra</h3>
-            <p className="text-gray-300 text-base">
-              Elivra är en tjänst som hjälper dig att samla dina minnen och din livsberättelse.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 py-12 md:py-16">
+          {/* Elivra セクション */}
+          <div className="md:col-span-1">
+            <h3 className="text-2xl font-bold mb-6 text-cyan-400">Elivra</h3>
           </div>
+
+          {/* Kontakt セクション */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Kontakt</h3>
-            <p className="text-gray-300 text-base">info@elivra.se</p>
-           
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Kontakt</h4>
+            <div className="space-y-2">
+              <p className="text-gray-200 text-sm">
+                <span className="font-semibold">Support:</span> 0705545333
+              </p>
+              <p className="text-gray-200 text-sm">
+                <span className="font-semibold">Email:</span> info@elivra.se
+              </p>
+            </div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mt-6 mb-4">Företag</h4>
+            <button 
+              onClick={() => goToSection("om-elivra")}
+              className="text-gray-200 text-sm hover:text-white transition-colors"
+            >
+              Om Elivra
+            </button>
           </div>
+
+          {/* Produkter セクション */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Adress</h3>
-            <p className="text-gray-300 text-base">Teknikringen 8D</p>
-            <p className="text-gray-300 text-base">58330 Linköping, Sweden</p>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Produkter</h4>
+            <div className="space-y-6">
+              <div>
+                <p className="font-semibold text-white mb-3">Elivra WalkGuard</p>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                  alt="App Store"
+                  className="h-8"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-white mb-3">Elivra Samtalvakt</p>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                  alt="App Store"
+                  className="h-8"
+                />
+              </div>
+            </div>
           </div>
+
+          {/* Adress セクション */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Länkar</h3>
-            <ul className="space-y-2">
-              <li>
-                <button onClick={() => goToSection("hem")} className="text-gray-300 hover:text-white transition-colors">Hem</button>
-              </li>
-              <li>
-                <button onClick={() => goToSection("vad-ar-elivra")} className="text-gray-300 hover:text-white transition-colors">Vad är Elivra?</button>
-              </li>
-              <li>
-                <button onClick={() => goToSection("min-livsbok")} className="text-gray-300 hover:text-white transition-colors">Min Livsbok</button>
-              </li>
-              <li>
-                <button onClick={() => goToSection("trygghet")} className="text-gray-300 hover:text-white transition-colors">Trygghet</button>
-              </li>
-            </ul>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Adress</h4>
+            <p className="text-gray-200 text-sm">Teknikringen 8D</p>
+            <p className="text-gray-200 text-sm">58330 Linköping, Sweden</p>
           </div>
         </div>
 
         {/* フッター下部のコピーライト */}
-        <div className="text-center pt-8 border-t border-gray-700">
-          <p className="text-gray-400 text-sm mb-3">
+        <div className="text-center py-6 border-t border-gray-600">
+          <p className="text-gray-300 text-xs">
             &copy; 2026 Elivra AB |{" "}
             <a href="/integritetspolicy" className="hover:text-white transition-colors">
               Integritetspolicy
