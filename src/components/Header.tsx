@@ -84,122 +84,61 @@ export default function Header() {
 
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="hidden lg:flex gap-8 flex-1 ml-8">
-            {isB2BPage ? (
-              <>
-                <button
-                  onClick={() => scrollToSection("oversikt")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Översikt
-                </button>
-                <button
-                  onClick={() => scrollToSection("sakerhet")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Säkerhet
-                </button>
-                <button
-                  onClick={() => scrollToSection("om-oss")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Om oss
-                </button>
-                <button
-                  onClick={() => scrollToSection("kontakt")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Kontakt
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  onClick={() => scrollToSection("hem")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Hem
-                </button>
-                <button
-                  onClick={() => scrollToSection("vad-ar-elivra")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Vad är Elivra?
-                </button>
-                <button
-                  onClick={() => scrollToSection("min-livsbok")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Min Livsbok
-                </button>
-                <button
-                  onClick={() => scrollToSection("trygghet")}
-                  className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
-                >
-                  Trygghet
-                </button>
-              </>
-            )}
+            <button
+              onClick={() => scrollToSection("hem")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
+            >
+              Hem
+            </button>
+            <button
+              onClick={() => scrollToSection("vad-ar-elivra")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
+            >
+              Vad är Elivra?
+            </button>
+            <button
+              onClick={() => scrollToSection("min-livsbok")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
+            >
+              Min Livsbok
+            </button>
+            <button
+              onClick={() => scrollToSection("trygghet")}
+              className="text-gray-600 hover:text-[oklch(0.58_0.09_220)] transition-colors whitespace-nowrap"
+            >
+              Trygghet
+            </button>
           </nav>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="lg:hidden bg-white border-b border-gray-200 py-5">
-            {isB2BPage ? (
-              <>
-                <button
-                  onClick={() => scrollToSection("oversikt")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Översikt
-                </button>
-                <button
-                  onClick={() => scrollToSection("sakerhet")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Säkerhet
-                </button>
-                <button
-                  onClick={() => scrollToSection("om-oss")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Om oss
-                </button>
-                <button
-                  onClick={() => scrollToSection("kontakt")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Kontakt
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  onClick={() => scrollToSection("hem")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Hem
-                </button>
-                <button
-                  onClick={() => scrollToSection("vad-ar-elivra")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Vad är Elivra?
-                </button>
-                <button
-                  onClick={() => scrollToSection("min-livsbok")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Min Livsbok
-                </button>
-                <button
-                  onClick={() => scrollToSection("trygghet")}
-                  className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
-                >
-                  Trygghet
-                </button>
-              </>
-            )}
+            <button
+              onClick={() => scrollToSection("hem")}
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
+            >
+              Hem
+            </button>
+            <button
+              onClick={() => scrollToSection("vad-ar-elivra")}
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
+            >
+              Vad är Elivra?
+            </button>
+            <button
+              onClick={() => scrollToSection("min-livsbok")}
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
+            >
+              Min Livsbok
+            </button>
+
+            <button
+              onClick={() => scrollToSection("trygghet")}
+              className="block w-full text-left py-3 px-4 text-gray-600 hover:text-[oklch(0.58_0.09_220)] border-b border-gray-100"
+            >
+              Trygghet
+            </button>
           </nav>
         )}
       </div>
