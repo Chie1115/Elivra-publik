@@ -135,14 +135,7 @@ export default function Footer() {
                   className="h-8"
                 />
               </div>
-              <div>
-                <p className="font-semibold text-white mb-3">Elivra Samtalvakt</p>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                  alt="App Store"
-                  className="h-8"
-                />
-              </div>
+              
             </div>
           </div>
 

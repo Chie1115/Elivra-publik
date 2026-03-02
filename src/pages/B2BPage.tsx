@@ -30,10 +30,10 @@ const HeroSection = () => (
   <div className="relative min-h-[520px] flex items-center overflow-hidden">
     <div className="absolute inset-0 w-full h-full">
       <img 
-        src="/assets/hero-bg-blue.jpeg" 
+        src="/assets/hero-bg-blue.png" 
         alt="" 
         role="presentation"
-        className="w-full h-full object-cover object-[center_30%]"
+        className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-white/30"></div>
     </div>
